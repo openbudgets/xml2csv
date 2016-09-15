@@ -1,7 +1,7 @@
 {
-  "name": "combineXMLdata",
+  "name": "xml2csv",
   "version": "0.0.1",
-  "description": "for test only",
+  "description": "commond-line utilities",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wk0206/testPorject2.git"
+    "url": "git+https://github.com/wk0206/xml2csv.git"
   },
   "keywords": [
     "xml",
@@ -19,17 +19,23 @@
   "author": "Kang Wang <wk0206@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wk0206/testPorject2/issues"
+    "url": "https://github.com/wk0206/xml2csv/issues"
   },
   "dependencies": {
-    "traverse": ">= 0.6.6",
-    "xml2json": ">= 0.9.1",
+    "chalk": "~0.4.0",
+    "commander": "~2.2.0",
     "formidable": ">= 1.0.17",
+    "libxmljs": "^0.18.0",
+    "mkdirp": ">= 0.5.1",
     "querystring": ">= 0.2.0",
-    "request": ">= 2.72.0",
+    "request": "~2.36.0",
     "synchronize": ">= 0.9.15",
-    "mkdirp": ">= 0.5.1"
+    "traverse": ">= 0.6.6",
+    "xml2json": ">= 0.9.1"
   },
-  "homepage": "https://github.com/wk0206/testPorject2#readme",
-  "devDependencies": {}
+  "homepage": "https://github.com/wk0206/xml2csv#readme",
+  "devDependencies": {},
+  "bin": {
+    "xml2csv": "xml2csv.js"
+  }
 }

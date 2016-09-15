@@ -2,25 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8e86b55-057c-4be5-a15c-f6d44109c6b5" name="Default" comment="upload for combine similar tables">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SigmodRecord.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/book.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/customer.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lineitem.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/orders.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/partsupp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sample1M.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sample227k.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sample23M.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sample603k.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_simple.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_simple_obeu.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_simple_obeu_short.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_simple_obeu_short_formatted.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/treebank_e.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uwm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wsu.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xml2csv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doodle.png" afterPath="$PROJECT_DIR$/doodle.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tables.png" afterPath="$PROJECT_DIR$/tables.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requestHandlers.js" afterPath="$PROJECT_DIR$/requestHandlers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/router.js" afterPath="$PROJECT_DIR$/router.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.html" afterPath="$PROJECT_DIR$/test.html" />
     </list>
     <ignored path="EmptyProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,16 +33,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="requestHandlers.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="requestHandlers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requestHandlers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37457046">
-              <caret line="1624" column="22" selection-start-line="1624" selection-start-column="22" selection-end-line="1624" selection-end-column="22" />
-              <folding>
-                <element signature="e#44721#45958#0" expanded="false" />
-                <marker date="1471261726356" expanded="true" signature="1028:1050" placeholder="/*...*/" />
-                <marker date="1471261726356" expanded="true" signature="55470:55480" placeholder="..." />
-              </folding>
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="xml2csv.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xml2csv.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,21 +73,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.js">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.40467626">
+              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="requestHandlers_full_log.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requestHandlers_full_log.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1177" column="0" selection-start-line="1177" selection-start-column="0" selection-end-line="1177" selection-end-column="0" />
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -181,7 +179,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="testProject2" />
+              <option name="myItemId" value="xml2csv" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -196,12 +194,12 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -321,18 +319,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/requestHandlers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#44721#45958#0" expanded="false" />
-            <marker date="1471261726356" expanded="true" signature="1028:1050" placeholder="/*...*/" />
-            <marker date="1471261726356" expanded="true" signature="55470:55480" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../NewWeb/js/NewWeb.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -365,11 +351,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#44721#45958#0" expanded="false" />
-            <marker date="1471261726356" expanded="true" signature="1028:1050" placeholder="/*...*/" />
-            <marker date="1471261726356" expanded="true" signature="55470:55480" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -405,11 +387,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#44721#45958#0" expanded="false" />
-            <marker date="1471261726356" expanded="true" signature="1028:1050" placeholder="/*...*/" />
-            <marker date="1471261726356" expanded="true" signature="55470:55480" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -459,11 +437,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#44721#45958#0" expanded="false" />
-            <marker date="1471261726356" expanded="true" signature="1028:1050" placeholder="/*...*/" />
-            <marker date="1471261726356" expanded="true" signature="55470:55480" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -499,11 +473,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#44721#45958#0" expanded="false" />
-            <marker date="1471261726356" expanded="true" signature="1028:1050" placeholder="/*...*/" />
-            <marker date="1471261726356" expanded="true" signature="55470:55480" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -539,11 +509,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#44721#45958#0" expanded="false" />
-            <marker date="1471261726356" expanded="true" signature="1028:1050" placeholder="/*...*/" />
-            <marker date="1471261726356" expanded="true" signature="55470:55480" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -572,11 +538,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#44721#45958#0" expanded="false" />
-            <marker date="1471261726356" expanded="true" signature="1028:1050" placeholder="/*...*/" />
-            <marker date="1471261726356" expanded="true" signature="55470:55480" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -676,14 +638,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requestHandlers_full_log.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1177" column="0" selection-start-line="1177" selection-start-column="0" selection-end-line="1177" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -708,15 +662,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/xml2csv.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/requestHandlers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37457046">
-          <caret line="1624" column="22" selection-start-line="1624" selection-start-column="22" selection-end-line="1624" selection-end-column="22" />
-          <folding>
-            <element signature="e#44721#45958#0" expanded="false" />
-            <marker date="1471261726356" expanded="true" signature="1028:1050" placeholder="/*...*/" />
-            <marker date="1471261726356" expanded="true" signature="55470:55480" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40467626">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
