@@ -30,7 +30,7 @@ if(!program.args.length) {
 	}
 
 
-    console.log('Keywords: ' + program.args);
+    //console.log('Keywords: ' + program.args);
 	//console.log("test" +　test);
 
 
@@ -49,7 +49,7 @@ if(!program.args.length) {
 			if(program.full) {
 				//console.log(body);
 			} else {
-				console.log("withLog"+withLog);
+				//console.log("withLog"+withLog);
 				var treatXML  = requestHandlers.treatXMLFile(body,additionOption,withLog);
 				
 				var temp = requestHandlers.outputXML(treatXML,url,additionOption,withLog);
