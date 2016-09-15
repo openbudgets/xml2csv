@@ -1938,7 +1938,6 @@ function treeToCSV(inputCSV, title, options){
             }
 
         }
-        res+="\n";
 
         return res;
     }
