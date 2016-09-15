@@ -1931,9 +1931,12 @@ function treeToCSV(inputCSV, title, options){
     if(title!=undefined&&title!=[]&&title!=""){
         var res = "";
         res+="";
-        for(idx in title){
-            res+=title[idx].RootName;
-            res+=",";
+        for(var i = 1 ; i < title.length ; i++){
+            res+=title[i].RootName;
+            if(i != title.length -1){
+                res+=",";
+            }
+
         }
         res+="\n";
 
@@ -1942,16 +1945,20 @@ function treeToCSV(inputCSV, title, options){
 
     var res = "";
     res+="";
-    for(idx in inputCSV){
+    for(var i = 1 ; i < inputCSV.length ; i++){
         if(options == "7" || options =="17" || options =="37" || options =="57" || options =="137" || options =="157" || options =="357" || options =="1357") {
-            if (inputCSV[idx].output == true) {
+            if (inputCSV[i].output == true) {
 
-                res += inputCSV[idx].Text;
-                res += ",";
+                res += inputCSV[i].Text;
+                if(i != inputCSV.length -1){
+                    res+=",";
+                }
             }
         }else{
-            res += inputCSV[idx].Text;
-            res += ",";
+            res += inputCSV[i].Text;
+            if(i != inputCSV.length -1){
+                res+=",";
+            }
         }
     }
 
@@ -2502,26 +2509,38 @@ function writeLog(msg){
 
 }
 
+function writeAuthFile(data, success, fail) {
+    var fs = require('fs');
+    fs.writeFile('auth.json', JSON.stringify(data), function(error) {
+        if(error) {
+            console.log('[write auth]: ' + err);
+            if (fail)
+                fail(error);
+        } else {
+            console.log('[write auth]: success');
+            if (success)
+                success();
+        }
+    });
+}
+
 function writeFile(path, data){
 
-    console.log("write File " + path);
-    console.log("data " + data);
+    //console.log("write File " + path);
+    //console.log("data " + data);
     var mkdirp = require('mkdirp');
 
-
+    console.log(mkdirp);
     mkdirp(path, function(err) {
 
         // path exists unless there was an error
 
     });
 
-    fs.writeFile(path, data, function(err) {
-        if(err) {
-            return console.log(err);
-        }
-        var date = new Date();
-        console.log("date "+ date);
-    });
+    console.log("path type "+ typeof(path));
+    console.log("data type "+ typeof(data));
+
+    fs.writeFileSync(path, data);
 
 }
 
@@ -2602,7 +2621,12 @@ function outputXML(treatXML,postData, options, log){
     var directory = "/tmp/transformTool/"+fileName;
     var mkdirp = require('mkdirp');
 
-    writeFile(directory,"")
+    //writeFile(directory,"")
+
+    mkdirp('/tmp/foo/bar/baz', function (err) {
+        if (err) console.error(err)
+        else console.log('pow!')
+    });
 
     mkdirp(directory, function(err) {
 
@@ -2617,31 +2641,31 @@ function outputXML(treatXML,postData, options, log){
 
     });
 
-    console.log("directory "+directory);
-    console.log("resultArray "+resultArray.length);
+    //console.log("directory "+directory);
+    //console.log("resultArray "+resultArray.length);
     //output separated csv
     for (var i = 0; i < resultArray.length; i ++){
         //console.log("temp "+ resultArray.length)
         var fs = require('fs');
         fs.writeFile(directory+"/"+i+".csv", resultArray[i], function(err) {
-            ///console.log("in sync");
+            //console.log("in sync");
             if(err) {
                 return console.log(err);
             }
             var date = new Date();
-            console.log(date.toISOString()+": The file "+i+" was saved!");
+            //console.log(date.toISOString()+": The file "+i+" was saved!");
         });
     }
 
     //output unified csv
     var fs = require('fs');
-    writeFile(directory+"/result"+".csv", resultArrayToSingleCSV);
+    //writeFile(directory+"/result"+".csv", resultArrayToSingleCSV);
     fs.writeFile(directory+"/result"+".csv", resultArrayToSingleCSV, function(err) {
         if(err) {
             return console.log(err);
         }
         var date = new Date();
-        console.log("date "+ date);
+        //console.log("date "+ date);
     });
 
 
@@ -2652,13 +2676,13 @@ function outputXML(treatXML,postData, options, log){
             return console.log(err);
         }
         var date = new Date();
-        console.log(date.toISOString()+": The file was saved!");
+        //console.log(date.toISOString()+": The file was saved!");
     });
 
 
 
     var date = new Date();
-    console.log(date.toISOString()+": the end");
+    //console.log(date.toISOString()+": the end");
 
     return resultArray;
 }
