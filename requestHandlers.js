@@ -843,7 +843,11 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, options,log ){
 //                  tempData   res
 function checkExist(inputLeaf, outputStack){
 
-    //console.log();
+    //this part will get out every piece of outputStack
+    //make this piece into title
+    //compare this title with inputLeaf
+    //until some piece matched
+    //or nothing matched, return -1
     var res = -1;
     for(var i = 0; i < outputStack.length; i ++){
 
@@ -880,11 +884,22 @@ function checkExist(inputLeaf, outputStack){
                 //break;
             }
 
+            //let's see what this for
+            //uhn, I forgot it
+            //maybe it is useless now
             if(j == title.length-1 && title[j]==inputLeaf[j].RootName){
+                //sameMark=true;
+            }
+
+            //at the last element , set sameMark to TRUE
+            if(j == title.length-1 && title.indexOf(inputLeaf[j].RootName)>0){
                 sameMark=true;
             }
         }
 
+        //this mark means
+        //they have same length
+        //they have every element indexed in the compare object( the piece of outputStack)
         if(sameMark==true){
 
             //console.log("index "+i);
@@ -894,6 +909,25 @@ function checkExist(inputLeaf, outputStack){
     }
     //console.log("index "+-1);
     return -1;
+}
+
+function sequenceAdjust(candidate, target){
+
+    var res=[];
+    var length = target.length;
+    var title = [];
+
+    for(idx in candidate){
+        title.push(candidate[idx].RootName);
+        //console.log(table[idx].RootName)
+    }
+
+    for(var i = 0; i < length ; i ++) {
+        var index = title.indexOf(target[i].RootName);
+        res.push(candidate[index]);
+    }
+
+    return res;
 }
 
 function combineBranch(treeStructure, options, log){
@@ -1000,6 +1034,8 @@ function combineBranch(treeStructure, options, log){
             //console.log(checkExist(treeStructure[i],res));
             var index = checkExist(tempData,res);
             //console.log("index is "+index);
+
+            //index == -1 means it is a brand new title type
             if(index==-1){
                 var ele = {};
                 ele["title"]=tempData;
@@ -1009,8 +1045,11 @@ function combineBranch(treeStructure, options, log){
 
                 res.push(ele);
             }else{
-
-                res[index].values.push(tempData);
+                //means it already exist , just add it
+                //adjust sequence before added
+                //OPTION 6 candidate
+                var seqData = sequenceAdjust(tempData,res[index].title);
+                res[index].values.push(seqData);
                 res[index].count+=1;
                 //console.log("test");
                 //console.log(res[index].values);
