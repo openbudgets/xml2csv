@@ -913,6 +913,9 @@ function checkExist(inputLeaf, outputStack){
 
 function sequenceAdjust(candidate, target){
 
+    if(candidate.length != target.length){
+        console.log("length different " + candidate.length +" : "+ target.length)
+    }
     var res=[];
     var length = target.length;
     var title = [];
@@ -923,6 +926,7 @@ function sequenceAdjust(candidate, target){
     }
 
     for(var i = 0; i < length ; i ++) {
+        console.log("title.indexOf(target[i].RootName) "+title.indexOf(target[i].RootName) + target[i].RootName + " : " + target[i].Text);
         var index = title.indexOf(target[i].RootName);
         res.push(candidate[index]);
     }
@@ -1048,8 +1052,10 @@ function combineBranch(treeStructure, options, log){
                 //means it already exist , just add it
                 //adjust sequence before added
                 //OPTION 6 candidate
-                var seqData = sequenceAdjust(tempData,res[index].title);
-                res[index].values.push(seqData);
+                //var seqData = sequenceAdjust(tempData,res[index].title);
+
+                res[index].values.push(tempData);
+                //res[index].values.push(seqData);
                 res[index].count+=1;
                 //console.log("test");
                 //console.log(res[index].values);
@@ -1067,7 +1073,8 @@ function combineBranch(treeStructure, options, log){
                 console.log("this is title " + res[x].values[i].length);
 
                 for (var j = 0; j < res[x].values[i].length; j++) {
-
+                    console.log("this is values | res[x].values.length " + res[x].values.length + " : "+ i)
+                    console.log("this is values | res[x].values[i].length " + res[x].values[i].length + " : "+ j)
                     console.log("this is values | " + res[x].values[i][j].RootName+" : "+res[x].values[i][j].Text);
 
                 }
@@ -1091,6 +1098,45 @@ function treatXMLFile(xmlInput,options,log){
     var xml = libxmljs.parseXmlString(xmlInput,{ noblanks: true });
     treeStructure=recFunc(xml,[],[],[],false,options, log);
 
+    for(idx in treeStructure){
+        var count = 0;
+        var str = [];
+        var str2 = "";
+        for (idx2 in treeStructure[idx]){
+
+            //console.log("node "+count);
+            //count++;
+            //if(treeStructure[idx][0].RootName == "isLeaf"){
+            if (str.length == 0 ){
+                var ele = {};
+                ele["title"] =treeStructure[idx][idx2].RootName;
+                ele["count"]=1;
+                str.push(ele);
+            }else{
+                var foundMark = false;
+                for ( var i = 0 ; i < str.length ; i ++){
+                    if(treeStructure[idx][idx2].RootName == str[i].title){
+                        str[i].count +=1;
+                        //console.log("str[i].count "+str[i].count);
+                        treeStructure[idx][idx2].RootName = (treeStructure[idx][idx2].RootName+ (str[i].count).toString());
+                        foundMark = true;
+                        break;
+                    }
+                }
+
+                if(foundMark==false){
+                    var ele = {};
+                    ele["title"] =treeStructure[idx][idx2].RootName;
+                    ele["count"]=1;
+                    str.push(ele);
+                }
+            }
+
+
+        }
+
+    }
+
     if(log==true){
         for(idx in treeStructure){
             //console.log("-----------treeStructure-----------")
@@ -1100,7 +1146,8 @@ function treatXMLFile(xmlInput,options,log){
             for (idx2 in treeStructure[idx]){
                 //console.log("node "+count);
                 //count++;
-                if(treeStructure[idx][0].RootName == "isLeaf"){
+                //if(treeStructure[idx][0].RootName == "isLeaf"){
+                if(1==1){
                     str+=treeStructure[idx][idx2].RootName;
                     str+=",";
                     str2+=treeStructure[idx][idx2].Text;
@@ -1112,7 +1159,7 @@ function treatXMLFile(xmlInput,options,log){
             }
             if(str!=""){
                 console.log(str);
-                console.log(str2);
+                //str[i].countconsole.log(str2);
 
             }
 
@@ -2739,7 +2786,7 @@ function outputXML(treatXML,postData, options, log){
 
             var htmlLine = treeToHTML(treatXML[i]["values"][j],"",options);
             var csvLine = treeToCSV(treatXML[i]["values"][j],"",options);
-            //console.log(csvLine);
+            console.log(csvLine);
             result+=(htmlLine);
             //console.log("treatJS["+i+"]["+j+"] length is //column count"+treatJS[i][j].length);
             //var consoleLine = JSONtoConsoleCSV(treatJS[i][j],title);
