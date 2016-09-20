@@ -317,8 +317,8 @@ function checkIsDescription(aTree){
 }
 
 
-function addChild(aTree,res,options){
-    if(options == "19" || options =="39" || options =="59" || options =="139" || options =="159" || options =="359" || options =="1359") {
+function addChild(aTree, res, parent, options, addNode, log){
+    if(log==true) {
         console.log("in addChild")
         console.log("    "+"aTree.tostring : " + aTree.toString());
     }
@@ -326,7 +326,7 @@ function addChild(aTree,res,options){
     //console.log("aTree type :"+typeof (aTree))
 
     if(aTree.name()=="text"){
-        if(options == "19" || options =="39" || options =="59" || options =="139" || options =="159" || options =="359" || options =="1359") {
+        if(log==true) {
             console.log("    "+"only text , last layer");
             console.log("    "+"directly return ");
         }
@@ -345,21 +345,39 @@ function addChild(aTree,res,options){
 
     var children = aTree.childNodes();
 
+    if(addNode==true){
+
+        var ele = {}
+        ele["Tree"] = aTree;
+        ele["Root"] = contactElement;
+        ele["RootName"] = rootName;
+        ele["Attribute"] = contactElement.attrs();
+        ele["Text"] = contactElement.name();
+        ele["Path"] = contactElement.path();
+        ele["Chilrden"] = contactElement.childNodes();
+        ele["ChilrdenNumber"] = contactElement.childNodes().length;
+        ele["Chilrden[0]"] = contactElement.childNodes()[0];
+        ele["isLeaf"] = checkIsLeaf(aTree);
+        ele["output"] = false;
+
+
+        //add this node to parent(include itself)
+        parent.push(ele);
+    }
+
     if(aTree.child(0)!=null){
-        if(options == "19" || options =="39" || options =="59" || options =="139" || options =="159" || options =="359" || options =="1359") {
+        if(log==true) {
             console.log("    "+"child is not empty");
         }
 
 
-        if(aTree.child(0).toString().substring(0,1)!="<"){
+        if(aTree.child(0).toString().substring(0,1)!="<" ){
             //res.push();
-            if(options == "19" || options =="39" || options =="59" || options =="139" || options =="159" || options =="359" || options =="1359") {
+            if(log==true) {
                 console.log("        "+"but will stop here ,output layer");
                 console.log("        "+"aTree.text() : " + aTree.text());
                 console.log("        "+"aTree.name : " + aTree.name());
             }
-
-
 
             var ele = {}
             ele["Tree"] = aTree;
@@ -383,27 +401,52 @@ function addChild(aTree,res,options){
              }
              */
 
-            if(options == "19" || options =="39" || options =="59" || options =="139" || options =="159" || options =="359" || options =="1359") {
+            if(log==true) {
                 console.log("res length is "+res.length);
             }
-
 
             res.push(ele);
             return res;
         } else {
+
+            if(log==true){
+                console.log("this child should not be the last lyer "+aTree.child(0).toString());
+                if(res=="") {
+                    console.log("res is empty");
+                }
+
+                console.log("children.length is "+children.length);
+            }
+
             if(children.length != 1){
                 return res;
             }else{
-                var result = addChild(aTree.child(0),res,options);
+                var result = addChild(aTree.child(0),parent, res, true, options, log);
                 return result;
             }
         }
     }else{
-        if(options == "19" || options =="39" || options =="59" || options =="139" || options =="159" || options =="359" || options =="1359") {
+        //add a node with empty value
+        if(log==true) {
             console.log("    "+"child is empty");
             console.log("    "+"aTree.text() : " + aTree.text());
             console.log("    "+"aTree.name() : " + aTree.name());
         }
+        var ele = {}
+        ele["Tree"] = aTree;
+        ele["Root"] = "";
+        ele["RootName"] = aTree.name();
+        ele["Attribute"] = aTree.attrs();
+        ele["Text"] = "";
+        ele["Path"] = aTree.path();
+        ele["Chilrden"] = aTree.childNodes();
+        ele["ChilrdenNumber"] = aTree.childNodes().length;
+        ele["Chilrden[0]"] = aTree.childNodes()[0];
+        ele["isLeaf"] = checkIsLeaf(aTree);
+        ele["output"] = true;
+
+        res.push(ele);
+        return res;
 
     }
     /*
@@ -441,6 +484,17 @@ function addChild(aTree,res,options){
      //this tree should be single
 
      */
+    if(log==true){
+        console.log("test res return "+res);
+        if(res=="") {
+            console.log("res is empty");
+        }else {
+            console.log("res length return is "+res.length);
+        }
+    }
+
+
+
     return res;
 }
 
@@ -451,7 +505,7 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, options,log ){
 
     //console.log("recFunc"+ options);
     //console.log("recFunc" + (options == "19" || options =="39" || options =="59" || options =="139" || options =="159" || options =="359" || options =="1359"));
-    if(options == "19" || options =="39" || options =="59" || options =="139" || options =="159" || options =="359" || options =="1359"|| log ==true) {
+    if(log ==true) {
         console.log("--------------------------")
     }
     //parent
@@ -466,7 +520,7 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, options,log ){
 
     //go deep mark, if not a leaf, go deep
     var isLeaf = checkIsLeaf(xml);
-    if(options == "19" || options =="39" || options =="59" || options =="139" || options =="159" || options =="359" || options =="1359"|| log ==true) {
+    if(log ==true) {
         console.log("is a leaf? " + isLeaf);
     }
     //root
@@ -546,38 +600,39 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, options,log ){
     //and mark the ones already checked not to be check again
     //ignore the ones with an already check mark
     var children = contactElement.childNodes();
-    var childrenB = [];
+    var childrenNext = [];
     var tempMark = false;
     if(checkedMark == false){
         if(children==undefined || (children == "")){
-            if(options == "19" || options =="39" || options =="59" || options =="139" || options =="159" || options =="359" || options =="1359" || log ==true) {
+            if(log ==true) {
                 console.log("ele[\"Children\"]==undefined");
             }
         }else{
-            if(options == "19" || options =="39" || options =="59" || options =="139" || options =="159" || options =="359" || options =="1359" || log ==true) {
+            if(log ==true) {
                 console.log("how many children " + children.length);
             }
 
             for(var i = 0; i < children.length; i ++){
-                if(options == "19" || options =="39" || options =="59" || options =="139" || options =="159" || options =="359" || options =="1359" || log ==true) {
+                if(log ==true) {
                     console.log("put child " + (i + 1) + " to addChild()");
                 }
-                var childrenA = addChild(children[i],[],options);
-                //  childrenB = test-childrenA
+                var childrenA = addChild(children[i],[],[],options,false, log);
+                //  childrenNext = test-childrenA
 
 
                 //if addChild return something ,that means this branch is a dead end
                 //add this node to parent as a description.
-                if(childrenA.length == 0 ){
-                    childrenB.push(children[i]);
+                if(childrenA.length == 0 || childrenA == ""){
+                    //this child should be have further check
+                    childrenNext.push(children[i]);
                 }else{
-                    if(options == "19" || options =="39" || options =="59" || options =="139" || options =="159" || options =="359" || options =="1359" || log ==true) {
-                        console.log("some return from addChild()" + childrenA[0]["RootName"]);
+                    if(log ==true) {
+                        console.log("some return from addChild()" + childrenA[0]["RootName"]+" : "+childrenA[0]["Text"]);
                     }
                     //if this node has some attribute, will also return
                     for(var j = 0; j < childrenA.length ; j ++){
                         //console.log(childrenA[j]);
-                        //OPTION 2
+                        //OPTION 3
                         if(options == "3" || options =="13" || options =="35" || options =="135"){
                             parent.push(childrenA[j]);
                         }
@@ -589,27 +644,27 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, options,log ){
             }
 
             //this block has same structure, they are all data,
-            if(childrenB.length == 0 & children.length > 1){
+            if(childrenNext.length == 0 & children.length > 1){
                 var parentLength = parent.length;
                 //remove all the child from parent
                 parent=parent.slice(0,parentLength-children.length);
-                //set childrenB to all the children
-                childrenB = children;
+                //set childrenNext to all the children
+                childrenNext = children;
                 tempMark = true;
             }
 
             //console.log("how many children children has :"+ children.length);
-            //console.log("how many children childrenB has :"+ childrenB.length);
+            //console.log("how many children childrenNext has :"+ childrenNext.length);
         }
     }else{
-        childrenB = children;
+        childrenNext = children;
     }
 
     /*
 
 
      if(ele["Children"]!=undefined){
-     for(var i = childrenB.length-1 ; i>-1 ; i--){
+     for(var i = childrenNext.length-1 ; i>-1 ; i--){
 
      //var childEles = addChild(children[i],[]);
 
@@ -645,32 +700,55 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, options,log ){
     //if the data has similar structure and need to make then in one row
     var endRowMark = false;
 
-    //each child(childrenB) call recFunc again
+    //each child(childrenNext) call recFunc again
     //I forgot how this part works now
     //add comment later
     if(isLeaf==false){
 
-        for(var i = childrenB.length-1 ; i>-1 ; i--){
-            //console.log("childrenB.length is " + childrenB.length)
+        for(var i = childrenNext.length-1 ; i>-1 ; i--){
+            //console.log("childrenNext.length is " + childrenNext.length)
             //console.log("checkedMark is " +checkedMark)
+            //console.log("childrenNext[i] text is "+childrenNext[i]);
+            //console.log("childrenNext[i].length-2,childrenNext[i]-1"+childrenNext[i].toString().substring(childrenNext[i].toString().length-2,childrenNext[i].toString().length));
+
+            if(childrenNext[i].toString().substring(childrenNext[i].toString().length-2,childrenNext[i].toString().length)=="/>"){
+                var ele = {}
+                ele["Tree"] = "";
+                ele["Root"] = "";
+                ele["RootName"] = childrenNext[i].toString().substring(1,childrenNext[i].toString().length-2);
+                ele["Attribute"] = "";
+                ele["Text"] = "";
+                ele["Path"] = "";
+                ele["Chilrden"] = "";
+                ele["ChilrdenNumber"] = "";
+                ele["Chilrden[0]"] = "";
+                ele["isLeaf"] = "";
+                ele["output"] = false;
+
+                //add this node to parent(include itself)
+                parent.push(ele);
+
+                continue;
+            }
+
             if(checkedMark==true){
-                if(options == "19" || options =="39" || options =="59" || options =="139" || options =="159" || options =="359" || options =="1359" || log ==true) {
+                if(log ==true) {
                     console.log("path 1 ");
                 }
-                recFunc(childrenB[i],parent,res,child, checkedMark, options, log);
+                recFunc(childrenNext[i],parent,res,child, checkedMark, options, log);
             }else if(tempMark==true){
-                if(options == "19" || options =="39" || options =="59" || options =="139" || options =="159" || options =="359" || options =="1359" || log ==true) {
+                if(log ==true) {
                     console.log("path 2 ");
                 }
                 //console.log("tempMark is " +tempMark)
-                recFunc(childrenB[i],parent,res,child, tempMark, options, log);
+                recFunc(childrenNext[i],parent,res,child, tempMark, options, log);
                 //console.log("return from path 2")
             }else {
                 //this should be the most common choice
-                if(options == "19" || options =="39" || options =="59" || options =="139" || options =="159" || options =="359" || options =="1359" || log ==true) {
+                if(log ==true) {
                     console.log("path 3 ");
                 }
-                recFunc(childrenB[i],parent,res,child,tempMark, options, log);
+                recFunc(childrenNext[i],parent,res,child,tempMark, options, log);
             }
 
 
@@ -793,8 +871,13 @@ function checkExist(inputLeaf, outputStack){
             //console.log("title[j]"+title[j]);
             //console.log("inputLeaf[j].RootName"+inputLeaf[j].RootName);
 
-            if(title[j]!=inputLeaf[j].RootName){
+            if(title.indexOf(inputLeaf[j].RootName)<0){
                 break;
+                //console.log("leaf index is " + title.indexOf(inputLeaf[j].RootName));
+            }
+
+            if(title[j]!=inputLeaf[j].RootName){
+                //break;
             }
 
             if(j == title.length-1 && title[j]==inputLeaf[j].RootName){
@@ -837,7 +920,7 @@ function combineBranch(treeStructure, options, log){
 
         if(options == "5" || options =="15" || options =="35" || options =="135"){
 
-            //console.log("in OPTION 3");
+            //console.log("in OPTION 5");
             var firstEle;
 
             if(i==treeStructure.length-1){
@@ -940,14 +1023,18 @@ function combineBranch(treeStructure, options, log){
     //console.log(res);
     if(log == true) {
 
-        for (var i = 0; i < res[0].values.length; i++) {
-            console.log("this is title" + res[0].values[i]);
+        for(var x = 0; x <res.length; x++){
+            for (var i = 0; i < res[x].values.length; i++) {
+                console.log("this is title " + res[x].values[i].length);
 
-            for (var j = 0; j < res[0].values[i].length; j++) {
+                for (var j = 0; j < res[x].values[i].length; j++) {
 
-                console.log("this is values" + res[0].values[i][j].RootName);
+                    console.log("this is values | " + res[x].values[i][j].RootName+" : "+res[x].values[i][j].Text);
+
+                }
             }
         }
+
     }
     return res;
 }
@@ -964,22 +1051,33 @@ function treatXMLFile(xmlInput,options,log){
     //var xml = libxmljs.parseXmlString(body);
     var xml = libxmljs.parseXmlString(xmlInput,{ noblanks: true });
     treeStructure=recFunc(xml,[],[],[],false,options, log);
-    for(idx in treeStructure){
-        //console.log("-----------treeStructure-----------")
-        var count = 0;
-        var str ="";
-        for (idx2 in treeStructure[idx]){
-            //console.log("node "+count);
-            //count++;
-            if(treeStructure[idx][0].RootName == "isLeaf"){
-                str+=treeStructure[idx][idx2].RootName;
-                str+=",";
+
+    if(log==true){
+        for(idx in treeStructure){
+            //console.log("-----------treeStructure-----------")
+            var count = 0;
+            var str = "";
+            var str2 = "";
+            for (idx2 in treeStructure[idx]){
+                //console.log("node "+count);
+                //count++;
+                if(treeStructure[idx][0].RootName == "isLeaf"){
+                    str+=treeStructure[idx][idx2].RootName;
+                    str+=",";
+                    str2+=treeStructure[idx][idx2].Text;
+                    str2+=",";
+                }
+
+                //console.log(treeStructure[idx][idx2].RootName + " : " + treeStructure[idx][idx2].Text);
+                //console.log(treeStructure[idx][idx2].Path);
+            }
+            if(str!=""){
+                console.log(str);
+                console.log(str2);
+
             }
 
-            //console.log(treeStructure[idx][idx2].RootName + " : " + treeStructure[idx][idx2].Text);
-            //console.log(treeStructure[idx][idx2].Path);
         }
-        //console.log(str);
     }
 
     //console.log("------------------------");
@@ -1945,6 +2043,8 @@ function treeToCSV(inputCSV, title, options){
     var res = "";
     res+="";
     for(var i = 1 ; i < inputCSV.length ; i++){
+
+        //OPTION 7
         if(options == "7" || options =="17" || options =="37" || options =="57" || options =="137" || options =="157" || options =="357" || options =="1357") {
             if (inputCSV[i].output == true) {
 
@@ -1994,6 +2094,8 @@ function treeToHTML(inputCSV, title, options){
     var res = "";
     res+="<tr>";
     for(idx in inputCSV){
+
+        //OPTION 7
         if(options == "7" || options =="17" || options =="37" || options =="57" || options =="137" || options =="157" || options =="357" || options =="1357") {
             if(inputCSV[idx].output==true){
                 res+="<td>";
@@ -2563,6 +2665,9 @@ function outputXML(treatXML,postData, options, log){
         }
     }
 
+
+    var req = require('request');
+
     var result = "";
 
     var resultArrayToSingleCSV=""
@@ -2595,7 +2700,7 @@ function outputXML(treatXML,postData, options, log){
 
             var htmlLine = treeToHTML(treatXML[i]["values"][j],"",options);
             var csvLine = treeToCSV(treatXML[i]["values"][j],"",options);
-            console.log(csvLine);
+            //console.log(csvLine);
             result+=(htmlLine);
             //console.log("treatJS["+i+"]["+j+"] length is //column count"+treatJS[i][j].length);
             //var consoleLine = JSONtoConsoleCSV(treatJS[i][j],title);
@@ -2609,6 +2714,7 @@ function outputXML(treatXML,postData, options, log){
         resultArray.push(aCSV);
         resultArrayToSingleCSV +=aCSV;
         //console.log("");
+        console.log('\n');
         result+=("</table>");
         result+=("</div>");
         result+=("<br/>");
@@ -2627,11 +2733,7 @@ function outputXML(treatXML,postData, options, log){
         else console.log('pow!')
     });
 
-    mkdirp(directory, function(err) {
-
-        // path exists unless there was an error
-
-    });
+    mkdirp.sync(directory);
 
     //additional floder
     mkdirp(directory+"/"+ resultArray.length, function(err) {
@@ -2670,6 +2772,7 @@ function outputXML(treatXML,postData, options, log){
 
     //output html
     var fs = require('fs');
+    //fs.writeFileSync("/tmp/result.html", result);
     fs.writeFile("/tmp/result.html", result, function(err) {
         if(err) {
             return console.log(err);

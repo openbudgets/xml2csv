@@ -50,6 +50,10 @@ if(!program.args.length) {
 				//console.log(body);
 			} else {
 				//console.log("withLog"+withLog);
+				//1 = attribute
+				//3 = single brother
+				//5 = combine similar
+				//7 = omit same value
 				var treatXML  = requestHandlers.treatXMLFile(body,additionOption,withLog);
 				
 				var temp = requestHandlers.outputXML(treatXML,url,additionOption,withLog);
