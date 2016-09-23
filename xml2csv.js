@@ -30,53 +30,99 @@ if(!program.args.length) {
 	}
 
 
-    //console.log('Keywords: ' + program.args);
-	//console.log("test" +　test);
+
+	if(url.toString().substring(0,4) == "http"){
+		request({
+			method: 'GET',
+			headers: {
+				'User-Agent': ''
+			},
+			url: url
+		}, function(error, response, body) {
+
+			if (!error && response.statusCode == 200) {
+
+				//console.log("body " + body);
+				//var body = JSON.parse(body);
+				if(program.full) {
+					//console.log(body);
+				} else {
+					//console.log("withLog"+withLog);
+					//1 = attribute
+					//3 = single brother
+					//5 = combine similar
+					//7 = omit same value
+					var treatXML  = requestHandlers.treatXMLFile(body,additionOption,withLog);
+
+					var temp = requestHandlers.outputXML(treatXML,url,additionOption,withLog);
 
 
-	request({
-	    method: 'GET',
-	    headers: {
-		'User-Agent': ''
-	    },
-	    url: url
-	}, function(error, response, body) {
-	
-	    if (!error && response.statusCode == 200) {
-
-			//console.log("body " + body);
-			//var body = JSON.parse(body);
-			if(program.full) {
-				//console.log(body);
-			} else {
-				//console.log("withLog"+withLog);
-				//1 = attribute
-				//3 = single brother
-				//5 = combine similar
-				//7 = omit same value
-				var treatXML  = requestHandlers.treatXMLFile(body,additionOption,withLog);
-				
-				var temp = requestHandlers.outputXML(treatXML,url,additionOption,withLog);
-
-
-				//for(var i = 0; i < body.items.length; i++) {
+					//for(var i = 0; i < body.items.length; i++) {
 					//console.log(chalk.cyan.bold('Name: ' + body.items[i].name));
 					//console.log(chalk.magenta.bold('Owner: ' + body.items[i].owner.login));
 					//console.log(chalk.grey('Desc: ' + body.items[i].description + '\n'));
 					//console.log(chalk.grey('Clone url: ' + body.items[i].clone_url + '\n'));
 
-				//}
+					//}
 
+					process.exit(0);
+					return temp;
+				}
 				process.exit(0);
-				return temp;
+			} else if (error) {
+				//console.log(chalk.red('Error: ' + error));
+				console.log('Error: ');
+				process.exit(1);
 			}
-			process.exit(0);
-		} else if (error) {
-			//console.log(chalk.red('Error: ' + error));
-			console.log('Error: ');
-			process.exit(1);
-		}
-	});
+		});
+	}else{
+		//console.log("local "+ url.toString());
+		fs = require('fs')
+		fs.readFile(url, 'utf8', function (error,body) {
+			if (!error ) {
+
+				//console.log("body " + body);
+				//var body = JSON.parse(body);
+				if(program.full) {
+					//console.log(body);
+				} else {
+					//console.log("withLog"+withLog);
+					//1 = attribute
+					//3 = single brother
+					//5 = combine similar
+					//7 = omit same value
+					var treatXML  = requestHandlers.treatXMLFile(body,additionOption,withLog);
+
+					var temp = requestHandlers.outputXML(treatXML,url,additionOption,withLog);
+
+
+					//for(var i = 0; i < body.items.length; i++) {
+					//console.log(chalk.cyan.bold('Name: ' + body.items[i].name));
+					//console.log(chalk.magenta.bold('Owner: ' + body.items[i].owner.login));
+					//console.log(chalk.grey('Desc: ' + body.items[i].description + '\n'));
+					//console.log(chalk.grey('Clone url: ' + body.items[i].clone_url + '\n'));
+
+					//}
+
+					process.exit(0);
+					return temp;
+				}
+				process.exit(0);
+			} else if (error) {
+				//console.log(chalk.red('Error: ' + error));
+				console.log('Error: ');
+				process.exit(1);
+			}
+			//console.log(data);
+		});
+	}
+
+    //console.log('Keywords: ' + program.args);
+	//console.log("test" +　test);
+
+
+
+
 
 }
 
