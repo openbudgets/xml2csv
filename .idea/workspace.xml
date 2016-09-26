@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a8e86b55-057c-4be5-a15c-f6d44109c6b5" name="Default" comment="upload for combine similar tables">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml2csv.js" afterPath="$PROJECT_DIR$/xml2csv.js" />
-    </list>
+    <list default="true" id="a8e86b55-057c-4be5-a15c-f6d44109c6b5" name="Default" comment="upload for combine similar tables" />
     <ignored path="EmptyProject.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
