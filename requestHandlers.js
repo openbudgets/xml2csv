@@ -952,17 +952,15 @@ function combineBranch(treeStructure, options, log){
 
         //console.log("treeStructure[i][0].RootName = "+treeStructure[i][0].RootName);
         var aData = treeStructure[i];
-        var tempData = aData.slice(0,aData.length-1);
+
 
         //OPTION 5
-
         if(options == "5" || options =="15" || options =="35" || options =="135"){
-
+            var tempData = aData.slice(0,aData.length-1);
             //console.log("in OPTION 5");
             var firstEle;
 
             if(i==treeStructure.length-1){
-
                 if(treeStructure[i-1][0].RootName=="isLeaf" && treeStructure[i][0].RootName=="isLeaf"){
                     sameMark = false;
                 }else{
@@ -1023,6 +1021,8 @@ function combineBranch(treeStructure, options, log){
                 temp.length = 0;
             }
 
+        } else {
+            var tempData = aData.slice(0,aData.length);
         }
 
         /*
@@ -1036,8 +1036,9 @@ function combineBranch(treeStructure, options, log){
             //console.log(treeStructure[i]);
             //console.log(res);
             //console.log(checkExist(treeStructure[i],res));
+            console.log(checkExist(tempData,res));
             var index = checkExist(tempData,res);
-            //console.log("index is "+index);
+            console.log("index is "+index);
 
             //index == -1 means it is a brand new title type
             if(index==-1){
@@ -1067,7 +1068,6 @@ function combineBranch(treeStructure, options, log){
 
     //console.log(res);
     if(log == true) {
-
         for(var x = 0; x <res.length; x++){
             for (var i = 0; i < res[x].values.length; i++) {
                 console.log("this is title " + res[x].values[i].length);
@@ -1080,7 +1080,6 @@ function combineBranch(treeStructure, options, log){
                 }
             }
         }
-
     }
     return res;
 }
@@ -1095,7 +1094,11 @@ function treatXMLFile(xmlInput,options,log){
     //result=recFunc(xmlInput,[],[]);
     //console.log(result);
     //var xml = libxmljs.parseXmlString(body);
+
+
+    //parse string file into XML object
     var xml = libxmljs.parseXmlString(xmlInput,{ noblanks: true });
+
     treeStructure=recFunc(xml,[],[],[],false,options, log);
 
     for(idx in treeStructure){
@@ -1158,7 +1161,7 @@ function treatXMLFile(xmlInput,options,log){
                 //console.log(treeStructure[idx][idx2].Path);
             }
             if(str!=""){
-                console.log(str);
+                console.log(str+" ;with value: "+str2);
                 //str[i].countconsole.log(str2);
 
             }
@@ -1174,70 +1177,6 @@ function treatXMLFile(xmlInput,options,log){
 
     //var tables = [];
     return tables;
-    //console.log("tables");
-    //console.log(tables);
-
-    console.log("values")
-    console.log(tables[0]["values"]);
-
-    console.log("title")
-    console.log(tables[0].title);
-
-
-    for(idx in tables[0].values){
-        console.log("detail");
-        console.log(tables[0].values[idx])
-    }
-
-    //console.log("json log");
-    //----------------------------------------------
-    //console.log("xml "+xml)
-    //var gchild = xml.get('//book');
-    //console.log("book "+gchild);
-    //console.log("author "+xml.get('//author'))
-
-    var contactElement = xml.root();
-    var idElement = contactElement.childNodes()[1];
-    var id = idElement.childNodes()[1];
-    var lastNameElement = contactElement.childNodes()[contactElement.childNodes().length-2];
-    var lastName = lastNameElement.childNodes()[1];
-    var firstNameElement = contactElement.childNodes()[2];
-    var firstName1 = firstNameElement.childNodes()[0];
-    var children = xml.root().childNodes();
-    var child = children[0];
-
-    //console.log("contactElement "+contactElement);
-    //console.log("idElement "+idElement);
-    //console.log("id "+id);
-    //console.log("lastNameElement "+lastNameElement);
-    //console.log("lastName "+lastName);
-    //console.log("firstNameElement "+firstNameElement);
-    //console.log("firstName1 "+firstName1);
-    //console.log("children "+children);
-    //console.log("children length"+children.length);
-    //console.log("child "+child);
-    for(var i = 0 ; i < children.length; i ++){
-        //console.log("children["+i+"] "+children[i]);
-    }
-
-    var xml2 = libxmljs.parseXmlString(children[1]);
-    var contactElement = xml2.root();
-
-    var idElement = contactElement.childNodes()[0];
-    //console.log("contactElement "+contactElement);
-    //console.log("idElement "+idElement);
-    //console.log("childNodes().length "+contactElement.childNodes().length);
-
-    for(var i = 0 ; i < contactElement.childNodes().length; i ++){
-        //console.log("sub child "+contactElement.child(i));
-        //console.log(contactElement.childNodes()[i].name());
-        //console.log(contactElement.childNodes()[i].text());
-        //console.log(contactElement.childNodes()[i].attrs());
-        //console.log(contactElement.childNodes()[i].path());
-
-    }
-
-    //----------------------------------------------
 
 }
 function treatJson( json ){

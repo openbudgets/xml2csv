@@ -44,7 +44,9 @@ if(!program.args.length) {
 
 				//console.log("body " + body);
 				//var body = JSON.parse(body);
-				console.log("online "+ url.toString());
+				if(withLog==true) {
+					console.log("online " + url.toString());
+				}
 				if(program.full) {
 					//console.log(body);
 				} else {
@@ -83,7 +85,10 @@ if(!program.args.length) {
 
 		fs.stat(url.toString(),function (error){
 			if(!error){
-				console.log("file exist");
+				if(withLog==true){
+					console.log("file exist");
+				}
+
 
 				fs.readFile(url, 'utf8', function (error,body) {
 					if (!error ) {
@@ -101,15 +106,6 @@ if(!program.args.length) {
 							var treatXML  = requestHandlers.treatXMLFile(body,additionOption,withLog);
 
 							var temp = requestHandlers.outputXML(treatXML,url,additionOption,withLog);
-
-
-							//for(var i = 0; i < body.items.length; i++) {
-							//console.log(chalk.cyan.bold('Name: ' + body.items[i].name));
-							//console.log(chalk.magenta.bold('Owner: ' + body.items[i].owner.login));
-							//console.log(chalk.grey('Desc: ' + body.items[i].description + '\n'));
-							//console.log(chalk.grey('Clone url: ' + body.items[i].clone_url + '\n'));
-
-							//}
 
 							process.exit(0);
 							return temp;
