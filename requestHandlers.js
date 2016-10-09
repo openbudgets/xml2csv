@@ -1036,9 +1036,9 @@ function combineBranch(treeStructure, options, log){
             //console.log(treeStructure[i]);
             //console.log(res);
             //console.log(checkExist(treeStructure[i],res));
-            console.log(checkExist(tempData,res));
+            //console.log(checkExist(tempData,res));
             var index = checkExist(tempData,res);
-            console.log("index is "+index);
+            //console.log("index is "+index);
 
             //index == -1 means it is a brand new title type
             if(index==-1){
@@ -2098,16 +2098,18 @@ function treeToHTML(inputCSV, title, options){
     if(title!=undefined&&title!=[]&&title!=""){
         var res = "";
         res+="<tr>";
-        for(idx in title){
-            if(options == "7" || options =="17" || options =="37" || options =="57" || options =="137" || options =="157" || options =="357" || options =="1357") {
-                if (title[idx].output == true) {
+        //for(idx in title){
+        for(var i = 1 ; i < inputCSV.length ; i++){
+            //if(options == "7" || options =="17" || options =="37" || options =="57" || options =="137" || options =="157" || options =="357" || options =="1357") {
+            if(options.indexOf("7")>=0){
+                if (title[i].output == true) {
                     res += "<td>";
-                    res += title[idx].RootName;
+                    res += title[i].RootName;
                     res += "</td>";
                 }
             }else{
                 res += "<td>";
-                res += title[idx].RootName;
+                res += title[i].RootName;
                 res += "</td>";
             }
         }
@@ -2118,18 +2120,19 @@ function treeToHTML(inputCSV, title, options){
 
     var res = "";
     res+="<tr>";
-    for(idx in inputCSV){
-
+    //for(idx in inputCSV){
+    for(var i = 1 ; i < inputCSV.length ; i++){
         //OPTION 7
-        if(options == "7" || options =="17" || options =="37" || options =="57" || options =="137" || options =="157" || options =="357" || options =="1357") {
-            if(inputCSV[idx].output==true){
+        //if(options == "7" || options =="17" || options =="37" || options =="57" || options =="137" || options =="157" || options =="357" || options =="1357") {
+        if(options.indexOf("7")>=0){
+            if(inputCSV[i].output==true){
                 res+="<td>";
-                res+=inputCSV[idx].Text;
+                res+=inputCSV[i].Text;
                 res+="</td>";
             }
         }else{
             res+="<td>";
-            res+=inputCSV[idx].Text;
+            res+=inputCSV[i].Text;
             res+="</td>";
         }
 
@@ -2693,7 +2696,18 @@ function outputXML(treatXML,postData, options, log){
 
     var req = require('request');
 
-    var result = "";
+    //var result = "";
+
+    var result =
+        '<script type="text/javascript">'+
+        'function showButton(id){' +
+        '   if(document.getElementById(id).style.display=="block"){' +
+        '       document.getElementById(id).style.display="none"' +
+        '   } else {' +
+        '       document.getElementById(id).style.display="block";' +
+        '   }'+
+        '}'+
+        '</script>';
 
     var resultArrayToSingleCSV=""
 
@@ -2753,14 +2767,10 @@ function outputXML(treatXML,postData, options, log){
 
     //writeFile(directory,"")
 
-    mkdirp('/tmp/foo/bar/baz', function (err) {
-        if (err) console.error(err)
-        else console.log('pow!')
-    });
-
     mkdirp.sync(directory);
 
     //additional floder
+    console.log("how many files generated "+resultArray.length)
     mkdirp(directory+"/"+ resultArray.length, function(err) {
 
         // path exists unless there was an error
@@ -2772,7 +2782,12 @@ function outputXML(treatXML,postData, options, log){
     //output separated csv
     for (var i = 0; i < resultArray.length; i ++){
         //console.log("temp "+ resultArray.length)
-        var fs = require('fs');
+        //var fs = require('fs');
+        //console.log("at out put ");
+        //console.log(resultArray[i]);
+
+        fs.writeFileSync(directory+"/"+i+".csv", resultArray[i]);
+        /*
         fs.writeFile(directory+"/"+i+".csv", resultArray[i], function(err) {
             //console.log("in sync");
             if(err) {
@@ -2781,11 +2796,16 @@ function outputXML(treatXML,postData, options, log){
             var date = new Date();
             //console.log(date.toISOString()+": The file "+i+" was saved!");
         });
+        */
     }
 
     //output unified csv
-    var fs = require('fs');
+    //var fs = require('fs');
     //writeFile(directory+"/result"+".csv", resultArrayToSingleCSV);
+    //console.log("--------result--------");
+    //console.log(resultArrayToSingleCSV);
+    fs.writeFileSync(directory+"/result"+".csv", resultArrayToSingleCSV);
+    /*
     fs.writeFile(directory+"/result"+".csv", resultArrayToSingleCSV, function(err) {
         if(err) {
             return console.log(err);
@@ -2793,11 +2813,13 @@ function outputXML(treatXML,postData, options, log){
         var date = new Date();
         //console.log("date "+ date);
     });
+    */
 
 
     //output html
-    var fs = require('fs');
-    //fs.writeFileSync("/tmp/result.html", result);
+    //var fs = require('fs');
+    fs.writeFileSync(directory+"/result"+".html", result);
+    /*
     fs.writeFile("/tmp/result.html", result, function(err) {
         if(err) {
             return console.log(err);
@@ -2805,6 +2827,7 @@ function outputXML(treatXML,postData, options, log){
         var date = new Date();
         //console.log(date.toISOString()+": The file was saved!");
     });
+    */
 
 
 
