@@ -1,30 +1,45 @@
-# testPorject2
+# XML2CSV
 
-#This is only for testPorject2
+#XML2CSV transorom XML to CSV with adjustable detail level
 
 #INSTALL
-type "npm install https://github.com/wk0206/testPorject2.git" to install
+Down load this repository "git clone https://github.com/wk0206/xml2csv.git".
+Enter the folder.
+Install xml2csv by command "npm install -g".
 
-#RUN server
-find where it installed , usually /home/[username]/node_module
-use console to get the path, type"node combineXMLdata" to start server(combineXMLdata only for not duplicate with other package)
+#USE this tool
+After install the tool, it will run as a command as system commnd
+```
+root@Debian:/home/xml2csv# xml2csv 
 
-#VISIT
-visit"http://localhost:8888/[https://raw.githubusercontent.com/wk0206/testPorject2/master/test_simple.xml]" for test;
+  Usage: xml2csv [options] <keywords>
 
-you can change test_simple.xml to other xml at the same domain;
+  Options:
 
-Sample1M , will take half an hour to finish transform;
+    -h, --help                 output usage information
+    -V, --version              output the version number
+    -a, --argument <argument>  switch
+    -r, --re <re>              regular expression
+    -l, --log                  output log
+```
 
-Sample23M, will not work;
+## Regular Expression
+Exmaple XML:
+https://raw.githubusercontent.com/wk0206/xml2csv/master/Final-budget-2014-EN/c!SEC1_E!en!0.xml
 
-you can send raw xml parameter inside [] after http://localhost:8888/
-it should be able to be visit by other application by call the link with xml URL as parameter.
+Grab specified data structure
+```xml
+<amount catpol="5.2.17" comp="true" year="n"><figure>p.m.</figure></amount>
+<amount catpol="5.2.17" year="nm1"><figure>12 912 765</figure></amount>
+<amount year="nm2"><figure>0,—</figure></amount>
+```
+With regular expression like below
 
-xml source:http://www.cs.washington.edu/research/xmldatasets/
-xml source:obeu
-
-#GET THE RESULT
-file:///tmp/result.html
-file:///tmp/transformTool/[inputfile name]/
+```js
+<amount *(catpol="[^\"]*")? *(comp=\"[^\"]*\")? *year="[^\"]*\"><figure>[^\"]*<\/figure><\/amount>
+```
+Whole command
+```
+xml2csv /home/xml2csv/Final-budget-2014-EN/c\!SEC1_E\!en\!0.xml -a 135  -r "<amount *(catpol=\"[^\\\"]*\")? *(comp=\"[^\\\"]*\")? *year=\"[^\\\"]*\"><figure>[^\\\"]*</figure></amount>"
+```
 
