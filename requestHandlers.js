@@ -155,7 +155,7 @@ function showxml2json(response,request,postData) {
             var treatJS = treatJson(json);
 
             var splithtml = json.split(/{/);
-            var replace1 = json.replace(/{/g,"<td>");
+            var replace1 = json.replace(/{/g,"<td nowrap>");
             var replace2 = replace1.replace(/}/g,"</td>");
             //var replace2 = replace1.replace(/,/g,",<br/>");
             //var splithtml = json.split(/\".*\"{1}/g);
@@ -501,10 +501,8 @@ function addChild(aTree, res, parent, options, addNode, log){
 
 //put in a tree.
 //give out an array.
-function recFunc(aTree, parentArr, result, child ,checkedMark, options,log ){
+function recFunc(aTree, parentArr, result, child ,checkedMark, matchMark, options,rgEx, log ){
 
-    //console.log("recFunc"+ options);
-    //console.log("recFunc" + (options == "19" || options =="39" || options =="59" || options =="139" || options =="159" || options =="359" || options =="1359"));
     if(log ==true) {
         console.log("--------------------------")
     }
@@ -523,15 +521,13 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, options,log ){
     if(log ==true) {
         console.log("is a leaf? " + isLeaf);
     }
+
+
     //root
     var contactElement = xml.root();
 
     //root name
     var rootName=contactElement.name();
-
-    //console.log(checkIsDescription(aTree));
-
-
 
     //var ele = current
     var ele = {}
@@ -540,13 +536,9 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, options,log ){
     ele["RootName"] = rootName;
     ele["Attribute"] = contactElement.attrs();
     ele["Text"] = contactElement.name();
+
     //path = parent path + path
     if(parentArr.length!=0){
-
-        //console.log(parentArr[parentArr.length-1]["Path"]+contactElement.path());
-        //console.log(parentArr);
-        //console.log(parentArr.length-1);
-        //console.log(parentArr[parentArr.length-1]);
         ele["Path"] = parentArr[parentArr.length-1]["Path"]+contactElement.path();
     }else{
         ele["Path"] = contactElement.path();
@@ -561,16 +553,54 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, options,log ){
 
 
     //add this node to parent(include itself)
+
+
+    if(rgEx!=""){
+        //var myArr = rgEx.exec(contactElement.name());
+        //console.log(myArr);
+        var regEx= ""+rgEx+""
+        if(regEx.substring(0,1)!="^"){
+            regEx="^"+regEx;
+        }
+
+        if(regEx.substring(regEx.length-1,regEx.length)!="$"){
+            regEx=regEx+"$";
+        }
+        //console.log(regEx)
+        var test = ele["Root"].toString();
+        //test = "<amount catpol=\"5.2.17\" year=\"n\"><figure>p.m.</figure></amount>"
+
+        //console.log(regEx);
+        if(test.match(regEx)!=null){
+            matchMark = true;
+            //console.log(matchMark + " " +test.match(regEx));
+        }else {
+            //console.log(test);
+        }
+
+        /*
+        console.log("-------------------")
+        console.log( " tree "+ele["Tree"]);
+        console.log( " Root "+ele["Root"]);
+        console.log( " RootName "+ele["RootName"]);
+        console.log( " Chilrden "+ele["Chilrden"]);
+        console.log("--------------------------------------")
+        */
+
+        //console.log( matchMark+ " Root "+ele["Root"]);
+    }
+
+
+    if(matchMark == true){
+        ele["isLeaf"] = "isMatch";
+    }
     parent.push(ele);
 
-
-    //console.log(ele["Attribute"].length);
     //isolate the attribute, make them as a node
     //OPTION 1
-    if(options == "1" || options =="13" || options =="15" || options =="135"){
-
+    if(options.indexOf("1")>=0){
         if(ele["Attribute"].length>0){
-            //console.log("not empty");
+
             var attrList = ele["Attribute"];
 
             for(idx in ele["Attribute"]){
@@ -733,22 +763,22 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, options,log ){
 
             if(checkedMark==true){
                 if(log ==true) {
-                    console.log("path 1 ");
+                    console.log("path 1 " + matchMark);
                 }
-                recFunc(childrenNext[i],parent,res,child, checkedMark, options, log);
+                recFunc(childrenNext[i],parent,res,child, checkedMark, matchMark, options,rgEx, log);
             }else if(tempMark==true){
                 if(log ==true) {
-                    console.log("path 2 ");
+                    console.log("path 2 " + matchMark);
                 }
                 //console.log("tempMark is " +tempMark)
-                recFunc(childrenNext[i],parent,res,child, tempMark, options, log);
+                recFunc(childrenNext[i],parent,res,child, tempMark, matchMark, options,rgEx, log);
                 //console.log("return from path 2")
             }else {
                 //this should be the most common choice
                 if(log ==true) {
-                    console.log("path 3 ");
+                    console.log("path 3 " + matchMark);
                 }
-                recFunc(childrenNext[i],parent,res,child,tempMark, options, log);
+                recFunc(childrenNext[i],parent,res,child,tempMark, matchMark, options,rgEx, log);
             }
 
 
@@ -768,14 +798,20 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, options,log ){
         var tempNode = {}
         tempNode["Tree"] = "";
         tempNode["Root"] = "";
-        tempNode["RootName"] = "isNode";
+
         tempNode["Attribute"] = "";
         tempNode["Text"] = "isNode";
         tempNode["Path"] = "";
         tempNode["Chilrden"] = "";
         tempNode["ChilrdenNumber"] = ""
         tempNode["Chilrden[0]"] = "";
-        tempNode["isLeaf"] = "isNode";
+        if(matchMark==true){
+            tempNode["RootName"] = "isNode";
+            tempNode["isLeaf"] = "isMatch";
+        }else{
+            tempNode["RootName"] = "isNode";
+            tempNode["isLeaf"] = "isNode";
+        }
         tempNode["output"] = false;
         parent.unshift(tempNode);
 
@@ -804,14 +840,21 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, options,log ){
         var tempNode = {}
         tempNode["Tree"] = "";
         tempNode["Root"] = "";
-        tempNode["RootName"] = "isLeaf";
+
         tempNode["Attribute"] = "";
         tempNode["Text"] = "isLeaf";
         tempNode["Path"] = "";
         tempNode["Chilrden"] = "";
         tempNode["ChilrdenNumber"] = ""
         tempNode["Chilrden[0]"] = "";
-        tempNode["isLeaf"] = "isLeaf";
+        if(matchMark==true){
+            tempNode["RootName"] = "isMatch";
+            tempNode["isLeaf"] = "isMatch";
+        }else{
+            tempNode["RootName"] = "isLeaf";
+            tempNode["isLeaf"] = "isLeaf";
+        }
+
         tempNode["output"] = false;
         parent.unshift(tempNode);
 
@@ -934,7 +977,7 @@ function sequenceAdjust(candidate, target){
     return res;
 }
 
-function combineBranch(treeStructure, options, log){
+function combineBranch(treeStructure, options,rgEx, log){
 
     if(log == true){
         console.log("options "+options);
@@ -961,34 +1004,47 @@ function combineBranch(treeStructure, options, log){
             var firstEle;
 
             if(i==treeStructure.length-1){
-                if(treeStructure[i-1][0].RootName=="isLeaf" && treeStructure[i][0].RootName=="isLeaf"){
-                    sameMark = false;
+                if(rgEx!=""){
+                    if(treeStructure[i-1][0].RootName=="isMatch" && treeStructure[i][0].RootName=="isMatch"){
+                        sameMark = false;
+                    }else{
+                        sameMark = false;
+                    }
                 }else{
-                    sameMark = false;
+                    if(treeStructure[i-1][0].RootName=="isLeaf" && treeStructure[i][0].RootName=="isLeaf"){
+                        sameMark = false;
+                    }else{
+                        sameMark = false;
+                    }
                 }
+
 
             }else{
-                if(treeStructure[i][0].RootName=="isNode" && treeStructure[i+1][0].RootName=="isLeaf"){
-                    sameMark = true;
-                    firstEle = treeStructure[i][aData.length-1];
-                }
-                //console.log("first  condition " + sameMark );
-                if(treeStructure[i][0].RootName=="isLeaf" && treeStructure[i+1][0].RootName=="isNode"){
-                    sameMark = false;
-                }
-                //console.log("second condition " + sameMark );
-            }
+                if(rgEx!=""){
+                    if(treeStructure[i][0].RootName=="isNode" && treeStructure[i+1][0].RootName=="isMatch"){
+                        sameMark = true;
+                        firstEle = treeStructure[i][aData.length-1];
+                    }
+                    if(treeStructure[i][0].RootName=="isMatch" && treeStructure[i+1][0].RootName=="isNode"){
+                        sameMark = false;
+                    }
 
-            //console.log("sameMark" + sameMark);
+                }else{
+                    if((treeStructure[i][0].RootName=="isNode"|| treeStructure[i][0].RootName=="isLeaf") && treeStructure[i+1][0].RootName=="isMatch"){
+                        sameMark = true;
+                        firstEle = treeStructure[i][aData.length-1];
+                    }
+                    if(treeStructure[i][0].RootName=="isMatch" && (treeStructure[i][0].RootName=="isNode"|| treeStructure[i][0].RootName=="isLeaf")){
+                        sameMark = false;
+                    }
+
+                }
+
+            }
 
             var differentMark = false;
             if( sameMark == true){
                 var pathLength = treeStructure[i-1].length;
-                //console.log("treeStructure[i-1][pathLength-1].RootName"+treeStructure[i-1][pathLength-1].RootName);
-                //console.log("treeStructure[i][pathLength-1].RootName"+treeStructure[i][pathLength-1].RootName);
-
-                //console.log("treeStructure[i-1].length "+treeStructure[i-1].length);
-                //console.log("treeStructure[i  ].length"+treeStructure[1].length);
 
                 var current = treeStructure[i][aData.length-1];
 
@@ -1030,8 +1086,17 @@ function combineBranch(treeStructure, options, log){
 
          */
 
+        var extractMark=""
+
+        if(rgEx!=""){
+            extractMark = "isMatch";
+        }else{
+            extractMark = "isLeaf";
+        }
+
+        //console.log(treeStructure[i][treeStructure[i].length-1].RootName +" : "+ treeStructure[i][treeStructure[i].length-1].Text);
         //console.log("treeStructure[i].isLeaf==true? " + treeStructure[i][0]);
-        if(treeStructure[i][0].RootName=="isLeaf"){
+        if(treeStructure[i][0].RootName==extractMark){
 
             //console.log(treeStructure[i]);
             //console.log(res);
@@ -1067,39 +1132,24 @@ function combineBranch(treeStructure, options, log){
     }
 
     //console.log(res);
-    if(log == true) {
-        for(var x = 0; x <res.length; x++){
-            for (var i = 0; i < res[x].values.length; i++) {
-                console.log("this is title " + res[x].values[i].length);
 
-                for (var j = 0; j < res[x].values[i].length; j++) {
-                    console.log("this is values | res[x].values.length " + res[x].values.length + " : "+ i)
-                    console.log("this is values | res[x].values[i].length " + res[x].values[i].length + " : "+ j)
-                    console.log("this is values | " + res[x].values[i][j].RootName+" : "+res[x].values[i][j].Text);
 
-                }
-            }
-        }
-    }
     return res;
 }
 
-function treatXMLFile(xmlInput,options,log){
+function treatXMLFile(xmlInput,options,rgEx,log){
     if(log == true){
         console.log("options "+options);
         console.log("log "+log);
     }
 
     var treeStructure = [];
-    //result=recFunc(xmlInput,[],[]);
-    //console.log(result);
-    //var xml = libxmljs.parseXmlString(body);
-
 
     //parse string file into XML object
     var xml = libxmljs.parseXmlString(xmlInput,{ noblanks: true });
 
-    treeStructure=recFunc(xml,[],[],[],false,options, log);
+    //grab function
+    treeStructure=recFunc(xml,[],[],[],false,false, options,rgEx, log);
 
     for(idx in treeStructure){
         var count = 0;
@@ -1107,9 +1157,6 @@ function treatXMLFile(xmlInput,options,log){
         var str2 = "";
         for (idx2 in treeStructure[idx]){
 
-            //console.log("node "+count);
-            //count++;
-            //if(treeStructure[idx][0].RootName == "isLeaf"){
             if (str.length == 0 ){
                 var ele = {};
                 ele["title"] =treeStructure[idx][idx2].RootName;
@@ -1120,7 +1167,6 @@ function treatXMLFile(xmlInput,options,log){
                 for ( var i = 0 ; i < str.length ; i ++){
                     if(treeStructure[idx][idx2].RootName == str[i].title){
                         str[i].count +=1;
-                        //console.log("str[i].count "+str[i].count);
                         treeStructure[idx][idx2].RootName = (treeStructure[idx][idx2].RootName+ (str[i].count).toString());
                         foundMark = true;
                         break;
@@ -1134,51 +1180,60 @@ function treatXMLFile(xmlInput,options,log){
                     str.push(ele);
                 }
             }
-
-
         }
-
     }
 
     if(log==true){
+
+        console.log("################start of treeStructure################")
         for(idx in treeStructure){
-            //console.log("-----------treeStructure-----------")
+
             var count = 0;
             var str = "";
             var str2 = "";
             for (idx2 in treeStructure[idx]){
-                //console.log("node "+count);
-                //count++;
-                //if(treeStructure[idx][0].RootName == "isLeaf"){
                 if(1==1){
                     str+=treeStructure[idx][idx2].RootName;
                     str+=",";
                     str2+=treeStructure[idx][idx2].Text;
                     str2+=",";
                 }
-
-                //console.log(treeStructure[idx][idx2].RootName + " : " + treeStructure[idx][idx2].Text);
-                //console.log(treeStructure[idx][idx2].Path);
             }
             if(str!=""){
                 console.log(str+" ;with value: "+str2);
-                //str[i].countconsole.log(str2);
-
             }
-
         }
+        console.log("################end of treeStructure################")
     }
 
-    //console.log("------------------------");
+    //classfiy function
+    var tables = combineBranch(treeStructure,options,rgEx, log);
 
-    var tables = combineBranch(treeStructure,options, log);
+    if(log==true){
 
-    //console.log(tables);
+        console.log("################start of combineBranch################")
+        if(log == true) {
+            for(var x = 0; x <tables.length; x++){
+                for (var i = 0; i < tables[x].values.length; i++) {
+                    console.log("this is title " + tables[x].values[i].length);
 
-    //var tables = [];
+                    for (var j = 0; j < tables[x].values[i].length; j++) {
+                        console.log("..")
+                        console.log("this is values | tables[x].values.length    " + (i+1)+ " of " + tables[x].values.length)
+                        console.log("this is values | tables[x].values[i].length " + (j+1) + " of " + tables[x].values[i].length)
+                        console.log("this is values | " + tables[x].values[i][j].RootName+" : "+tables[x].values[i][j].Text);
+
+                    }
+                }
+            }
+        }
+        console.log("################end of combineBranch################")
+    }
+
     return tables;
-
 }
+
+
 function treatJson( json ){
     //console.log("transform from JOSN to HTML:start");
     //var temp = json.indexOf("{");
@@ -2103,12 +2158,12 @@ function treeToHTML(inputCSV, title, options){
             //if(options == "7" || options =="17" || options =="37" || options =="57" || options =="137" || options =="157" || options =="357" || options =="1357") {
             if(options.indexOf("7")>=0){
                 if (title[i].output == true) {
-                    res += "<td>";
+                    res += "<td nowrap>";
                     res += title[i].RootName;
                     res += "</td>";
                 }
             }else{
-                res += "<td>";
+                res += "<td nowrap>";
                 res += title[i].RootName;
                 res += "</td>";
             }
@@ -2126,19 +2181,19 @@ function treeToHTML(inputCSV, title, options){
         //if(options == "7" || options =="17" || options =="37" || options =="57" || options =="137" || options =="157" || options =="357" || options =="1357") {
         if(options.indexOf("7")>=0){
             if(inputCSV[i].output==true){
-                res+="<td>";
+                res+="<td nowrap>";
                 res+=inputCSV[i].Text;
                 res+="</td>";
             }
         }else{
-            res+="<td>";
+            res+="<td nowrap>";
             res+=inputCSV[i].Text;
             res+="</td>";
         }
 
         /*
          if(title[idx].output==true){
-         res+="<td>";
+         res+="<td nowrap>";
          if(inputCSV[idx]==undefined){
          res+="wrong here";
          }else{
@@ -2171,7 +2226,7 @@ function JSONtoHTML(inputCSV, title){
     for(idx in inputCSV){
 
         if(title[idx].output==true){
-            res+="<td>";
+            res+="<td nowrap>";
             if(inputCSV[idx]==undefined){
                 res+="wrong here";
             }else{

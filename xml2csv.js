@@ -7,9 +7,11 @@ var requestHandlers = require("./requestHandlers");
 program
     .version('0.0.1')
     .usage('[options] <keywords>')
-    .option('-a, --add', 'should be 1,3,5,7')
+    .option('-a, --argument <argument>', 'switch')
+	.option('-r, --re <re>', 'regular expression')
 	.option('-l, --log', 'output log')
-    .parse(process.argv);
+
+	.parse(process.argv);
 
 if(!program.args.length) {
     program.help();
@@ -21,15 +23,17 @@ if(!program.args.length) {
 	var url = program.args[0];
 
 
-	if(program.add) {
-		var additionOption = program.args[1];
+	if(program.argument) {
+		var additionOption = program.argument;
 	}
 
 	if(program.log) {
 		var withLog  = program.log;
 	}
 
-
+	if(program.re) {
+		var rgEx  = program.re;
+	}
 
 	if(url.toString().substring(0,4) == "http"){
 		request({
@@ -55,7 +59,7 @@ if(!program.args.length) {
 					//3 = single brother
 					//5 = combine similar
 					//7 = omit same value
-					var treatXML  = requestHandlers.treatXMLFile(body,additionOption,withLog);
+					var treatXML  = requestHandlers.treatXMLFile(body,additionOption,rgEx,withLog);
 
 					var temp = requestHandlers.outputXML(treatXML,url,additionOption,withLog);
 
@@ -103,7 +107,7 @@ if(!program.args.length) {
 							//3 = single brother
 							//5 = combine similar
 							//7 = omit same value
-							var treatXML  = requestHandlers.treatXMLFile(body,additionOption,withLog);
+							var treatXML  = requestHandlers.treatXMLFile(body,additionOption,rgEx,withLog);
 
 							var temp = requestHandlers.outputXML(treatXML,url,additionOption,withLog);
 
