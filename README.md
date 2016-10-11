@@ -3,9 +3,15 @@
 #XML2CSV transorom XML to CSV with adjustable detail level
 
 #INSTALL
-Down load this repository "git clone https://github.com/wk0206/xml2csv.git".
-Enter the folder.
-Install xml2csv by command "npm install -g".
+* Download this repository 
+```
+git clone https://github.com/wk0206/xml2csv.git
+```
+* Enter the folder.
+* Install xml2csv by command
+```
+npm install -g"
+```
 
 #USE this tool
 After install the tool, it will run as a command as system commnd
@@ -22,6 +28,12 @@ root@Debian:/home/xml2csv# xml2csv
     -r, --re <re>              regular expression
     -l, --log                  output log
 ```
+## Argument
+A sequence of number ,include 1,3,5 with different meaning.
+* 1 :
+* 3 :
+* 5 :
+
 
 ## Regular Expression
 Exmaple XML:
