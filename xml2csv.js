@@ -33,6 +33,8 @@ if(!program.args.length) {
 
 	if(program.re) {
 		var rgEx  = program.re;
+	}else{
+		var rgEx  = "";
 	}
 
 	if(url.toString().substring(0,4) == "http"){

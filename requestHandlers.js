@@ -978,7 +978,6 @@ function sequenceAdjust(candidate, target){
 }
 
 function combineBranch(treeStructure, options,rgEx, log){
-
     if(log == true){
         console.log("options "+options);
         console.log("log "+log);
@@ -996,14 +995,21 @@ function combineBranch(treeStructure, options,rgEx, log){
         //console.log("treeStructure[i][0].RootName = "+treeStructure[i][0].RootName);
         var aData = treeStructure[i];
 
+        for (idx in treeStructure[i]){
+            //console.log("aData" + treeStructure[i][idx].Text);
+        }
+
 
         //OPTION 5
-        if(options == "5" || options =="15" || options =="35" || options =="135"){
+        if(options.indexOf("5")>=0){
             var tempData = aData.slice(0,aData.length-1);
             //console.log("in OPTION 5");
             var firstEle;
 
+
             if(i==treeStructure.length-1){
+                //last element
+                //console.log(rgEx!="");
                 if(rgEx!=""){
                     if(treeStructure[i-1][0].RootName=="isMatch" && treeStructure[i][0].RootName=="isMatch"){
                         sameMark = false;
@@ -1020,22 +1026,27 @@ function combineBranch(treeStructure, options,rgEx, log){
 
 
             }else{
+                //all element except last one
                 if(rgEx!=""){
-                    if(treeStructure[i][0].RootName=="isNode" && treeStructure[i+1][0].RootName=="isMatch"){
+                    if((treeStructure[i][0].RootName=="isNode"|| treeStructure[i+1][0].RootName=="isLeaf") && treeStructure[i+1][0].RootName=="isMatch"){
                         sameMark = true;
                         firstEle = treeStructure[i][aData.length-1];
                     }
-                    if(treeStructure[i][0].RootName=="isMatch" && treeStructure[i+1][0].RootName=="isNode"){
+                    if(treeStructure[i][0].RootName=="isMatch" && (treeStructure[i+1][0].RootName=="isNode"|| treeStructure[i+1][0].RootName=="isLeaf")){
                         sameMark = false;
                     }
 
                 }else{
-                    if((treeStructure[i][0].RootName=="isNode"|| treeStructure[i][0].RootName=="isLeaf") && treeStructure[i+1][0].RootName=="isMatch"){
+                    if(treeStructure[i][0].RootName=="isNode" && treeStructure[i+1][0].RootName=="isLeaf"){
                         sameMark = true;
                         firstEle = treeStructure[i][aData.length-1];
+                        //console.log("without re,set true")
+                        //console.log("firstEle.Text "+firstEle.Text);
+                        //console.log("treeStructure[i][aData.length-2].Text "+treeStructure[i][aData.length-2].Text);
                     }
-                    if(treeStructure[i][0].RootName=="isMatch" && (treeStructure[i][0].RootName=="isNode"|| treeStructure[i][0].RootName=="isLeaf")){
+                    if(treeStructure[i][0].RootName=="isLeaf" && treeStructure[i+1][0].RootName=="isNode"){
                         sameMark = false;
+                        //console.log("without re,set false")
                     }
 
                 }
@@ -1043,6 +1054,8 @@ function combineBranch(treeStructure, options,rgEx, log){
             }
 
             var differentMark = false;
+
+            //console.log("sameMark"+sameMark)
             if( sameMark == true){
                 var pathLength = treeStructure[i-1].length;
 
@@ -1052,6 +1065,7 @@ function combineBranch(treeStructure, options,rgEx, log){
                     differentMark=true;
                 }
                 temp.push(treeStructure[i][aData.length-1]);
+                //console.log("treeStructure[i][aData.length-1] "+ treeStructure[i][aData.length-1].Text);
                 //console.log(temp.length);
                 continue;
             }
@@ -1094,6 +1108,7 @@ function combineBranch(treeStructure, options,rgEx, log){
             extractMark = "isLeaf";
         }
 
+        //console.log("extractMark"+ extractMark)
         //console.log(treeStructure[i][treeStructure[i].length-1].RootName +" : "+ treeStructure[i][treeStructure[i].length-1].Text);
         //console.log("treeStructure[i].isLeaf==true? " + treeStructure[i][0]);
         if(treeStructure[i][0].RootName==extractMark){
@@ -2736,6 +2751,7 @@ function outputXML(treatXML,postData, options, log){
         console.log("log "+log);
     }
 
+    //console.log(treatXML.length);
     if(log == true) {
 
         for (var x = 0; x < treatXML[0].values.length; x++) {

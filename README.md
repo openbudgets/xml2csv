@@ -30,9 +30,17 @@ root@Debian:/home/xml2csv# xml2csv
 ```
 ## Argument
 A sequence of number ,include 1,3,5 with different meaning.
-* 1 :
-* 3 :
-* 5 :
+Example XML: 
+https://raw.githubusercontent.com/wk0206/xml2csv/master/TestData/book.xml
+
+
+* 1 : With attribute
+* 3 : Extract single branch as descrition
+* 5 : Combine similar datas
+
+Example of Attribute 1
+Example of Attribute 3
+Example of Attribute 5
 
 
 ## Regular Expression
