@@ -38,10 +38,22 @@ https://raw.githubusercontent.com/wk0206/xml2csv/master/TestData/book.xml
 * 3 : Extract single branch as descrition
 * 5 : Combine similar datas
 
-Example of Attribute 1
-Example of Attribute 3
-Example of Attribute 5
-
+##Example
+Attribute 1
+```
+xml2csv /home/wk/WebstormProjects/xml2csv/TestData/book.xml -a 35 >/home/wk/Documents/log.txt
+xml2csv /home/wk/WebstormProjects/xml2csv/TestData/book.xml -a 135 >/home/wk/Documents/log.txt
+```
+Attribute 3
+```
+xml2csv /home/xml2csv/Final-budget-2014-EN/c\!SEC1_E\!en\!0.xml -a 15
+xml2csv /home/xml2csv/Final-budget-2014-EN/c\!SEC1_E\!en\!0.xml -a 135
+```
+Attribute 5
+```
+xml2csv /home/wk/WebstormProjects/xml2csv/TestData/book.xml -a 13 >/home/wk/Documents/log.txt
+xml2csv /home/wk/WebstormProjects/xml2csv/TestData/book.xml -a 135 >/home/wk/Documents/log.txt
+```
 
 ## Regular Expression
 Exmaple XML:
