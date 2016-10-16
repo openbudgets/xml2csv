@@ -61,6 +61,7 @@ if(!program.args.length) {
 					//3 = single brother
 					//5 = combine similar
 					//7 = omit same value
+					var date1 = new Date();
 					var treatXML  = requestHandlers.treatXMLFile(body,additionOption,rgEx,withLog);
 
 					var temp = requestHandlers.outputXML(treatXML,url,additionOption,withLog);
@@ -73,6 +74,9 @@ if(!program.args.length) {
 					//console.log(chalk.grey('Clone url: ' + body.items[i].clone_url + '\n'));
 
 					//}
+					var date2 = new Date();
+					console.log((date1-date2).toISOString()+" consumped");
+					requestHandlers.logTime(date1, date2);
 
 					process.exit(0);
 					return temp;
@@ -109,10 +113,17 @@ if(!program.args.length) {
 							//3 = single brother
 							//5 = combine similar
 							//7 = omit same value
+							var date1 = new Date();
+							console.log(date1.toISOString()+" start");
 							var treatXML  = requestHandlers.treatXMLFile(body,additionOption,rgEx,withLog);
 
 							var temp = requestHandlers.outputXML(treatXML,url,additionOption,withLog);
 
+							var date2 = new Date();
+
+							console.log(date2.toISOString()+" end");
+							requestHandlers.logTime(date1, date2);
+							//console.log((date1-date2).toISOString()+" consumped");
 							process.exit(0);
 							return temp;
 						}

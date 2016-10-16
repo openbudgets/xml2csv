@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a8e86b55-057c-4be5-a15c-f6d44109c6b5" name="Default" comment="upload for combine similar tables">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requestHandlers.js" afterPath="$PROJECT_DIR$/requestHandlers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml2csv.js" afterPath="$PROJECT_DIR$/xml2csv.js" />
     </list>
@@ -26,28 +25,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="requestHandlers.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="requestHandlers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requestHandlers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.840868">
-              <caret line="2753" column="6" selection-start-line="2753" selection-start-column="6" selection-end-line="2753" selection-end-column="6" />
+            <state vertical-scroll-proportion="-14.931034">
+              <caret line="3140" column="4" selection-start-line="3140" selection-start-column="4" selection-end-line="3140" selection-end-column="4" />
               <folding>
                 <element signature="e#16634#16691#0" expanded="false" />
-                <element signature="e#32197#32841#0" expanded="false" />
                 <element signature="e#37325#37406#0" expanded="false" />
                 <element signature="e#37668#38704#0" expanded="false" />
-                <marker date="1476264145443" expanded="true" signature="1065:1087" placeholder="/*...*/" />
-                <marker date="1476264145443" expanded="true" signature="90067:90077" placeholder="..." />
+                <marker date="1476536128534" expanded="true" signature="1065:1087" placeholder="/*...*/" />
+                <marker date="1476536128534" expanded="true" signature="90067:90077" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="xml2csv.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="xml2csv.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/xml2csv.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="63" column="77" selection-start-line="63" selection-start-column="77" selection-end-line="63" selection-end-column="77" />
+            <state vertical-scroll-proportion="0.4076087">
+              <caret line="130" column="39" selection-start-line="130" selection-start-column="39" selection-end-line="130" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -113,8 +111,8 @@
         <option value="$PROJECT_DIR$/requestHandlers_bk.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/router.js" />
-        <option value="$PROJECT_DIR$/xml2csv.js" />
         <option value="$PROJECT_DIR$/requestHandlers.js" />
+        <option value="$PROJECT_DIR$/xml2csv.js" />
       </list>
     </option>
   </component>
@@ -154,7 +152,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -176,6 +173,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -356,11 +354,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#16634#16691#0" expanded="false" />
-            <element signature="e#32197#32841#0" expanded="false" />
             <element signature="e#37325#37406#0" expanded="false" />
             <element signature="e#37668#38704#0" expanded="false" />
-            <marker date="1476264145443" expanded="true" signature="1065:1087" placeholder="/*...*/" />
-            <marker date="1476264145443" expanded="true" signature="90067:90077" placeholder="..." />
+            <marker date="1476536128534" expanded="true" signature="1065:1087" placeholder="/*...*/" />
+            <marker date="1476536128534" expanded="true" signature="90067:90077" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -399,11 +396,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#16634#16691#0" expanded="false" />
-            <element signature="e#32197#32841#0" expanded="false" />
             <element signature="e#37325#37406#0" expanded="false" />
             <element signature="e#37668#38704#0" expanded="false" />
-            <marker date="1476264145443" expanded="true" signature="1065:1087" placeholder="/*...*/" />
-            <marker date="1476264145443" expanded="true" signature="90067:90077" placeholder="..." />
+            <marker date="1476536128534" expanded="true" signature="1065:1087" placeholder="/*...*/" />
+            <marker date="1476536128534" expanded="true" signature="90067:90077" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -456,11 +452,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#16634#16691#0" expanded="false" />
-            <element signature="e#32197#32841#0" expanded="false" />
             <element signature="e#37325#37406#0" expanded="false" />
             <element signature="e#37668#38704#0" expanded="false" />
-            <marker date="1476264145443" expanded="true" signature="1065:1087" placeholder="/*...*/" />
-            <marker date="1476264145443" expanded="true" signature="90067:90077" placeholder="..." />
+            <marker date="1476536128534" expanded="true" signature="1065:1087" placeholder="/*...*/" />
+            <marker date="1476536128534" expanded="true" signature="90067:90077" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -499,11 +494,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#16634#16691#0" expanded="false" />
-            <element signature="e#32197#32841#0" expanded="false" />
             <element signature="e#37325#37406#0" expanded="false" />
             <element signature="e#37668#38704#0" expanded="false" />
-            <marker date="1476264145443" expanded="true" signature="1065:1087" placeholder="/*...*/" />
-            <marker date="1476264145443" expanded="true" signature="90067:90077" placeholder="..." />
+            <marker date="1476536128534" expanded="true" signature="1065:1087" placeholder="/*...*/" />
+            <marker date="1476536128534" expanded="true" signature="90067:90077" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -542,11 +536,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#16634#16691#0" expanded="false" />
-            <element signature="e#32197#32841#0" expanded="false" />
             <element signature="e#37325#37406#0" expanded="false" />
             <element signature="e#37668#38704#0" expanded="false" />
-            <marker date="1476264145443" expanded="true" signature="1065:1087" placeholder="/*...*/" />
-            <marker date="1476264145443" expanded="true" signature="90067:90077" placeholder="..." />
+            <marker date="1476536128534" expanded="true" signature="1065:1087" placeholder="/*...*/" />
+            <marker date="1476536128534" expanded="true" signature="90067:90077" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -578,11 +571,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#16634#16691#0" expanded="false" />
-            <element signature="e#32197#32841#0" expanded="false" />
             <element signature="e#37325#37406#0" expanded="false" />
             <element signature="e#37668#38704#0" expanded="false" />
-            <marker date="1476264145443" expanded="true" signature="1065:1087" placeholder="/*...*/" />
-            <marker date="1476264145443" expanded="true" signature="90067:90077" placeholder="..." />
+            <marker date="1476536128534" expanded="true" signature="1065:1087" placeholder="/*...*/" />
+            <marker date="1476536128534" expanded="true" signature="90067:90077" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -697,14 +689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -721,26 +705,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xml2csv.js">
+    <entry file="file://$PROJECT_DIR$/router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="77" selection-start-line="63" selection-start-column="77" selection-end-line="63" selection-end-column="77" />
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/requestHandlers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.840868">
-          <caret line="2753" column="6" selection-start-line="2753" selection-start-column="6" selection-end-line="2753" selection-end-column="6" />
+        <state vertical-scroll-proportion="-14.931034">
+          <caret line="3140" column="4" selection-start-line="3140" selection-start-column="4" selection-end-line="3140" selection-end-column="4" />
           <folding>
             <element signature="e#16634#16691#0" expanded="false" />
-            <element signature="e#32197#32841#0" expanded="false" />
             <element signature="e#37325#37406#0" expanded="false" />
             <element signature="e#37668#38704#0" expanded="false" />
-            <marker date="1476264145443" expanded="true" signature="1065:1087" placeholder="/*...*/" />
-            <marker date="1476264145443" expanded="true" signature="90067:90077" placeholder="..." />
+            <marker date="1476536128534" expanded="true" signature="1065:1087" placeholder="/*...*/" />
+            <marker date="1476536128534" expanded="true" signature="90067:90077" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml2csv.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4076087">
+          <caret line="130" column="39" selection-start-line="130" selection-start-column="39" selection-end-line="130" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>

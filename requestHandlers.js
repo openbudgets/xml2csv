@@ -3111,6 +3111,38 @@ function realfunction(response,request,postData) {
 
 
 }
+
+function logTime(FirstTime1, LastTime2){
+    /*
+    var regExMin = ":[0-9]*\.";
+
+    var hour1 =  FirstTime1.toString().substring(FirstTime1.toString().match(regExMin).index-2,FirstTime1.toString().match(regExMin).index);
+    var minute1 = FirstTime1.toString().substring(FirstTime1.toString().match(regExMin).index+1,FirstTime1.toString().match(regExMin).index+3);
+    var second1 =  FirstTime1.toString().substring(FirstTime1.toString().match(regExMin).index+4,FirstTime1.toString().match(regExMin).index+6);
+    //console.log(hour1+":"+minute1+":"+second1);
+
+
+
+    //console.log(LastTime2.getTime());
+
+    var hour2 =  LastTime2.toString().substring(LastTime2.toString().match(regExMin).index-2,LastTime2.toString().match(regExMin).index);
+    var minute2 = LastTime2.toString().substring(LastTime2.toString().match(regExMin).index+1,LastTime2.toString().match(regExMin).index+3);
+    var second2 =  LastTime2.toString().substring(LastTime2.toString().match(regExMin).index+4,LastTime2.toString().match(regExMin).index+6);
+
+    //console.log(hour2+":"+minute2+":"+second2);
+
+    //console.log(second1.length);
+    if(second1.length==2){
+
+        second1=second1+"0";
+        console.log(second1);
+    }
+
+    */
+    //console.log((hour2-hour1)+":"+(minute2-minute1)+":")
+    console.log(LastTime2.getTime()-FirstTime1.getTime());
+
+}
 exports.start = start;
 exports.upload = upload;
 exports.show = show;
@@ -3120,3 +3152,4 @@ exports.addNewPage = addNewPage;
 exports.realfunction = realfunction;
 exports.treatXMLFile =treatXMLFile;
 exports.outputXML = outputXML;
+exports.logTime = logTime;
