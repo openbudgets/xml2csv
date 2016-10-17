@@ -1,0 +1,689 @@
+root,course,reg_num,subj,crse,sect,title,units,instructor,days,place,building,room
+root,course,10577,ANTH,211,F01,Introduction to Anthropology,1.0,Brightman,M-W,place,ELIOT,414
+root,course,20573,ANTH,344,S01,Sex and Gender,1.0,Makley,T-Th,place,VOLLUM,120
+root,course,10624,BIOL,431,F01,Field Biology of Amphibians,0.5,Kaplan,T,place,PHYSIC,240A
+root,course,20626,BIOL,431,S04,Seminar in Biology,0.5,Yezerinac,Th,place,BIOL,200A
+root,course,10543,CHEM,101,F,MolecularStructure and Properties,1.0,Geselbracht,M-W-F,place,VOLLUM,VLH
+root,course,10544,CHEM,101,F01,MolecularStructure and Properties,0.0,Geselbracht,M,place,CHEM,301
+root,course,10545,CHEM,101,F02,MolecularStructure and Properties,0.0,Geselbracht,M,place,CHEM,301
+root,course,10546,CHEM,101,F03,MolecularStructure and Properties,0.0,Geselbracht,M,place,CHEM,301
+root,course,10789,CHEM,101,F08,MolecularStructure and Properties,0.0,Geselbracht,T,place,PHYSIC,123
+root,course,10547,CHEM,101,F04,MolecularStructure and Properties,0.0,Geselbracht,T,place,CHEM,301
+root,course,10548,CHEM,101,F05,MolecularStructure and Properties,0.0,Geselbracht,T,place,CHEM,301
+root,course,20575,ANTH,344,S02,Sex and Gender,1.0,Makley,T-Th,place,VOLLUM,110
+root,course,10549,CHEM,101,F06,MolecularStructure and Properties,0.0,Geselbracht,T,place,CHEM,301
+root,course,10550,CHEM,101,F07,MolecularStructure and Properties,0.0,Geselbracht,T,place,CHEM,301
+root,course,10551,CHEM,101,FL1,MolecularStructure and Properties,0.0,Geselbracht,M,place,CHEM,308
+root,course,10555,CHEM,101,FL5,MolecularStructure and Properties,0.0,Geselbracht,T,place,CHEM,308
+root,course,10552,CHEM,101,FL2,MolecularStructure and Properties,0.0,Geselbracht,T,place,CHEM,308
+root,course,10553,CHEM,101,FL3,MolecularStructure and Properties,0.0,Geselbracht,W,place,CHEM,308
+root,course,10557,CHEM,101,FL7,MolecularStructure and Properties,0.0,Geselbracht,W,place,CHEM,308
+root,course,10556,CHEM,101,FL6,MolecularStructure and Properties,0.0,Geselbracht,Th,place,CHEM,308
+root,course,10554,CHEM,101,FL4,MolecularStructure and Properties,0.0,Geselbracht,Th,place,CHEM,308
+root,course,10558,CHEM,101,FL8,MolecularStructure and Properties,0.0,Geselbracht,F,place,CHEM,308
+root,course,20483,ANTH,348,S,Languages the Americas:Mayan,1.0,Haviland,T,place,ELIOT,419
+root,course,20537,CHEM,102,S,Chemical Reactivity,1.0,Glasfeld,M-W-F,place,VOLLUM,VLH
+root,course,20538,CHEM,102,S01,Chemical Reactivity,0.0,Glasfeld,M,place,CHEM,301
+root,course,20539,CHEM,102,S02,Chemical Reactivity,0.0,Glasfeld,M,place,CHEM,301
+root,course,20540,CHEM,102,S03,Chemical Reactivity,0.0,Glasfeld,T,place,CHEM,301
+root,course,20541,CHEM,102,S04,Chemical Reactivity,0.0,Glasfeld,T,place,CHEM,301
+root,course,20542,CHEM,102,S05,Chemical Reactivity,0.0,Glasfeld,T,place,PHYSIC,123
+root,course,20543,CHEM,102,SL1,Chemical Reactivity,0.0,Glasfeld,M,place,CHEM,308
+root,course,20544,CHEM,102,SL2,Chemical Reactivity,0.0,Glasfeld,T,place,CHEM,308
+root,course,20545,CHEM,102,SL3,Chemical Reactivity,0.0,Glasfeld,W,place,CHEM,308
+root,course,20546,CHEM,102,SL4,Chemical Reactivity,0.0,Glasfeld,Th,place,CHEM,308
+root,course,20667,ANTH,352,S,Anthropology of Europe,1.0,Silverstein,T-Th,place,LIB,203
+root,course,20547,CHEM,102,SL5,Chemical Reactivity,0.0,Glasfeld,F,place,CHEM,308
+root,course,10559,CHEM,201,F,Organic Chemistry I,1.0,Shusterman,M-W-F,place,PSYCH,105
+root,course,10560,CHEM,201,F01,Organic Chemistry I,0.0,Shusterman,Th,place,PHYSIC,123
+root,course,10561,CHEM,201,F02,Organic Chemistry I,0.0,Shusterman,Th,place,PHYSIC,121
+root,course,10562,CHEM,201,F03,Organic Chemistry I,0.0,Shusterman,Th,place,PHYSIC,123
+root,course,10563,CHEM,201,F04,Organic Chemistry I,0.0,Shusterman,Th,place,PHYSIC,123
+root,course,10565,CHEM,201,FL1,Organic Chemistry I,0.0,Shusterman,M,place,CHEM,209
+root,course,10566,CHEM,201,FL2,Organic Chemistry I,0.0,Shusterman,T,place,CHEM,209
+root,course,10567,CHEM,201,FL3,Organic Chemistry I,0.0,Shusterman,W,place,CHEM,209
+root,course,20548,CHEM,202,S,Organic Chemistry II,1.0,McDougal,M-W-F,place,PSYCH,105
+root,course,20571,ANTH,357,S,Prob in IndonesianEthnography,1.0,Stasch,T-Th,place,VOLLUM,309
+root,course,20549,CHEM,202,S01,Organic Chemistry II,0.0,McDougal,Th,place,PHYSIC,123
+root,course,20550,CHEM,202,S02,Organic Chemistry II,0.0,McDougal,Th,place,PHYSIC,121
+root,course,20551,CHEM,202,S03,Organic Chemistry II,0.0,McDougal,Th,place,PHYSIC,121
+root,course,20552,CHEM,202,S04,Organic Chemistry II,0.0,McDougal,Th,place,PHYSIC,123
+root,course,20554,CHEM,202,SL1,Organic Chemistry II,0.0,McDougal,M,place,CHEM,209
+root,course,20555,CHEM,202,SL2,Organic Chemistry II,0.0,McDougal,T,place,CHEM,209
+root,course,20556,CHEM,202,SL3,Organic Chemistry II,0.0,McDougal,W,place,CHEM,209
+root,course,20557,CHEM,212,S,Intro Inorganic Chemistry,1.0,Geselbracht,M-W-F,place,CHEM,301
+root,course,20559,CHEM,212,SL1,Intro Inorganic Chemistry,0.0,Geselbracht,W,place,CHEM,214
+root,course,20560,CHEM,212,SL2,Intro Inorganic Chemistry,0.0,Geselbracht,F,place,CHEM,214
+root,course,10605,ANTH,362,F,Gender and Ethnicity China, Tibet,1.0,Makley,T-Th,place,VOLLUM,228
+root,course,10582,CHEM,225,F,Environmental Chemistry,0.5,Dunne,M-W,place,CHEM,301
+root,course,10568,CHEM,271,F,Analytical Chemistry,1.0,McClard,T-Th,place,CHEM,301
+root,course,10569,CHEM,271,FL1,Analytical Chemistry,0.0,McClard,Th,place,CHEM,313
+root,course,10570,CHEM,271,FL2,Analytical Chemistry,0.0,McClard,F,place,CHEM,313
+root,course,20561,CHEM,316,S,Physical Chemistry Laboratory,0.5,Ahmadi,T,place,CHEM,301
+root,course,20563,CHEM,324,S,Computational Organic Chem,0.5,Shusterman,M-W-F,place,CHEM,301
+root,course,20564,CHEM,332,S,Statistical Thermodynamics,1.0,Ahmadi,M-W-F,place,CHEM,301
+root,course,10571,CHEM,333,F,Quantum Mechanics  and  MolStruct,1.0,Ahmadi,M-W-F,place,CHEM,301
+root,course,20565,CHEM,334,S,Advanced Inorganic Chemistry,0.5,Geselbracht,T-Th,place,PSYCH,103
+root,course,10572,CHEM,343,F,Adv Synth Organic Chemistry,1.0,McDougal,M-W-F,place,CHEM,301
+root,course,20570,ANTH,368,S,Myth,1.0,Stasch,T-Th,place,VOLLUM,126
+root,course,10574,CHEM,391,F,Structural Biochemistry,0.5,Glasfeld,T-Th,place,CHEM,301
+root,course,10576,CHEM,391,F02,Structural Biochemistry,0.0,Glasfeld,W,place,CHEM,301
+root,course,10575,CHEM,391,F01,Structural Biochemistry,0.0,Glasfeld,T,place,PHYSIC,121
+root,course,20566,CHEM,392,S,Metabolic Biochemistry,0.5,McClard,T-Th,place,CHEM,301
+root,course,20567,CHEM,394,S,Biochemical Methods,0.5,McClard,M,place,CHEM,301
+root,course,20568,CHEM,394,SL1,Biochemical Methods,0.0,McClard,T,place,CHEM,313
+root,course,20569,CHEM,394,SL2,Biochemical Methods,0.0,McClard,W,place,CHEM,313
+root,course,20598,CHIN,311,S,Third Year Chinese,1.0,Wu,M-W-F,place,ELIOT,121
+root,course,20572,ANTH,369,S,Media  and  Culture Post-MaoChina,1.0,Makley,M-W,place,ELIOT,414
+root,course,10629,CHIN,316,F,Classical Chinese,1.0,Rhew,M-W-F,place,ELIOT,121
+root,course,10628,CHIN,321,F,20 Cent Chin Fiction, 1919-49,1.0,Wu,T-Th,place,ELIOT,121
+root,course,10630,CHIN,326,F,Chinese Narrative Tradition,1.0,Rhew,M-W,place,ELIOT,121
+root,course,20596,CHIN,334,S,Yijing: Text and Tradition,1.0,Rhew,M-W,place,ELIOT,121
+root,course,20601,CHIN,341,S,20th Century Chinese Poetry,1.0,Wu,T-Th,place,ELIOT,121
+root,course,20486,CLAS,363,S,Greek Tragedy,1.0,Englert,M-W-F,place,VOLLUM,126
+root,course,10489,CLAS,373,F,Ancient History: Rome,1.0,Kelly,M-W,place,VOLLUM,120
+root,course,20488,CLAS,374,S,Specl Topics in Roman History,1.0,Kelly,M-W,place,VOLLUM,120
+root,course,20503,CRWR,201,S,Intro to Creative Writing,1.0,Hillis,M-W-F,place,PHYSIC,121
+root,course,10515,CRWR,211,F,Intro Poetry Writing,1.0,Williams,M-W,place,PHYSIC,121
+root,course,20659,ANTH,372,S,Indians  and  Northrn NativeAmers,1.0,Brightman,M-W,place,,TBA
+root,course,20504,CRWR,211,S,Intro Poetry Writing,1.0,Williams,M-W,place,PHYSIC,121
+root,course,10516,CRWR,221,F,Intro to Fiction Writing,1.0,Hillis,M-W-F,place,PHYSIC,121
+root,course,20642,CRWR,241,S,Intermediate Poetry: StudioII,1.0,Williams,T-Th,place,PHYSIC,121
+root,course,10517,CRWR,250,F,Intro to ScreenwritingWrkshop,1.0,Hillis,W,place,VOLLUM,228
+root,course,10518,CRWR,331,F,Adv Poet Writng: SequentVoice,1.0,Williams,T,place,VOLLUM,234
+root,course,20506,CRWR,331,S,Adv Poet Writing:NaturalVoice,1.0,Williams,M,place,VOLLUM,234
+root,course,10519,CRWR,332,F,Advanced Fiction Writing,1.0,Hillis,T-Th,place,ELIOT,317
+root,course,20507,CRWR,332,S,Advanced Fiction Writing,1.0,Hillis,T-Th,place,ELIOT,405
+root,course,10119,DANC,110,Y,Basic Technique,1.0,Mann,M-W,place,SPORTS,GYMII
+root,course,10121,DANC,210,Y,Technique, Design  and Compostion,1.0,Wong,T-Th,place,SPORTS,GYMII
+root,course,20672,ANTH,374,S,Urban Anthropology,1.0,Silverstein,T-Th,place,VOLLUM,120
+root,course,20627,DANC,252,S,Improvisation,0.5,Mann,T-Th,place,SPORTS,GYMII
+root,course,10639,DANC,311,F,Adv Techniques  and  CompositionI,1.0,Mann,T-Th,place,SPORTS,GYMII
+root,course,20655,DANC,312,S,Adv Technique  and  CompositionII,1.0,Wong,T-Th,place,SPORTS,GYMII
+root,course,10631,DANC,330,F,Dance Theory and Criticism,1.0,Wong,M-W,place,ELIOT,126
+root,course,10324,ECON,201,F01,Intro to Economic Analysis,1.0,Clausing,M-W-F,place,VOLLUM,116
+root,course,10325,ECON,201,F02,Intro to Economic Analysis,1.0,Clausing,M-W-F,place,VOLLUM,116
+root,course,10326,ECON,201,FL1,Intro to Economic Analysis,0.0,Clausing,Th,place,ELIOT,314
+root,course,10327,ECON,201,FL2,Intro to Economic Analysis,0.0,Clausing,Th,place,ELIOT,314
+root,course,20319,ECON,201,S01,Intro to Economic Analysis,1.0,Netusil,M-W-F,place,VOLLUM,116
+root,course,20320,ECON,201,S02,Intro to Economic Analysis,1.0,Netusil,M-W-F,place,VOLLUM,116
+root,course,10578,ANTH,211,F02,Introduction to Anthropology,1.0,Makley,T-Th,place,VOLLUM,120
+root,course,10583,ANTH,378,F,Nature, Cult  and Envirnmentalism,1.0,Brightman,T,place,ELIOT,414
+root,course,20321,ECON,201,SL1,Intro to Economic Analysis,0.0,Netusil,Th,place,ELIOT,314
+root,course,20322,ECON,201,SL2,Intro to Economic Analysis,0.0,Netusil,Th,place,ELIOT,314
+root,course,10584,ECON,311,F,Survey of Econometric Methods,1.0,Netusil,M-W-F,place,VOLLUM,120
+root,course,20574,ECON,312,S,Theory and  Practice Econometrics,1.0,Parker,M-W-F,place,VOLLUM,116
+root,course,10585,ECON,313,F,Microeconomic Theory,1.0,Despins,M-W-F,place,VOLLUM,234
+root,course,20576,ECON,314,S,Macroeconomic Theory,1.0,Parker,M-W-F,place,VOLLUM,120
+root,course,20580,ECON,331,S,History of Economic Thought,1.0,Clausing,M-W-F,place,VOLLUM,134
+root,course,10587,ECON,341,F,Monetary and Fiscal Policy,1.0,Parker,T-Th,place,VOLLUM,228
+root,course,10589,ECON,342,F,International Macroeconomics,1.0,Clausing,M-W-F,place,VOLLUM,134
+root,course,20585,ECON,348,S,Economics of the PublicSector,1.0,Netusil,M-W-F,place,VOLLUM,116
+root,course,10586,ANTH,392,F01,Structuralism and Semiotics,1.0,Stasch,T-Th,place,VOLLUM,134
+root,course,10590,ECON,351,F,Environment  and  Nat Resrce Econ,1.0,Netusil,M-W-F,place,VOLLUM,116
+root,course,10591,ECON,382,F,Economics of Development,1.0,Despins,M-W-F,place,VOLLUM,234
+root,course,20582,ECON,383,S,International Trade,1.0,Clausing,M-W-F,place,VOLLUM,234
+root,course,10592,ECON,401,F,Seminar: Unemployment,0.5,Parker,M-W-F,place,VOLLUM,234
+root,course,20602,ECON,413,S,Economics  and  Game Theory,1.0,Despins,T-Th,place,VOLLUM,234
+root,course,20592,ECON,442,S,Econ Envirn, Intl Trade,Devel,1.0,Despins,T-Th,place,VOLLUM,234
+root,course,10597,ECON,454,F,Economic Growth,1.0,Parker,M-W-F,place,VOLLUM,234
+root,course,10503,ENG,201,F01,Intro Narr:Native AmericanLit,1.0,Arnold,M-W,place,VOLLUM,116
+root,course,10774,ENG,201,F02,Intro Narr: Telling Lives,1.0,Leveen,M-W-F,place,VOLLUM,309
+root,course,20508,ENG,201,S,Intro Narrative: The Essay,1.0,Duquette,M-W-F,place,VOLLUM,110
+root,course,10593,ANTH,392,F02,Structuralism and Semiotics,1.0,Stasch,T-Th,place,VOLLUM,134
+root,course,10504,ENG,205,F01,Intro Fict:Colonl and LaterNovels,1.0,Gillcrist,T-Th,place,ELIOT,416
+root,course,10505,ENG,205,F02,Intro Fict:Portraits ofLadies,1.0,King,T-Th,place,PSYCH,108
+root,course,20509,ENG,205,S,Intro Fict: The Short Story,1.0,Baker,M-W-F,place,VOLLUM,120
+root,course,10506,ENG,211,F01,Intro to Poetry and Poetics,1.0,Steinman,T-Th,place,VOLLUM,110
+root,course,10507,ENG,211,F02,Intro to Poetry and Poetics,1.0,Steinman,T-Th,place,VOLLUM,116
+root,course,20510,ENG,211,S,Intro to Poetry and Poetics,1.0,Stauder,T-Th,place,PSYCH,103
+root,course,10758,ENG,242,F,Intro to Drama: The 1990s,1.0,Savery,M-W-F,place,LIB,41
+root,course,20511,ENG,242,S01,Intro Drama:Conventn  and Inovatn,1.0,Porter,T-Th,place,ELIOT,416
+root,course,20512,ENG,242,S02,Intro Drama:Conventn  and Inovatn,1.0,Porter,T-Th,place,ELIOT,416
+root,course,10508,ENG,301,F,Jun Sem: Epic and Novel,1.0,Sherman,T-Th,place,ELIOT,126
+root,course,20660,ANTH,434,S,Theories of Culture,1.0,Brightman,W,place,,ELIOT
+root,course,20513,ENG,302,S,Jun Sem:Irony, Allegory, Epic,1.0,Knapp,W,place,VOLLUM,126
+root,course,20647,ENG,303,S,Amer. Studies Seminar: TheEnd,1.0,Arnold,M-W,place,PSYCH,103
+root,course,20514,ENG,333,S01,Fict:Wolff,Forster,Bloomsbury,1.0,Gillcrist,T-Th,place,ELIOT,405
+root,course,20515,ENG,333,S02,Fict: Novel  and  Theory Mimesis,1.0,King,T,place,VOLLUM,126
+root,course,20516,ENG,338,S,Mod Fict:Representing Mothers,1.0,Sherman,T-Th,place,ELIOT,126
+root,course,10509,ENG,341,F01,American Lit: Race in America,1.0,Baker,M,place,VOLLUM,126
+root,course,10510,ENG,341,F02,Amer Lit: The James Brothers,1.0,Duquette,M-W,place,ELIOT,405
+root,course,20677,ENG,341,S,American Lit: Speaking ofRace,1.0,Leveen,Th,place,VOLLUM,110
+root,course,10511,ENG,356,F,20th Cent African-Amercan Lit,1.0,Savery,M-W-F,place,LIB,41
+root,course,10512,ENG,363,F,Love in Shakespeare,1.0,Porter,T-Th,place,PHYSIC,121
+root,course,10458,ART,161,F01,Introductory Drawing,0.5,Knutson,M-W,place,ART,DRAW
+root,course,20517,ENG,363,S,Skepticism in Shakespeare,1.0,Knapp,M-W-F,place,VOLLUM,126
+root,course,10752,ENG,366,F,Poetry: Pound and H.D.,1.0,Stauder,T-Th,place,VOLLUM,118
+root,course,20518,ENG,384,S,Poetry  and  History:Contemp Amer,1.0,Steinman,T-Th,place,VOLLUM,116
+root,course,10514,ENG,393,F,Literary Theory:EthicsReading,1.0,Knapp,M-W-F,place,LIB,41
+root,course,10139,FREN,210,Y01,Second Year French,1.0,Delehanty,M-W-F,place,VOLLUM,126
+root,course,10140,FREN,210,Y02,Second Year French,1.0,Berkvam,M-W-F,place,VOLLUM,302
+root,course,10141,FREN,210,Y03,Second Year French,1.0,Berkvam,M-W-F,place,VOLLUM,302
+root,course,10459,ART,161,F02,Introductory Drawing,0.5,Ondrizek,T-Th,place,ART,DRAW
+root,course,10142,FREN,320,Y,Stylistics and Composition,1.0,Khan,M-W-F,place,VOLLUM,118
+root,course,10495,FREN,332,F,Lit  and  Society (16th Century),1.0,Berkvam,T-Th,place,VOLLUM,302
+root,course,20493,FREN,334,S,Lit  and  Society (18th Century),1.0,Berkvam,T-Th,place,VOLLUM,302
+root,course,20494,FREN,341,S,Early Modern French Narrative,1.0,Khan,M-W,place,LIB,203
+root,course,20495,FREN,351,S,17th Cent French Drama,1.0,Delehanty,T-Th,place,VOLLUM,118
+root,course,20496,FREN,381,S,20th C French Poetry  and Poetics,1.0,Hochman,M-W-F,place,VOLLUM,302
+root,course,10496,FREN,382,F,20th Century French Theatre,1.0,Khan,T-Th,place,VOLLUM,309
+root,course,10497,FREN,451,F,Seminar:Uses of Literature,1.0,Hochman,M-W,place,VOLLUM,118
+root,course,20465,ART,162,S,Figure Drawing,0.5,Ondrizek,T-Th,place,ART,DRAW
+root,course,10145,GER,220,Y,Secnd Yr Ger:CultralPerspctvs,1.0,Gokberk,M-W-F,place,VOLLUM,110
+root,course,10498,GER,311,F,Adv Conversation and Writing,1.0,Mieszkowski,T-Th,place,ELIOT,419
+root,course,20499,GER,312,S,Advancd Conversation and Writing,1.0,Irmscher,T-Th,place,ELIOT,419
+root,course,20497,GER,321,S,Modernism: Berlin,1.0,Gokberk,M-W,place,VOLLUM,116
+root,course,20502,GER,335,S,Contemporary German Prose,1.0,Gokberk,Th,place,ELIOT,419
+root,course,10501,GER,341,F,Modern German Theatre,1.0,Rudolf,M-W,place,ELIOT,419
+root,course,10499,GER,391,F,German Thought Postmodrn Era,1.0,Irmscher,T-Th,place,ELIOT,414
+root,course,20500,GER,392,S,German Theory II: Body Media,1.0,Mieszkowski,W,place,ELIOT,414
+root,course,10147,GRK,210,Y,Second Year Greek,1.0,Wolfe,M-T-W-Th,place,VOLLUM,234
+root,course,20466,ART,164,S,Printmaking,0.5,Knutson,M-W,place,ART,PRINT
+root,course,10487,GRK,311,F,Advanced Greek,1.0,Tron,T-Th,place,VOLLUM,134
+root,course,20485,GRK,312,S,Advanced Greek,1.0,Nicholson,T-Th,place,VOLLUM,134
+root,course,20628,HIST,220,S,Late Imperial China,1.0,Fix,M-W-F,place,ELIOT,414
+root,course,10643,HIST,221,F,Modern China,1.0,Fix,M-W-F,place,ELIOT,414
+root,course,10644,HIST,275,F,Cultr  and  Society 19 CentAmerca,1.0,Dirks,M-W,place,VOLLUM,110
+root,course,20629,HIST,276,S,Culture and Society 20 Cent Amer,1.0,Dirks,M-W,place,VOLLUM,110
+root,course,10784,HIST,281,F,Introduction to Judaism,1.0,McCalla,M-W-F,place,ELIOT,314
+root,course,10645,HIST,308,F01,Spcl Tops: Vietnam War,1.0,Segel,M-W-F,place,VOLLUM,120
+root,course,10646,HIST,308,F02,Spcl Tops: Vietnam War,1.0,Segel,M-W-F,place,VOLLUM,120
+root,course,10647,HIST,322,F,Subaltern Stds Historiography,1.0,Fix,M-W-F,place,ELIOT,414
+root,course,10453,ART,201,F,Introduction to Art History,1.0,Diebold,T-Th,place,LIB,41
+root,course,20630,HIST,325,S,The Family in China and Japan,1.0,Fix,T-Th,place,ELIOT,405
+root,course,10648,HIST,335,F,Devel of Britain 1700-1830,1.0,Sacks,T-Th,place,VOLLUM,118
+root,course,20631,HIST,343,S01,The Third Reich,1.0,Mueller,T-Th,place,WINCH,CPHT
+root,course,20632,HIST,343,S02,The Third Reich,1.0,Mueller,T-Th,place,VOLLUM,120
+root,course,20633,HIST,344,S01,The Russian Revolution,1.0,Smith,T-Th,place,PSYCH,103
+root,course,20634,HIST,344,S02,The Russian Revolution,1.0,Smith,T-Th,place,PSYCH,103
+root,course,10649,HIST,345,F,Weimar:State,Society  and Culture,1.0,Mueller,T-Th,place,ELIOT,405
+root,course,10653,HIST,352,F,Old Regime France 1600-1750,1.0,Breen,M-W-F,place,LIB,203
+root,course,20640,HIST,356,S,The French Enlightenment,1.0,Breen,M-W-F,place,LIB,203
+root,course,20641,HIST,364,S,Civil War and Reconstruction,1.0,Iaccarino,M-W,place,VOLLUM,234
+root,course,20461,ART,201,S01,Introduction to Art History,1.0,Diebold,M-W,place,LIB,41
+root,course,20635,HIST,367,S01,Gender and History,1.0,Dirks,T-Th,place,ELIOT,414
+root,course,20636,HIST,367,S02,Gender and History,1.0,Dirks,T-Th,place,ELIOT,414
+root,course,10650,HIST,369,F,American Slavery,1.0,Iaccarino,M-W,place,VOLLUM,126
+root,course,20637,HIST,384,S01,Mexico: Indepdence toRevolutn,1.0,Garrett,M-W,place,VOLLUM,228
+root,course,20638,HIST,384,S02,Mexico: Indepdence toRevolutn,1.0,Garrett,T-Th,place,VOLLUM,228
+root,course,10651,HIST,386,F,Mexico  and  the Spanish Conquest,1.0,Garrett,T-Th,place,VOLLUM,228
+root,course,10800,HIST,386,F02,Mexico  and  the Spanish Conquest,1.0,Garrett,T-Th,place,VOLLUM,134
+root,course,10490,HIST,393,F,Ancient History: Rome,1.0,Kelly,M-W,place,VOLLUM,120
+root,course,20489,HIST,394,S,Specl Topics in Roman History,1.0,Kelly,M-W,place,VOLLUM,120
+root,course,10652,HIST,411,F,Jun Sem: Depression Era U.S.,1.0,Dirks,T-Th,place,ELIOT,123
+root,course,10579,ANTH,211,F03,Introduction to Anthropology,1.0,Stasch,T-Th,place,VOLLUM,116
+root,course,20462,ART,201,S02,Introduction to Art History,1.0,Diebold,T-Th,place,LIB,41
+root,course,20639,HIST,412,S,Sem: Comty, Auth, Cult15-1700,1.0,Sacks,T-Th,place,VOLLUM,134
+root,course,10072,HUM,110,Y,West Humanities: Greece  and Rome,0.0,King,M-W-F,place,VOLLUM,VLH
+root,course,10148,HUM,110,Y01,West Humanities: Greece  and Rome,0.0,Arnold,M-W-F,place,ELIOT,121
+root,course,10149,HUM,110,Y02,West Humanities: Greece  and Rome,0.0,Drumm,M-W-F,place,ELIOT,123
+root,course,10150,HUM,110,Y03,West Humanities: Greece  and Rome,0.0,Englert,M-W-F,place,ELIOT,126
+root,course,10151,HUM,110,Y04,West Humanities: Greece  and Rome,0.0,Sherman,M-W-F,place,ELIOT,317
+root,course,10152,HUM,110,Y05,West Humanities: Greece  and Rome,0.0,Leveen,M-W-F,place,LIB,203
+root,course,10153,HUM,110,Y06,West Humanities: Greece  and Rome,0.0,Arkonovich,M-W-F,place,ELIOT,123
+root,course,10154,HUM,110,Y07,West Humanities: Greece  and Rome,0.0,Gillcrist,M-W-F,place,ELIOT,126
+root,course,10155,HUM,110,Y08,West Humanities: Greece  and Rome,0.0,Breen,M-W-F,place,ELIOT,317
+root,course,10460,ART,271,F,Introductory Painting,1.0,Knutson,M-W,place,ART,PAINT
+root,course,10156,HUM,110,Y09,West Humanities: Greece  and Rome,0.0,Baker,M-W-F,place,LIB,203
+root,course,10157,HUM,110,Y10,West Humanities: Greece  and Rome,0.0,Duquette,M-W-F,place,ELIOT,317
+root,course,10158,HUM,110,Y11,West Humanities: Greece  and Rome,0.0,Nicholson,M-W-F,place,LIB,203
+root,course,10159,HUM,110,Y12,West Humanities: Greece  and Rome,0.0,Stauder,M-W-F,place,ELIOT,123
+root,course,10160,HUM,110,Y13,West Humanities: Greece  and Rome,0.0,Feener,M-W-F,place,ELIOT,317
+root,course,10161,HUM,110,Y14,West Humanities: Greece  and Rome,0.0,Delehanty,M-W-F,place,ELIOT,317
+root,course,10749,HUM,110,Y25,West Humanities: Greece  and Rome,0.0,Foat,M-W-F,place,ELIOT,123
+root,course,10162,HUM,110,Y15,West Humanities: Greece  and Rome,0.0,Mandell,M-W,place,ELIOT,123
+root,course,10163,HUM,110,Y16,West Humanities: Greece  and Rome,0.0,King,M-W,place,ELIOT,317
+root,course,10164,HUM,110,Y17,West Humanities: Greece  and Rome,0.0,David,T-Th,place,ELIOT,317
+root,course,20467,ART,272,S,Introductory Painting II,1.0,Knutson,M-W,place,ART,PAINT
+root,course,10165,HUM,110,Y18,West Humanities: Greece  and Rome,0.0,Latham,T-Th,place,LIB,203
+root,course,10775,HUM,110,Y26,West Humanities: Greece  and Rome,0.0,Wolfe,T-Th,place,ELIOT,126
+root,course,10166,HUM,110,Y19,West Humanities: Greece  and Rome,0.0,Mieszkowski,T-Th,place,ELIOT,317
+root,course,10168,HUM,110,Y21,West Humanities: Greece  and Rome,0.0,Kelly,T-Th,place,ELIOT,317
+root,course,10169,HUM,110,Y22,West Humanities: Greece  and Rome,0.0,Hendrickson,T-Th,place,LIB,203
+root,course,10318,HUM,110,Y23,West Humanities: Greece  and Rome,0.0,Sacks,T-Th,place,ELIOT,317
+root,course,10323,HUM,110,Y24,West Humanities: Greece  and Rome,0.0,Iaccarino,T-Th,place,LIB,203
+root,course,10073,HUM,210,Y,Early Modern Europe,0.0,Knapp,M-W,place,PSYCH,105
+root,course,10175,HUM,210,Y01,Early Modern Europe,0.0,Knapp,M-W-F,place,VOLLUM,134
+root,course,10176,HUM,210,Y02,Early Modern Europe,0.0,Steinman,M-W,place,VOLLUM,309
+root,course,10461,ART,281,F,Sculpture,1.0,Ondrizek,M-W,place,ART,SCULP
+root,course,10177,HUM,210,Y03,Early Modern Europe,0.0,Kierstead,T-Th,place,VOLLUM,302
+root,course,10178,HUM,210,Y04,Early Modern Europe,0.0,Garrett,T-Th,place,VOLLUM,228
+root,course,10074,HUM,220,Y,Modern Humanities,0.0,Mueller,M-W,place,ELIOT,CHPL
+root,course,10170,HUM,220,Y01,Modern Humanities,0.0,van Dyke,M-W-F,place,VOLLUM,302
+root,course,10171,HUM,220,Y02,Modern Humanities,0.0,Mueller,M-W-F,place,LIB,203
+root,course,10172,HUM,220,Y03,Modern Humanities,0.0,Porter,M-W,place,VOLLUM,134
+root,course,10173,HUM,220,Y04,Modern Humanities,0.0,Segel,T-Th,place,PSYCH,103
+root,course,10174,HUM,220,Y05,Modern Humanities,0.0,Gokberk,T-Th,place,VOLLUM,302
+root,course,10314,HUM,230,Y,Foundatns ChineseCivilization,0.0,Brashier,T-Th,place,PSYCH,105
+root,course,10315,HUM,230,Y01,Foundatns ChineseCivilization,0.0,Wu,M-W-F,place,ELIOT,405
+root,course,20468,ART,282,S,Sculpture II,1.0,Ondrizek,M-W,place,ART,SCULP
+root,course,10316,HUM,230,Y02,Foundatns ChineseCivilization,0.0,Brashier,M-W-F,place,ELIOT,405
+root,course,10317,HUM,230,Y03,Foundatns ChineseCivilization,0.0,Fix,T-Th,place,ELIOT,121
+root,course,10180,LAT,210,Y,Second Year Latin,1.0,Wolfe,M-T-W-Th,place,VOLLUM,234
+root,course,10486,LAT,311,F,Advanced Latin,1.0,Englert,T-Th,place,VOLLUM,134
+root,course,20484,LAT,312,S,Advanced Latin,1.0,Tron,T-Th,place,VOLLUM,134
+root,course,10481,LING,311,F,General Linguistics,1.0,Haviland,T-Th,place,VOLLUM,116
+root,course,10484,LING,313,F,Language and Society,1.0,Haviland,T,place,ELIOT,419
+root,course,10483,LING,323,F,Introductory Syntax,1.0,Haviland,T-Th,place,ELIOT,419
+root,course,20481,LING,328,S,Morphosyntactic Typology,1.0,Haviland,T-Th,place,ELIOT,419
+root,course,10454,ART,315,F,Early Medieval Art,1.0,Diebold,T-Th,place,LIB,41
+root,course,20482,LING,348,S,Languages the Americas:Mayan,1.0,Haviland,T,place,ELIOT,419
+root,course,10588,LING,392,F01,Structuralism and Semiotics,1.0,Stasch,T-Th,place,VOLLUM,134
+root,course,10598,LING,392,F02,Structuralism and Semiotics,1.0,Stasch,T-Th,place,VOLLUM,134
+root,course,10747,LING,393,F,Psycholinguistics,1.0,Canseco-Gonzale,M-W-F,place,PSYCH,108
+root,course,10747,LING,393,F,Psycholinguistics,1.0,Canseco-Gonzale,W,place,PSYCH,108
+root,course,20652,LING,396,S,Psych of Language Acquisition,1.0,Canseco-Gonzale,T-Th,place,PSYCH,108
+root,course,10538,LIT,266,F,Russian Short Fiction,1.0,Lencek,T-Th,place,VOLLUM,126
+root,course,10757,LIT,320,F,20-Cent Chin Fiction, 1919-49,1.0,Wu,T-Th,place,ELIOT,121
+root,course,20498,LIT,321,S,Modernism: Berlin,1.0,Gokberk,M-W,place,VOLLUM,116
+root,course,10756,LIT,326,F,Chinese Narrative Tradition,1.0,Rhew,M-W,place,ELIOT,121
+root,course,20682,ART,316,S,Medieval Manuscript Illumin,1.0,Diebold,T-Th,place,LIB,41
+root,course,20657,LIT,334,S,Yijing: Text and Tradition,1.0,Rhew,M-W,place,ELIOT,121
+root,course,10502,LIT,341,F,Modern German Theatre,1.0,Rudolf,M-W,place,ELIOT,419
+root,course,20665,LIT,343,S,20-Century Chinese Poetry,1.0,Wu,T-Th,place,ELIOT,121
+root,course,20487,LIT,363,S,Greek Tragedy,1.0,Englert,M-W-F,place,VOLLUM,126
+root,course,20531,LIT,373,S,Russian Lit:Chekhov toPresent,1.0,Bershtein,T-Th,place,VOLLUM,126
+root,course,10540,LIT,379,F,The Myth of St. Petersburg,1.0,Bershtein,T-Th,place,PSYCH,103
+root,course,10500,LIT,391,F,German Thought Postmod Era,1.0,Irmscher,T-Th,place,ELIOT,414
+root,course,20501,LIT,392,S,German Theory II: Body Media,1.0,Mieszkowski,W,place,ELIOT,414
+root,course,20536,LIT,404,S,Russian Lit:Gogol  and Dostoevsky,1.0,Lencek,T-Th,place,VOLLUM,118
+root,course,20533,LIT,408,S,Russ Decadent/SymbolistCultur,1.0,Bershtein,M-W,place,VOLLUM,302
+root,course,10455,ART,333,F,Divine Comedy  and Visualizations,1.0,David,T-Th,place,LIB,41
+root,course,10542,LIT,413,F,20th C Russian CriticalTheory,1.0,Lencek,T-Th,place,VOLLUM,126
+root,course,10430,MATH,111,F01,Calculus I,1.0,Mayer,M-T-W-F,place,LIB,204
+root,course,10431,MATH,111,F02,Calculus I,1.0,Shurman,M-T-W-F,place,LIB,204
+root,course,10432,MATH,111,F03,Calculus I,1.0,Mayer,M-T-W-F,place,ELIOT,200
+root,course,10433,MATH,111,F04,Calculus I,1.0,Potluri,M-T-W-F,place,PSYCH,102
+root,course,10434,MATH,111,F05,Calculus I,1.0,Shurman,M-T-W-F,place,ELIOT,207
+root,course,10435,MATH,111,F06,Calculus I,1.0,Potluri,M-T-W-F,place,PSYCH,102
+root,course,20442,MATH,111,S01,Calculus I,1.0,Potluri,M-T-W-F,place,PSYCH,102
+root,course,20443,MATH,111,S02,Calculus I,1.0,Potluri,M-T-W-F,place,PSYCH,102
+root,course,20444,MATH,112,S01,Calculus II,1.0,Mayer,M-T-W-F,place,LIB,204
+root,course,20680,ART,343,S,Art and Politics in France,1.0,Hendrickson,T-Th,place,LIB,41
+root,course,20445,MATH,112,S02,Calculus II,1.0,Perkinson,M-T-W-F,place,LIB,204
+root,course,20446,MATH,112,S03,Calculus II,1.0,Jones,M-T-W-F,place,ELIOT,200
+root,course,20447,MATH,112,S04,Calculus II,1.0,Wieting,M-T-W-F,place,LIB,204
+root,course,20448,MATH,112,S05,Calculus II,1.0,Perkinson,M-T-W-F,place,ELIOT,207
+root,course,20449,MATH,112,S06,Calculus II,1.0,Bernhard,M-T-W-F,place,ELIOT,200
+root,course,10436,MATH,121,F01,Introduction to Computing,1.0,Fix,M-W-F,place,PHYSIC,123
+root,course,10436,MATH,121,F01,Introduction to Computing,1.0,Fix,Th,place,LIB,18
+root,course,10437,MATH,121,F02,Introduction to Computing,1.0,Fix,M-W-F,place,PHYSIC,123
+root,course,10437,MATH,121,F02,Introduction to Computing,1.0,Fix,Th,place,LIB,18
+root,course,20450,MATH,132,S,Introduction to Combinatorics,1.0,Shurman,M-W-F,place,ELIOT,207
+root,course,20681,ART,344,S,Pol Hist of Art Between Wars,1.0,van Dyke,M-W-F,place,LIB,41
+root,course,10438,MATH,141,F01,Intro to Probability  and Statist,1.0,Jones,M-W-F,place,PHYSIC,240A
+root,course,10439,MATH,141,F02,Intro to Probability  and Statist,1.0,Jones,M-W-F,place,PHYSIC,240A
+root,course,10440,MATH,141,FL1,Intro to Probability  and Statist,0.0,Jones,T,place,LIB,18
+root,course,10441,MATH,141,FL2,Intro to Probability  and Statist,0.0,Jones,T,place,LIB,18
+root,course,10442,MATH,141,FL3,Intro to Probability  and Statist,0.0,Jones,T,place,LIB,18
+root,course,10443,MATH,211,F01,Introduction to Analysis I,1.0,Perkinson,M-T-W-F,place,ELIOT,200
+root,course,10444,MATH,211,F02,Introduction to Analysis I,1.0,Wieting,M-T-W-F,place,ELIOT,200
+root,course,10445,MATH,211,F03,Introduction to Analysis I,1.0,Bernhard,M-T-W-F,place,LIB,204
+root,course,20451,MATH,212,S01,Introduction to Analysis II,1.0,Wieting,M-T-W-F,place,ELIOT,207
+root,course,20452,MATH,212,S02,Introduction to Analysis II,1.0,Bernhard,M-T-W-F,place,PHYSIC,240A
+root,course,10580,ANTH,211,F04,Introduction to Anthropology,1.0,Silverstein,T-Th,place,ELIOT,414
+root,course,10777,ART,348,F,Art  and  Pol in Weimar Republic,1.0,van Dyke,M-W,place,LIB,41
+root,course,20453,MATH,311,S,Complex Analysis,1.0,Perkinson,M-T-W-F,place,LIB,204
+root,course,10446,MATH,321,F,Advanced Calculus,1.0,Shurman,M-T-W-F,place,LIB,204
+root,course,10447,MATH,331,F01,Linear Algebra,1.0,Mayer,M-T-W-F,place,ELIOT,216
+root,course,10448,MATH,331,F02,Linear Algebra,1.0,Potluri,M-T-W-F,place,PSYCH,102
+root,course,20454,MATH,331,S,Linear Algebra,1.0,Jones,M-T-W-F,place,ELIOT,216
+root,course,20455,MATH,332,S,Abstract Algebra,1.0,Bernhard,M-T-W-F,place,ELIOT,200
+root,course,20456,MATH,341,S,Geometry,1.0,Wieting,M-W-F,place,LIB,204
+root,course,10449,MATH,372,F,Combinatorics,1.0,Perkinson,M-W-F,place,ELIOT,216
+root,course,20457,MATH,382,S,Data Structure  and  Algorithm,1.0,Fix,M-W-F,place,PHYSIC,123
+root,course,20643,MATH,385,S,Computer Graphics,1.0,Fix,M-W-F,place,PHYSIC,123
+root,course,20679,ART,349,S,New West in Amer Photography,0.5,Fillin-Yeh,F,place,LIB,41
+root,course,10450,MATH,391,F,Probability,1.0,Wieting,M-W-F,place,LIB,204
+root,course,20458,MATH,412,S,Topics in Advanced AnalysisII,1.0,Mayer,M-W-F,place,LIB,204
+root,course,20459,MATH,421,S,Elemetary Number Theory,1.0,Shurman,M-W-F,place,PHYSIC,122
+root,course,10451,MATH,431,F,Algebraic Structures,1.0,Bernhard,M-W-F,place,LIB,204
+root,course,10452,MATH,441,F,Topics In Computer Theory,1.0,Fix,M-W-F,place,LIB,204
+root,course,10329,MUS,103,F,Chamber Orchestra,0.5,Schiff,M,place,,KAUL
+root,course,20324,MUS,103,S,Chamber Orchestra,0.5,Schiff,M,place,,KAUL
+root,course,10321,MUS,105,F,Chorus,0.5,Hancock,T,place,ELIOT,314
+root,course,20316,MUS,105,S,Chorus,0.5,Hancock,T,place,ELIOT,314
+root,course,10322,MUS,107,F,Collegium Musicum,0.5,Hancock,W,place,ELIOT,123
+root,course,10462,ART,371,F,Intermed Paint,Draw,PrintmakI,1.0,Knutson,T-Th,place,ART,PAINT
+root,course,20317,MUS,107,S,Collegium Musicum,0.5,Hancock,W,place,ELIOT,123
+root,course,10464,MUS,110,F,Intro to Music Listening,1.0,Falk,M-W-F,place,ELIOT,416
+root,course,10465,MUS,111,F,Music Theory I,1.0,Hancock,M-W-F,place,ELIOT,416
+root,course,10466,MUS,111,FL1,Music Theory I,0.0,Hancock,M,place,ELIOT,416
+root,course,10467,MUS,111,FL2,Music Theory I,0.0,Hancock,M,place,ELIOT,416
+root,course,10468,MUS,111,FL3,Music Theory I,0.0,Hancock,T,place,ELIOT,416
+root,course,10469,MUS,111,FL4,Music Theory I,0.0,Hancock,W,place,ELIOT,301A
+root,course,20471,MUS,112,S,Theory II:IntermediateHarmony,1.0,Hancock,M-W-F,place,ELIOT,416
+root,course,20472,MUS,112,SL1,Theory II:IntermediateHarmony,0.0,Hancock,M,place,ELIOT,301A
+root,course,20473,MUS,112,SL2,Theory II:IntermediateHarmony,0.0,Hancock,W,place,ELIOT,301A
+root,course,20469,ART,372,S,IntermedPaint,Draw,PrintmakII,1.0,Knutson,T-Th,place,ART,PAINT
+root,course,20474,MUS,122,S,Survey of Western Music,1.0,Falk,M-W-F,place,ELIOT,416
+root,course,10470,MUS,212,F,Theory III: BaroqueCounterpnt,1.0,Schiff,M-W-F,place,ELIOT,301A
+root,course,20648,MUS,236,S,The String Quartet,1.0,Falk,T-Th,place,LIB,36
+root,course,10471,MUS,251,F,Representation in Music,1.0,Falk,T-Th,place,LIB,36
+root,course,20475,MUS,256,S,Romantic Music,1.0,Hancock,T-Th,place,ELIOT,416
+root,course,20476,MUS,262,S01,Jazz,1.0,Schiff,M-W-F,place,ELIOT,416
+root,course,20477,MUS,262,S02,Jazz,1.0,Schiff,M-W-F,place,ELIOT,416
+root,course,10472,MUS,264,F,Modernism in Music,1.0,Schiff,M-W-F,place,ELIOT,416
+root,course,10473,MUS,311,F,Medieval and RenaissanceMusic,1.0,Falk,T-Th,place,LIB,36
+root,course,20478,MUS,343,S,Advanced Analysis,1.0,Schiff,M-W-F,place,ELIOT,301A
+root,course,10463,ART,381,F,Intermed Sculp  and  Multimedia I,1.0,Ondrizek,T-Th,place,ART,SCULP
+root,course,10656,PE,101,AE6,Aerobics,0.0,Casey,M-W,place,SPORTS,DANCE
+root,course,10657,PE,101,AE7,Aerobics,0.0,Casey,M-W,place,SPORTS,DANCE
+root,course,10658,PE,101,AFD,African Dance,0.0,Casey,T-Th,place,SPORTS,DANCE
+root,course,10661,PE,101,AIK,Aikido,0.0,Casey,M-W,place,SPORTS,MAT
+root,course,10659,PE,101,AR3,Archery,0.0,Casey,M-W,place,,SPORTS
+root,course,10660,PE,101,AR4,Archery,0.0,Casey,M-W,place,,SPORTS
+root,course,10664,PE,101,BEL,Bellydance,0.0,Casey,T,place,SPORTS,DANCE
+root,course,10662,PE,101,BRB,Ballroom Dance-Beginning,0.0,Casey,W,place,SPORTS,GYMII
+root,course,10663,PE,101,BRI,Ballroom Dance-Intermediate,0.0,Casey,W,place,SPORTS,DANCE
+root,course,10665,PE,101,CAN,Canoeing,0.0,Casey,W,place,,SPORTS
+root,course,20470,ART,382,S,Intermed Sculp  and  MultimediaII,1.0,Ondrizek,T-Th,place,ART,SCULP
+root,course,10680,PE,101,DEF,Self Defense,0.0,Casey,Th,place,SPORTS,MAT
+root,course,10666,PE,101,FEN,Fencing,0.0,Casey,M-Th,place,SPORTS,GYMII
+root,course,10667,PE,101,FLK,Folkdance,0.0,Casey,Th,place,SPORTS,DANCE
+root,course,10668,PE,101,GLF,Golf,0.0,Casey,T-Th,place,,SPORTS
+root,course,10698,PE,101,HAT,Yoga-Hatha,0.0,Casey,T-Th,place,SPORTS,DANCE
+root,course,10671,PE,101,JDO,Judo,0.0,Casey,M-W,place,SPORTS,MAT
+root,course,10670,PE,101,JGL,Juggling,0.0,Casey,W,place,SPORTS,GYMI
+root,course,10669,PE,101,JIT,Jitterbug,0.0,Casey,M,place,,WINCH
+root,course,10697,PE,101,KUN,Yoga-Kundilini,0.0,Casey,M-W,place,SPORTS,DANCE
+root,course,10672,PE,101,KYI,Kayaking-Intermediate,0.0,Casey,W,place,,SPORTS
+root,course,20464,ART,425,S,Leonardo, Raphael,Michelangel,1.0,David,T-Th,place,LIB,41
+root,course,10673,PE,101,LIF,Lifeguard Training,0.0,Casey,M,place,,SPORTS
+root,course,10699,PE,101,REL,Yoga-Relaxaion,0.0,Casey,T-Th,place,SPORTS,MAT
+root,course,10674,PE,101,ROC,Rock Climbing,0.0,Casey,Th,place,VOLLUM,120
+root,course,10675,PE,101,RUG,Rugby-Men and Women,0.0,Casey,T-W-Th,place,,SPORTS
+root,course,10750,PE,101,RWB,Rowing-Beginning,0.0,Casey,M-W-F,place,,SPORTS
+root,course,10751,PE,101,RWI,Rowing-Intermediate,0.0,Casey,M-W-F,place,,SPORTS
+root,course,10683,PE,101,SFT,Softball,0.0,Casey,M,place,,SPORTS
+root,course,10684,PE,101,SQB,Squash-Beginning,0.0,Casey,T-Th,place,,SPORTS
+root,course,10685,PE,101,SQI,Squash-Intermediate,0.0,Casey,T-Th,place,,SPORTS
+root,course,10678,PE,101,SR2,Sailing,0.0,Casey,Th,place,,SPORTS
+root,course,10594,BIOL,101,F,Intro Biology Lect and Lab,1.0,Shampay,T-Th,place,VOLLUM,VLH
+root,course,10676,PE,101,ST2,Sailing,0.0,Casey,T,place,,SPORTS
+root,course,10677,PE,101,SW2,Sailing,0.0,Casey,W,place,,SPORTS
+root,course,10689,PE,101,TCB,Tai Chi-Beginning,0.0,Casey,M-W,place,SPORTS,GYMI
+root,course,10690,PE,101,TCI,Tai Chi-Intermediate,0.0,Casey,M-W,place,SPORTS,GYMI
+root,course,10693,PE,101,TNA,Tennis-Advanced,0.0,Casey,T-Th,place,,SPORTS
+root,course,10691,PE,101,TNB,Tennis-Beginning,0.0,Casey,T-Th,place,,SPORTS
+root,course,10692,PE,101,TNI,Tennis-Intermediate,0.0,Casey,T-Th,place,,SPORTS
+root,course,10694,PE,101,ULT,Ultimate Frisbee,0.0,Casey,T-Th,place,,SPORTS
+root,course,10696,PE,101,WWR,White Water Rafting,0.0,Casey,T,place,,SPORTS
+root,course,10701,PE,102,AE6,Aerobics,0.0,Casey,M-W,place,SPORTS,DANCE
+root,course,10596,BIOL,101,FT3,Intro Biology Lect and Lab,0.0,Shampay,T,place,BIOL,103
+root,course,10703,PE,102,AE7,Aerobics,0.0,Casey,M-W,place,SPORTS,DANCE
+root,course,10704,PE,102,AFD,African Dance,0.0,Casey,T-Th,place,,SPORTS
+root,course,10705,PE,102,AIK,Aikido,0.0,Casey,M-W,place,SPORTS,MAT
+root,course,10707,PE,102,BAD,Badminton,0.0,Casey,T-Th,place,SPORTS,GYMI
+root,course,10709,PE,102,BBC,Basketball-Coed,0.0,Casey,T-Th,place,SPORTS,GYMI
+root,course,10706,PE,102,BCN,Backcountry Navigation,0.0,Casey,W,place,,VOLLUM
+root,course,10708,PE,102,BD1,Badminton,0.0,Casey,T-Th,place,SPORTS,GYMI
+root,course,10713,PE,102,BEL,Bellydance,0.0,Casey,T,place,SPORTS,DANCE
+root,course,10714,PE,102,BOW,Bowling,0.0,Casey,T,place,,SPORTS
+root,course,10711,PE,102,BRB,Ballroom Dance-Beginning,0.0,Casey,W,place,SPORTS,GYMII
+root,course,10599,BIOL,101,FT7,Intro Biology Lect and Lab,0.0,Shampay,T,place,BIOL,107
+root,course,10712,PE,102,BRI,Ballroom Dance-Intermediate,0.0,Casey,W,place,SPORTS,GYMII
+root,course,10727,PE,102,DEF,Self Defense,0.0,Casey,Th,place,SPORTS,MAT
+root,course,10715,PE,102,FEN,Fencing,0.0,Casey,M-Th,place,SPORTS,GYMII
+root,course,10716,PE,102,FLK,Folkdancing,0.0,Casey,Th,place,SPORTS,DANCE
+root,course,10717,PE,102,HAP,Hiking Around Portland,0.0,Casey,T,place,VOLLUM,120
+root,course,10740,PE,102,HAT,Yoga-Hatha,0.0,Casey,T-Th,place,SPORTS,DANCE
+root,course,10721,PE,102,JGL,Juggling,0.0,Casey,W,place,SPORTS,GYMI
+root,course,10720,PE,102,JIT,Jitterbug,0.0,Casey,M,place,,WINCH
+root,course,10722,PE,102,JUD,Judo,0.0,Casey,M-W,place,SPORTS,MAT
+root,course,10739,PE,102,KUN,Yoga-Kundlini,0.0,Casey,M-W,place,SPORTS,DANCE
+root,course,10581,ANTH,211,F05,Introduction to Anthropology,1.0,Brightman,M-W,place,ELIOT,317
+root,course,10600,BIOL,101,FW3,Intro Biology Lect and Lab,0.0,Shampay,W,place,BIOL,103
+root,course,10723,PE,102,LIF,Lifeguard Training,0.0,Casey,M,place,,SPORTS
+root,course,10781,PE,102,MOD,Modern Dance,0.0,Casey,F,place,SPORTS,GYMII
+root,course,10741,PE,102,REL,Yoga-Relaxation,0.0,Casey,T-Th,place,SPORTS,MAT
+root,course,10725,PE,102,ROC,Rock Climbing,0.0,Casey,Th,place,VOLLUM,120
+root,course,10724,PE,102,RQB,Raquetball-Beginning,0.0,Casey,T-Th,place,,SPORTS
+root,course,10726,PE,102,RUG,Rugby-Men and Women,0.0,Casey,T-W-Th,place,,SPORTS
+root,course,10730,PE,102,SQB,Squash-beginning,0.0,Casey,T-Th,place,,SPORTS
+root,course,10731,PE,102,SQI,Squash-Intermediate,0.0,Casey,T-Th,place,,SPORTS
+root,course,10735,PE,102,TCB,Tai Chi-Beginning,0.0,Casey,M-W,place,SPORTS,GYMI
+root,course,10736,PE,102,TCI,Tai Chi-Intermediate,0.0,Casey,M-W,place,SPORTS,GYMI
+root,course,10601,BIOL,101,FW7,Intro Biology Lect and Lab,0.0,Shampay,W,place,BIOL,107
+root,course,10737,PE,102,ULT,Ultimate Frisbee,0.0,Casey,T-Th,place,,SPORTS
+root,course,10421,PHIL,200,F01,Introduction to Philosophy,1.0,Hinchliff,T-Th,place,VOLLUM,120
+root,course,10422,PHIL,200,F02,Introduction to Philosophy,1.0,Latham,T-Th,place,PSYCH,103
+root,course,10423,PHIL,200,F03,Introduction to Philosophy,1.0,Reeve,T-Th,place,WINCH,CPHT
+root,course,20417,PHIL,201,S,Logic,1.0,Taschek,T-Th,place,PSYCH,105
+root,course,10424,PHIL,301,F,Ancient Philosophy,1.0,Reeve,T-Th,place,PSYCH,105
+root,course,20418,PHIL,308,S,Post-Kantian Continental Phil,1.0,Peck,T-Th,place,VOLLUM,118
+root,course,20419,PHIL,310,S,Metaphysics,1.0,Hinchliff,T-Th,place,VOLLUM,116
+root,course,10425,PHIL,311,F,Epistemology,1.0,Taschek,T-Th,place,PHYSIC,121
+root,course,10767,PHIL,312,F,Ethics,1.0,Arkonovich,M-W-F,place,VOLLUM,126
+root,course,10602,BIOL,101,FR3,Intro Biology Lect and Lab,0.0,Shampay,Th,place,BIOL,103
+root,course,10427,PHIL,317,F,Philosophy of Mind,1.0,Hinchliff,T-Th,place,VOLLUM,110
+root,course,20421,PHIL,410,S01,Adv Topics:APrior,Nec,Anlytic,1.0,Hinchliff,T-Th,place,VOLLUM,118
+root,course,20422,PHIL,410,S02,Advanced Topics:Phil of Mind,1.0,Reeve,M-W,place,VOLLUM,118
+root,course,20423,PHIL,410,S03,Advanced Topics: Epistemology,1.0,Taschek,T-Th,place,ELIOT,405
+root,course,20670,PHIL,410,S04,Adv Topics: Ethics,1.0,Latham,M-W-F,place,VOLLUM,126
+root,course,10428,PHIL,415,F01,Major Figures:Existentialists,1.0,Peck,M-W-F,place,VOLLUM,134
+root,course,10429,PHIL,415,F02,Major Figures: Davidson,1.0,Taschek,M-W,place,VOLLUM,234
+root,course,20424,PHIL,415,S,Major Figures: Hume,1.0,Arkonovich,M-W-F,place,VOLLUM,134
+root,course,10075,PHYS,100,Y,General Physics I,1.0,Bonfim,M-W-F,place,VOLLUM,VLH
+root,course,10181,PHYS,100,Y01,General Physics I,0.0,Bonfim,T,place,PHYSIC,122
+root,course,10603,BIOL,101,FR7,Intro Biology Lect and Lab,0.0,Shampay,Th,place,BIOL,107
+root,course,10182,PHYS,100,Y02,General Physics I,0.0,Bonfim,T,place,PHYSIC,122
+root,course,10183,PHYS,100,Y03,General Physics I,0.0,Bonfim,W,place,PHYSIC,122
+root,course,10184,PHYS,100,Y04,General Physics I,0.0,Bonfim,W,place,PHYSIC,122
+root,course,10185,PHYS,100,Y05,General Physics I,0.0,Bonfim,Th,place,PHYSIC,122
+root,course,10186,PHYS,100,Y06,General Physics I,0.0,Bonfim,Th,place,PHYSIC,122
+root,course,10392,PHYS,100,Y07,General Physics I,0.0,Bonfim,Th,place,PHYSIC,122
+root,course,10187,PHYS,100,YL1,General Physics I,0.0,Bonfim,M,place,PHYSIC,129
+root,course,10188,PHYS,100,YL2,General Physics I,0.0,Bonfim,M,place,PHYSIC,129
+root,course,10189,PHYS,100,YL3,General Physics I,0.0,Bonfim,T,place,PHYSIC,129
+root,course,10190,PHYS,100,YL4,General Physics I,0.0,Bonfim,T,place,PHYSIC,129
+root,course,10604,BIOL,101,FF3,Intro Biology Lect and Lab,0.0,Shampay,F,place,BIOL,103
+root,course,10191,PHYS,100,YL5,General Physics I,0.0,Bonfim,W,place,PHYSIC,129
+root,course,10192,PHYS,100,YL6,General Physics I,0.0,Bonfim,W,place,PHYSIC,129
+root,course,10193,PHYS,100,YL7,General Physics I,0.0,Bonfim,Th,place,PHYSIC,129
+root,course,10194,PHYS,100,YL8,General Physics I,0.0,Bonfim,Th,place,PHYSIC,129
+root,course,20402,PHYS,101,S,Introduction to Physics,1.0,Reynolds,M-W-F,place,VOLLUM,VLH
+root,course,20403,PHYS,101,S01,Introduction to Physics,0.0,Reynolds,W,place,PHYSIC,123
+root,course,20404,PHYS,101,S02,Introduction to Physics,0.0,Reynolds,Th,place,PHYSIC,123
+root,course,20405,PHYS,101,S03,Introduction to Physics,0.0,Reynolds,Th,place,PHYSIC,123
+root,course,20406,PHYS,101,S04,Introduction to Physics,0.0,Reynolds,F,place,PHYSIC,123
+root,course,20407,PHYS,101,SL1,Introduction to Physics,0.0,Reynolds,M,place,PHYSIC,134
+root,course,10606,BIOL,101,FF7,Intro Biology Lect and Lab,0.0,Shampay,F,place,BIOL,107
+root,course,20409,PHYS,101,SL2,Introduction to Physics,0.0,Reynolds,T,place,PHYSIC,134
+root,course,20410,PHYS,101,SL3,Introduction to Physics,0.0,Reynolds,W,place,PHYSIC,134
+root,course,20658,PHYS,101,SL7,Introduction to Physics,0.0,Staff,W,place,PHYSIC,134
+root,course,20412,PHYS,101,SL4,Introduction to Physics,0.0,Reynolds,Th,place,PHYSIC,134
+root,course,20413,PHYS,101,SL5,Introduction to Physics,0.0,Reynolds,Th,place,PHYSIC,134
+root,course,20415,PHYS,101,SL6,Introduction to Physics,0.0,Reynolds,F,place,PHYSIC,134
+root,course,10076,PHYS,200,Y,General Physics II,1.0,Griffiths,M-W-F,place,PHYSIC,123
+root,course,10195,PHYS,200,YL1,General Physics II,0.0,Griffiths,T,place,PHYSIC,133
+root,course,10196,PHYS,200,YL2,General Physics II,0.0,Griffiths,W,place,PHYSIC,133
+root,course,10393,PHYS,200,YL3,General Physics II,0.0,Griffiths,Th,place,PHYSIC,133
+root,course,20579,BIOL,102,S,Intro Biology Lect and Lab,1.0,Black,T-Th,place,VOLLUM,VLH
+root,course,10399,PHYS,311,F,Classical Mechanics I,1.0,Reynolds,T-Th,place,PHYSIC,123
+root,course,10401,PHYS,321,F,Electrodynamics I,1.0,James,M-W-F,place,PHYSIC,240A
+root,course,20392,PHYS,322,S,Electrodynamics II,1.0,James,M-W-F,place,PHYSIC,123
+root,course,10702,PHYS,323,F,Optics,1.0,Mitchell,M-W-F,place,PHYSIC,121
+root,course,10402,PHYS,331,F,Advanced Laboratory I,0.5,Essick,M,place,PHYSIC,122
+root,course,10404,PHYS,331,FL1,Advanced Laboratory I,0.0,Essick,W,place,,PHYSIC
+root,course,10405,PHYS,331,FL2,Advanced Laboratory I,0.0,Essick,Th,place,,PHYSIC
+root,course,20394,PHYS,332,S,Advanced Laboratory II,0.5,Mitchell,M,place,PHYSIC,122
+root,course,20395,PHYS,332,SL1,Advanced Laboratory II,0.0,Mitchell,W,place,,PHYSIC
+root,course,20396,PHYS,332,SL2,Advanced Laboratory II,0.0,Mitchell,Th,place,,PHYSIC
+root,course,20583,BIOL,102,ST3,Intro Biology Lect and Lab,0.0,Black,T,place,BIOL,103
+root,course,20397,PHYS,342,S,Quantum Mechanics I,1.0,Wheeler,T-Th,place,PHYSIC,123
+root,course,10407,PHYS,351,F,Thermal Physics,1.0,Reynolds,M-W-F,place,PHYSIC,122
+root,course,20398,PHYS,362,S,Solid State Physics,1.0,Essick,M-W-F,place,PHYSIC,240A
+root,course,20399,PHYS,366,S,Elementary Particles,1.0,Griffiths,T-Th,place,PHYSIC,240A
+root,course,10409,PHYS,367,F,Scientific Computation,1.0,Crandall,T-Th,place,PHYSIC,123
+root,course,10411,PHYS,411,F,Classical Mechanics II,1.0,Wheeler,M-W-F,place,PHYSIC,122
+root,course,20400,PHYS,442,S,Quantum Mechanics II,1.0,Wheeler,M-W-F,place,PHYSIC,121
+root,course,10633,POL,211,F,Intro Political Analysis,1.0,Rejali,M-W-F,place,VOLLUM,VLH
+root,course,20613,POL,214,S,Empirical Political Theory,1.0,Gronke,T-Th,place,VOLLUM,110
+root,course,20612,POL,301,S,Classical PoliticalPhilosophy,1.0,Mandell,T-Th,place,ELIOT,123
+root,course,20584,BIOL,102,ST7,Intro Biology Lect and Lab,0.0,Black,T,place,BIOL,107
+root,course,10635,POL,303,F,Modern Political Philosophy,1.0,Steinberger,T-Th,place,ELIOT,405
+root,course,20611,POL,310,S,Comparative Politics,1.0,Andreas,T-Th,place,ELIOT,123
+root,course,10521,POL,311,F,Research Methods,1.0,Tudor,T-Th,place,ELIOT,126
+root,course,10636,POL,335,F,Democratic Theory,1.0,Mandell,T-Th,place,ELIOT,123
+root,course,10637,POL,340,F,Politics of Globalization,1.0,Andreas,T,place,ELIOT,123
+root,course,10769,POL,345,F,Environmental Politics,1.0,Teske,M-W,place,ELIOT,216
+root,course,20675,POL,351,S,Pol of Democratic Participatn,1.0,Teske,M,place,VOLLUM,134
+root,course,20618,POL,356,S,States and Illegal Markets,1.0,Andreas,W,place,ELIOT,123
+root,course,10634,POL,360,F,Approaches to Violence,1.0,Rejali,M-W,place,PSYCH,103
+root,course,20622,POL,379,S,Pol of Border and US-Mexico,1.0,Andreas,T-Th,place,,ELIOT
+root,course,20586,BIOL,102,SW3,Intro Biology Lect and Lab,0.0,Black,W,place,BIOL,103
+root,course,20609,POL,381,S,Con. Law and JudicialPolitics,1.0,Kapsch,M-W,place,VOLLUM,126
+root,course,20614,POL,383,S,Systems of Justice,1.0,Kapsch,T-Th,place,ELIOT,123
+root,course,10638,POL,385,F,International CriminalJustice,1.0,Rejali,T-Th,place,VOLLUM,118
+root,course,20615,POL,390,S,Machiavelli,1.0,Rejali,T-Th,place,ELIOT,121
+root,course,20616,POL,396,S,Political Philosophies ofWork,1.0,Rejali,M-W,place,ELIOT,405
+root,course,10398,PSY,121,F,Intro to Psychology I,1.0,Reisberg,T-Th,place,PSYCH,105
+root,course,10400,PSY,121,FL1,Intro to Psychology,0.0,Reisberg,T-Th,place,PSYCH,136
+root,course,10403,PSY,121,FL2,Intro to Psychology,0.0,Reisberg,T-Th,place,PSYCH,136
+root,course,10406,PSY,121,FL3,Intro to Psychology,0.0,Reisberg,W-F,place,PSYCH,136
+root,course,10408,PSY,121,FL4,Intro to Psychology,0.0,Reisberg,W-F,place,PSYCH,136
+root,course,10763,ANTH,211,F06,Introduction to Anthropology,1.0,Silverstein,T-Th,place,VOLLUM,120
+root,course,20587,BIOL,102,SW7,Intro Biology Lect and Lab,0.0,Black,W,place,BIOL,107
+root,course,20401,PSY,122,S,Intro to Psychology II,1.0,Neuringer,T-Th,place,PSYCH,105
+root,course,20408,PSY,122,SL1,Intro to Psychology II,0.0,Neuringer,T-Th,place,PSYCH,136
+root,course,20411,PSY,122,SL2,Intro to Psychology II,0.0,Neuringer,T-Th,place,PSYCH,136
+root,course,20414,PSY,122,SL3,Intro to Psychology II,0.0,Neuringer,W-F,place,PSYCH,136
+root,course,20416,PSY,122,SL4,Intro to Psychology II,0.0,Neuringer,W-F,place,PSYCH,136
+root,course,10413,PSY,322,F,Social Psychology,1.0,Oleson,M-W-F,place,PSYCH,108
+root,course,10753,PSY,324,F,Health Psychology,1.0,Herman,M-W-F,place,PSYCH,108
+root,course,20662,PSY,326,S,Social Development,1.0,Bulkley,M-W-F,place,PSYCH,103
+root,course,20663,PSY,327,S,Community Psychology,1.0,Herman,M-W-F,place,PSYCH,108
+root,course,10414,PSY,333,F,Psychobiology,1.0,Dickinson,M-W-F,place,PSYCH,105
+root,course,20588,BIOL,102,SR3,Intro Biology Lect and Lab,0.0,Black,Th,place,BIOL,103
+root,course,20426,PSY,333,S,Psychobiology,1.0,Rhodes,T-Th,place,PSYCH,136
+root,course,20428,PSY,336,S,Neuropsychology,1.0,Canseco-Gonzale,T-Th,place,PSYCH,108
+root,course,20429,PSY,338,S,Psychopharmacology,1.0,Dickinson,M-W-F,place,PSYCH,105
+root,course,20430,PSY,338,SL1,Psychopharmacology,0.0,Dickinson,W,place,PSYCH,108
+root,course,20431,PSY,338,SL2,Psychopharmacology,0.0,Dickinson,W,place,PSYCH,108
+root,course,10416,PSY,344,F,Thinking,1.0,Reisberg,M-W-F,place,PSYCH,108
+root,course,20432,PSY,348,S,Research Design  and  DataAnalysi,1.0,Oleson,M-W-F,place,PSYCH,108
+root,course,20433,PSY,348,SL1,Research Design  and  DataAnalysi,0.0,Oleson,M,place,PSYCH,136
+root,course,20434,PSY,348,SL2,Research Design  and  DataAnalysi,0.0,Oleson,T,place,PSYCH,136
+root,course,10754,PSY,351,F,Psychopathology,1.0,Herman,M-W-F,place,PSYCH,108
+root,course,20589,BIOL,102,SR7,Intro Biology Lect and Lab,0.0,Black,Th,place,BIOL,107
+root,course,10417,PSY,361,F,Human Development,1.0,Bulkley,T-Th,place,PSYCH,108
+root,course,20435,PSY,366,S,Cognitive Processes,1.0,Reisberg,T-Th,place,PSYCH,108
+root,course,20436,PSY,366,SL1,Cognitive Processes,0.0,Reisberg,M,place,PSYCH,136
+root,course,20437,PSY,366,SL2,Cognitive Processes,0.0,Reisberg,M,place,PSYCH,108
+root,course,20438,PSY,373,S,Learning,1.0,Neuringer,M-W-F,place,PSYCH,108
+root,course,20425,PSY,383,S,Music Perception,1.0,Reisberg,M-W-F,place,PSYCH,108
+root,course,10755,PSY,385,F,Cross-Cultural Psychology,1.0,Bulkley,M-W-F,place,PSYCH,108
+root,course,10418,PSY,393,F,Psycholinguistics,1.0,Canseco-Gonzale,M-W-F,place,PSYCH,108
+root,course,20440,PSY,396,S,Psych of Language Acquisition,1.0,Canseco-Gonzale,T-Th,place,PSYCH,108
+root,course,10420,PSY,401,F,Junior Seminar,1.0,Rhodes,M,place,PSYCH,108
+root,course,20590,BIOL,102,SF3,Intro Biology Lect and Lab,0.0,Black,F,place,BIOL,103
+root,course,20441,PSY,433,S,Psychobiology Research,1.0,Dickinson,T-Th,place,PSYCH,108
+root,course,20664,PSY,442,S,Clinical Psychology,1.0,Herman,M-W-F,place,PSYCH,108
+root,course,10759,REL,152,F,Introduction to Judaism,1.0,McCalla,M-W-F,place,ELIOT,314
+root,course,20521,REL,154,S,Intro to Religions of Asia,1.0,Brashier,M-W-F,place,PSYCH,105
+root,course,10523,REL,155,F,Introduction to Islam,1.0,Feener,M-W-F,place,PSYCH,103
+root,course,10524,REL,201,F,Theory  and  Method in RelStudies,1.0,Brashier,M-W-F,place,LIB,204
+root,course,10785,REL,201,F01,Theory  and Methods in RelStudies,0.0,Brashier,M-W-F,place,VOLLUM,134
+root,course,10786,REL,201,F02,Theory  and Methods in RelStudies,0.0,Brashier,M-W-F,place,VOLLUM,302
+root,course,10787,REL,201,F03,Theory  and Methods in RelStudies,0.0,Brashier,M-W-F,place,VOLLUM,302
+root,course,20522,REL,301,S,History of Religion,1.0,McCalla,T-Th,place,VOLLUM,120
+root,course,20591,BIOL,102,SF7,Intro Biology Lect and Lab,0.0,Black,F,place,BIOL,107
+root,course,10525,REL,313,F,Chinese Mahayana Texts,1.0,Brashier,T-Th,place,ELIOT,405
+root,course,20523,REL,363,S,Missing Persons World ofIslam,1.0,Feener,M-W-F,place,VOLLUM,234
+root,course,10760,REL,366,F,Romanticism and Religion,1.0,McCalla,M-W,place,ELIOT,405
+root,course,10527,REL,384,F,Spcl Top Ancient Christianity,1.0,Foat,M-W-F,place,ELIOT,419
+root,course,20666,REL,399,S,Junior Seminar,1.0,Foat,T-Th,place,PHYSIC,121
+root,course,10799,RUSS,120,Y02,First Year Russian,1.0,Lencek,M-W-F,place,VOLLUM,120
+root,course,10799,RUSS,120,Y02,First Year Russian,1.0,Lencek,T-Th,place,VOLLUM,234
+root,course,10537,RUSS,266,F,Russian Short Fiction,1.0,Lencek,T-Th,place,VOLLUM,126
+root,course,20593,BIOL,332,S,Vascular Plant Diversity,1.0,Raubeson,M-W-F,place,PHYSIC,240A
+root,course,10536,RUSS,300,F,Advanced Russian,1.0,Bershtein,T-Th,place,ELIOT,123
+root,course,20534,RUSS,355,S,20th Century Russian Poetry,1.0,Lencek,T-Th,place,VOLLUM,134
+root,course,20530,RUSS,373,S,Mod Russ Lit:Chekov toPresent,1.0,Bershtein,T-Th,place,VOLLUM,126
+root,course,10539,RUSS,379,F,The Myth of St. Petersburg,1.0,Bershtein,T-Th,place,PSYCH,103
+root,course,20535,RUSS,404,S,Russ Lit: Gogol  and  Dostoevsky,1.0,Lencek,T-Th,place,VOLLUM,118
+root,course,20532,RUSS,408,S,Russ Decadent/SymbolistCultur,1.0,Bershtein,M-W,place,VOLLUM,302
+root,course,10541,RUSS,413,F,20th C Russian CriticalTheory,1.0,Lencek,T-Th,place,VOLLUM,126
+root,course,10474,SOC,211,F,Introduction to Sociology,0.0,Tudor,M,place,PSYCH,105
+root,course,10475,SOC,211,F01,Introduction to Sociology,0.0,Hrycak,W-F,place,VOLLUM,228
+root,course,10476,SOC,211,F02,Introduction to Sociology,0.0,Hrycak,W-F,place,VOLLUM,228
+root,course,20594,BIOL,332,SL1,Vascular Plant Diversity,0.0,Raubeson,T,place,BIOL,207
+root,course,10477,SOC,211,F03,Introduction to Sociology,0.0,Schneiberg,W-F,place,VOLLUM,228
+root,course,10478,SOC,211,F04,Introduction to Sociology,0.0,Schneiberg,W-F,place,VOLLUM,228
+root,course,10479,SOC,211,F05,Introduction to Sociology,0.0,Tudor,W-F,place,VOLLUM,228
+root,course,10480,SOC,211,F06,Introduction to Sociology,0.0,Tudor,W-F,place,VOLLUM,228
+root,course,20684,SOC,244,S01,Race and Ethnicity,1.0,Schneiberg,T-Th,place,VOLLUM,302
+root,course,20685,SOC,244,S02,Race and Ethnicity,1.0,Schneiberg,T-Th,place,ELIOT,419
+root,course,20653,SOC,283,S01,Sociology of Religion,1.0,Tudor,M-W-F,place,ELIOT,126
+root,course,20654,SOC,283,S02,Sociology of Religion,1.0,Tudor,M-W-F,place,ELIOT,126
+root,course,10520,SOC,311,F,Research Methods,1.0,Tudor,T-Th,place,ELIOT,126
+root,course,20646,SOC,321,S,American Capitalism,1.0,Schneiberg,T-Th,place,ELIOT,126
+root,course,20595,BIOL,332,SL2,Vascular Plant Diversity,0.0,Raubeson,Th,place,BIOL,207
+root,course,10522,SOC,363,F,Sociology of Culture,1.0,Hrycak,M-W,place,VOLLUM,302
+root,course,10199,SPAN,110,Y01,First Year Spanish,1.0,Drumm,M-T-W-F,place,VOLLUM,110
+root,course,10200,SPAN,110,Y02,First Year Spanish,1.0,Moret,M-T-W-F,place,VOLLUM,110
+root,course,10201,SPAN,110,Y03,First Year Spanish,1.0,Schulz,M-T-W-F,place,VOLLUM,116
+root,course,10202,SPAN,210,Y01,Second Year Spanish,1.0,Fischer,M-T-W-F,place,VOLLUM,110
+root,course,10203,SPAN,210,Y02,Second Year Spanish,1.0,Fischer,M-T-W-F,place,PHYSIC,121
+root,course,10378,SPAN,210,Y03,Second Year Spanish,1.0,Moret,M-T-W-F,place,VOLLUM,116
+root,course,10491,SPAN,321,F01,Theory  and  Practice HispanicLit,1.0,Moret,M-W-F,place,ELIOT,416
+root,course,10492,SPAN,321,F02,Theory  and  Practice HispanicLit,1.0,Schulz,M-W-F,place,ELIOT,121
+root,course,20492,SPAN,322,S,Spanish Short Story,1.0,Alonso,M-W-F,place,VOLLUM,118
+root,course,10610,BIOL,342,F,Animal Behav.  and  Behav.Ecology,1.0,Yezerinac,T-Th,place,PHYSIC,240A
+root,course,10494,SPAN,375,F,Modern Peninsular Drama,1.0,Drumm,T-Th,place,PSYCH,108
+root,course,20491,SPAN,395,S,Mod Spanish American Drama,1.0,Larisch,M-W-F,place,VOLLUM,228
+root,course,20683,SPAN,413,S,Penin Lit: Dogma  and  Disbelief,1.0,Garcia-Bryce,T,place,VOLLUM,134
+root,course,10493,SPAN,442,F01,Spl Tops Span Amer Lit:Borges,1.0,Fischer,M-W,place,LIB,203
+root,course,10770,SPAN,442,F02,The City in Span Amer Lit,1.0,Schulz,T-Th,place,LIB,203
+root,course,20490,SPAN,442,S,Lit Responses to Dictatorship,1.0,Fischer,M-W,place,ELIOT,419
+root,course,10528,THEA,110,F,Introduction to Theatre,1.0,Worley,M-W,place,,THEATR
+root,course,10530,THEA,205,F01,Masks  and  Make-up Design,0.5,Carr,T-Th,place,,THEATR
+root,course,10531,THEA,205,F02,Design for the Theatre: Sets,0.5,Muller,M-W-F,place,,THEATR
+root,course,20525,THEA,206,S01,Costume History  and  Design,0.5,Carr,T-Th,place,,THEATR
+root,course,10611,BIOL,342,FL1,Animal Behav.  and  Behav.Ecology,0.0,Yezerinac,Th,place,BIOL,211
+root,course,20526,THEA,206,S02,Design for Theatre: Lights,0.5,Muller,M-W-F,place,,THEATR
+root,course,10532,THEA,210,F,Acting Laboratory,0.5,Worley,T-Th,place,,THEATR
+root,course,10533,THEA,250,F,Plays and Playhouses,1.0,Clinton,T-Th,place,,THEATR
+root,course,20527,THEA,270,S,Intercultr ExperimentsTheatre,1.0,Worley,T-Th,place,,THEATR
+root,course,10534,THEA,275,F,Playwriting,1.0,Clinton,W,place,,THEATR
+root,course,20528,THEA,310,S,Techniques of Acting,1.0,Worley,T-Th,place,,THEATR
+root,course,10535,THEA,331,F,Directing I,1.0,Clinton,T-Th,place,,THEATR
+root,course,20529,THEA,334,S,Special Problems in Directing,1.0,Clinton,T-Th,place,,THEATR
+root,course,10744,HIST,556,F,Topics in FrenchEnlightenment,0.5,Kierstead,W,place,VOLLUM,234
+root,course,10745,HUM,510,F,Greek Humanities,0.5,King,T,place,VOLLUM,302
+root,course,10482,ANTH,311,F,General Linguistics,1.0,Haviland,T-Th,place,VOLLUM,116
+root,course,10612,BIOL,342,FL2,Animal Behav.  and  Behav.Ecology,0.0,Yezerinac,F,place,BIOL,211
+root,course,20649,LBST,579,S,ColonizingAfrica:Conrad and Congo,0.5,Lowe,W,place,ELIOT,317
+root,course,20650,LIT,560,S,Don Quixote  and  Narr. Theory,0.5,Drumm,W,place,VOLLUM,309
+root,course,10746,MATH,555,F,Ornamental Art,0.5,Wieting,W,place,VOLLUM,120
+root,course,20651,THEA,570,S,Experiments Intercult Theatre,0.5,Worley,T,place,ELIOT,126
+root,course,10613,BIOL,351,F,Developmental Biology,1.0,Black,T-Th,place,PHYSIC,240A
+root,course,10614,BIOL,351,FL1,Developmental Biology,0.0,Black,T,place,BIOL,207
+root,course,10615,BIOL,351,FL2,Developmental Biology,0.0,Black,W,place,BIOL,207
+root,course,20597,BIOL,356,S,Genetics and Gene Regulation,1.0,Shampay,M-W-F,place,PSYCH,105
+root,course,20599,BIOL,356,SL1,Genetics and Gene Regulation,0.0,Shampay,W,place,BIOL,21
+root,course,20600,BIOL,356,SL2,Genetics and Gene Regulation,0.0,Shampay,F,place,BIOL,21
+root,course,10771,BIOL,358,F,Microbiology,1.0,Mellies,M-W-F,place,PHYSIC,240A
+root,course,10772,BIOL,358,FL1,Microbiology,0.0,Mellies,T,place,BIOL,217
+root,course,10773,BIOL,358,FL2,Microbiology,0.0,Mellies,Th,place,BIOL,217
+root,course,10485,ANTH,313,F,Language in Society,1.0,Haviland,T,place,ELIOT,419
+root,course,10616,BIOL,361,F,Genetics and MolecularBiology,1.0,Russell,M-W-F,place,PSYCH,105
+root,course,10617,BIOL,361,FL1,Genetics and MolecularBiology,0.0,Russell,T,place,BIOL,21
+root,course,10618,BIOL,361,FL2,Genetics and MolecularBiology,0.0,Russell,W,place,BIOL,21
+root,course,10619,BIOL,361,FL3,Genetics and MolecularBiology,0.0,Russell,Th,place,BIOL,21
+root,course,20606,BIOL,366,S,Population Bio:Ecolgy and Evolutn,1.0,Kaplan,T-Th,place,PHYSIC,240A
+root,course,20608,BIOL,366,SL1,Population Bio:Ecolgy and Evolutn,0.0,Kaplan,T,place,BIOL,211
+root,course,20610,BIOL,366,SL2,Population Bio:Ecolgy and Evolutn,0.0,Kaplan,Th,place,BIOL,211
+root,course,10768,ANTH,339,F,Ethnic  and  Nation France  and  NAfr,1.0,Silverstein,T-Th,place,VOLLUM,118
+root,course,10410,BIOL,367,F,Scientific Computation,1.0,Crandall,T-Th,place,PHYSIC,123
+root,course,20617,BIOL,372,S,Cellular Biology,1.0,McClellan,T-Th,place,PHYSIC,123
+root,course,20620,BIOL,372,SL1,Cellular Biology,0.0,McClellan,W,place,BIOL,7
+root,course,20621,BIOL,372,SL2,Cellular Biology,0.0,McClellan,Th,place,BIOL,7
+root,course,10620,BIOL,381,F,Animal Physiology,1.0,Arch,T-Th,place,ELIOT,216
+root,course,10622,BIOL,381,FL1,Animal Physiology,0.0,Arch,T,place,BIOL,7
+root,course,10623,BIOL,381,FL2,Animal Physiology,0.0,Arch,Th,place,BIOL,7
+root,course,10776,BIOL,388,F,Evolutionary Biology,1.0,Raubeson,M-W-F,place,PHYSIC,240A
+root,course,10778,BIOL,388,FL1,Evolutionary Biology,0.0,Raubeson,W,place,PHYSIC,134
+root,course,10779,BIOL,388,FL2,Evolutionary Biology,0.0,Raubeson,F,place,PHYSIC,134

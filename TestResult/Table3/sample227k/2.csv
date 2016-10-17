@@ -1,0 +1,16 @@
+root,course,reg_num,subj,crse,sect,title,units,instructor,days,place,room
+root,course,10626,BIOL,431,F03,Bacterial Pathogenesis,0.5,,,place,Mellies         RESCHEDULED TO OTHER SEMESTER
+root,course,10377,CHIN,110,Y,First Year Chinese,1.0,,,place,Staff           M-T-W-Th-F12:00     VOLLUM  120
+root,course,10118,CHIN,210,Y,Second Year Chinese,1.0,,,place,Staff           M-T-W-Th-F12:00     ELIOT   123
+root,course,10136,FREN,110,Y01,First Year French,1.0,,,place,Hochman         M-T-W-Th-F11:00     ELIOT   207
+root,course,10137,FREN,110,Y02,First Year French,1.0,,,place,Hochman         M-T-W-Th-F12:00     ELIOT   207
+root,course,10138,FREN,110,Y03,First Year French,1.0,,,place,Khan            M-T-W-Th-F12:00     ELIOT   216
+root,course,10143,GER,110,Y01,Frst Yr German:A Foundation,1.0,,,place,Irmscher        M-T-W-Th-F11:00     ELIOT   414
+root,course,10397,GER,110,Y02,Frst Yr German:A Foundation,1.0,,,place,Irmscher        M-T-W-Th-F12:00     ELIOT   414
+root,course,10146,GRK,110,Y,First Year Greek,1.0,,,place,Nicholson       M-T-W-Th-F11:00     VOLLUM  309
+root,course,10179,LAT,110,Y,First Year Latin,1.0,,,place,Englert         M-T-W-Th-F11:00     VOLLUM  126
+root,course,10197,RUSS,120,Y,First Year Russian,1.0,,,place,Lencek          M-T-W-Th-F12:00     VOLLUM  126
+root,course,10198,RUSS,220,Y,Second Year Russian,1.0,,,place,Bershtein       M-T-W-Th-F12:00     VOLLUM  309
+root,course,20603,BIOL,358,S,Microbiology,1.0,,,place,Mellies         RESCHEDULED TO OTHER SEMESTER
+root,course,20604,BIOL,358,SL1,Microbiology,0.0,,,place,Mellies         RESCHEDULED TO OTHER SEMESTER
+root,course,20605,BIOL,358,SL2,Microbiology,0.0,,,place,Mellies         RESCHEDULED TO OTHER SEMESTER
