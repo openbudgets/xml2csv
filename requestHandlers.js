@@ -360,7 +360,6 @@ function addChild(aTree, res, parent, options, addNode, log){
         ele["isLeaf"] = checkIsLeaf(aTree);
         ele["output"] = false;
 
-
         //add this node to parent(include itself)
         parent.push(ele);
     }
@@ -379,6 +378,7 @@ function addChild(aTree, res, parent, options, addNode, log){
                 console.log("        "+"aTree.name : " + aTree.name());
             }
 
+            //add leaf node
             var ele = {}
             ele["Tree"] = aTree;
             ele["Root"] = "";
@@ -432,18 +432,23 @@ function addChild(aTree, res, parent, options, addNode, log){
             console.log("    "+"aTree.text() : " + aTree.text());
             console.log("    "+"aTree.name() : " + aTree.name());
         }
+
         var ele = {}
         ele["Tree"] = aTree;
         ele["Root"] = "";
         ele["RootName"] = aTree.name();
         ele["Attribute"] = aTree.attrs();
-        ele["Text"] = "";
+        ele["Text"] = aTree.name();
         ele["Path"] = aTree.path();
         ele["Chilrden"] = aTree.childNodes();
         ele["ChilrdenNumber"] = aTree.childNodes().length;
         ele["Chilrden[0]"] = aTree.childNodes()[0];
         ele["isLeaf"] = checkIsLeaf(aTree);
         ele["output"] = true;
+
+
+        //console.log(aTree.name());
+        //console.log(aTree.text());
 
         res.push(ele);
         return res;
@@ -566,13 +571,17 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, matchMark, option
         if(regEx.substring(regEx.length-1,regEx.length)!="$"){
             regEx=regEx+"$";
         }
-        //console.log(regEx)
+
         var test = ele["Root"].toString();
         //test = "<amount catpol=\"5.2.17\" year=\"n\"><figure>p.m.</figure></amount>"
-
+        if(log == true){
+            console.log(regEx);
+            //console.log(matchMark + " " +test.match(regEx);
+        }
         //console.log(regEx);
         if(test.match(regEx)!=null){
             matchMark = true;
+
             //console.log(matchMark + " " +test.match(regEx));
         }else {
             //console.log(test);
@@ -633,6 +642,7 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, matchMark, option
     var childrenNext = [];
     var tempMark = false;
     if(checkedMark == false){
+        //will never come to this if
         if(children==undefined || (children == "")){
             if(log ==true) {
                 console.log("ele[\"Children\"]==undefined");
@@ -689,43 +699,6 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, matchMark, option
     }else{
         childrenNext = children;
     }
-
-    /*
-
-
-     if(ele["Children"]!=undefined){
-     for(var i = childrenNext.length-1 ; i>-1 ; i--){
-
-     //var childEles = addChild(children[i],[]);
-
-     if(checkIsLeaf(children[i])){
-     var childEle = {}
-     childEle["Tree"] = "";
-     childEle["Root"] = "";
-     childEle["RootName"] = ele["RootName"] + " " + children[i].name();
-     childEle["Attribute"] = "";
-     childEle["Text"] = children[i].text();
-     childEle["Path"] = ele["Path"];
-     childEle["Chilrden"] = "";
-     childEle["ChilrdenNumber"] = "";
-     childEle["Chilrden[0]"] = "";
-     childEle["isLeaf"] = "";
-     childEle["output"] = true;
-     //console.log(ele["RootName"] + " " + attrList[idx].name());
-     //console.log(attrList[idx].value());
-     //parent.push(childEle);
-     }
-
-     }
-     }
-
-     */
-
-
-    // number of child
-    //var children = xml.root().childNodes();
-    //var childrenNumber = children.length;
-
 
     //if the data has similar structure and need to make then in one row
     var endRowMark = false;
@@ -820,18 +793,10 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, matchMark, option
 
     }else {
 
-        /*
-         console.log("--------------------Child--------------------")
-         console.log(child)
-         console.log("--------------------Child--------------------")
-         */
-        //child.unshift(rootName);
 
         ele["Text"]=contactElement.text();
         ele["output"] = true;
         child.unshift(ele);
-
-        //parent.unshift("isLeaf");
 
         //this tempNode tells the row is a leaf row
         //leaf row must be in both final result and output
@@ -869,17 +834,12 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, matchMark, option
             //parent.push(child[i]);
         }
 
-        //parent.unshift("isNode");
-
-        //res.unshift(parent);
-
         child.length = 0;
     }
 
     //console.log(isLeaf);
     //if find an leaf , return this root- node -leaf back
     if(isLeaf==true || endRowMark == true){
-        //console.log("recfun return ");
         return res;
     }
 }
