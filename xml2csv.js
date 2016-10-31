@@ -17,8 +17,6 @@ if(!program.args.length) {
     program.help();
 } else {
 	var keywords = program.args;
-	//var url = 'https://api.github.com/search/repositories?sort=stars&order=desc&q='+keywords;
-	//var url = 'https://raw.githubusercontent.com/wk0206/testPorject2/master/TestData/book.xml';
 	var test = keywords;
 	var url = program.args[0];
 
@@ -66,30 +64,24 @@ if(!program.args.length) {
 
 					var temp = requestHandlers.outputXML(treatXML,url,additionOption,withLog);
 
-
-					//for(var i = 0; i < body.items.length; i++) {
-					//console.log(chalk.cyan.bold('Name: ' + body.items[i].name));
-					//console.log(chalk.magenta.bold('Owner: ' + body.items[i].owner.login));
-					//console.log(chalk.grey('Desc: ' + body.items[i].description + '\n'));
-					//console.log(chalk.grey('Clone url: ' + body.items[i].clone_url + '\n'));
-
-					//}
 					var date2 = new Date();
-					console.log((date1-date2).toISOString()+" consumped");
-					requestHandlers.logTime(date1, date2);
+					//console.log((date1-date2).toISOString()+" consumped");
+					//requestHandlers.logTime(date1, date2);
 
 					process.exit(0);
 					return temp;
 				}
 				process.exit(0);
 			} else if (error) {
-				//console.log(chalk.red('Error: ' + error));
 				console.log('Error: ');
 				process.exit(1);
 			}
 		});
 	}else{
-		console.log("local "+ url.toString());
+		if(withLog==true) {
+			console.log("local "+ url.toString());
+		}
+		//
 
 		fs = require('fs')
 
@@ -114,15 +106,15 @@ if(!program.args.length) {
 							//5 = combine similar
 							//7 = omit same value
 							var date1 = new Date();
-							console.log(date1.toISOString()+" start");
+							//console.log(date1.toISOString()+" start");
 							var treatXML  = requestHandlers.treatXMLFile(body,additionOption,rgEx,withLog);
 
 							var temp = requestHandlers.outputXML(treatXML,url,additionOption,withLog);
 
 							var date2 = new Date();
 
-							console.log(date2.toISOString()+" end");
-							requestHandlers.logTime(date1, date2);
+							//console.log(date2.toISOString()+" end");
+							//requestHandlers.logTime(date1, date2);
 							//console.log((date1-date2).toISOString()+" consumped");
 							process.exit(0);
 							return temp;
@@ -141,16 +133,6 @@ if(!program.args.length) {
 				process.exit(1);
 			}
 		})
-
-
 	}
-
-    //console.log('Keywords: ' + program.args);
-	//console.log("test" +　test);
-
-
-
-
-
 }
 

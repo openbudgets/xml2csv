@@ -3100,7 +3100,9 @@ function logTime(FirstTime1, LastTime2){
 
     */
     //console.log((hour2-hour1)+":"+(minute2-minute1)+":")
-    console.log(LastTime2.getTime()-FirstTime1.getTime());
+    //console.log(LastTime2.getTime()-FirstTime1.getTime());
+    //console.log("\n");
+    //console.log("\n");
 
 }
 exports.start = start;
