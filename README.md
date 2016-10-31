@@ -1,6 +1,6 @@
 # XML2CSV
 
-#XML2CSV transorom XML to CSV with adjustable detail level
+#XML2CSV transform XML to CSV with adjustable detail level
 
 #INSTALL
 * Download this repository 
