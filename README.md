@@ -81,5 +81,5 @@ xml2csv /home/xml2csv/Final-budget-2014-EN/c\!SEC1_E\!en\!0.xml -a 135  -r "<amo
 ## Debug
 Use option "-l"
 ```
-xml2csv https://raw.githubusercontent.com/wk0206/xml2csv/master/TestData/book.xml -a 13 
+xml2csv https://raw.githubusercontent.com/wk0206/xml2csv/master/TestData/book.xml -a 13 -l
 ```
