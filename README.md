@@ -39,19 +39,19 @@ https://raw.githubusercontent.com/wk0206/xml2csv/master/TestData/book.xml
 * 5 : Combine similar datas
 
 ##Example
-Attribute 1
+Option 1
 * https://raw.githubusercontent.com/wk0206/xml2csv/master/TestData/book.xml
 ```
 xml2csv https://raw.githubusercontent.com/wk0206/xml2csv/master/TestData/book.xml -a 35 >/home/usr/Documents/log.txt
 xml2csv https://raw.githubusercontent.com/wk0206/xml2csv/master/TestData/book.xml -a 135 >/home/usr/Documents/log.txt
 ```
-Attribute 3
+Option 3
 * https://raw.githubusercontent.com/wk0206/xml2csv/master/Final-budget-2014-EN/c!SEC1_E!en!0.xml
 ```
 xml2csv https://raw.githubusercontent.com/wk0206/xml2csv/master/Final-budget-2014-EN/c!SEC1_E!en!0.xml -a 15 >/home/usr/Documents/log.txt
 xml2csv https://raw.githubusercontent.com/wk0206/xml2csv/master/Final-budget-2014-EN/c!SEC1_E!en!0.xml -a 135 >/home/usr/Documents/log.txt
 ```
-Attribute 5
+Option 5
 * https://raw.githubusercontent.com/wk0206/xml2csv/master/TestData/book.xml
 ```
 xml2csv https://raw.githubusercontent.com/wk0206/xml2csv/master/TestData/book.xml -a 13 >/home/usr/Documents/log.txt
