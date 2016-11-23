@@ -77,22 +77,17 @@ function upload(response, request) {
 }
 function xmlload(response, request) {
     var xml = "<foo>bar</foo>";
-//console.log(xml);
+
     var json = parser.toJson(xml); //returns a string containing the JSON structure by default
-//console.log(json);
+
     var form = new formidable.IncomingForm();
     console.log("about to parse");
     form.parse(request, function(error, fields, files) {
         console.log("parsing done");
-//console.log(files);
-//console.log(files.upload);
-//console.log(files.upload.path);
         fs.renameSync(files.upload.path, "/tmp/test.xml");
         response.writeHead(200, {"Content-Type": "text/html"});
         response.write("received data:<br/>");
         response.write(json);
-        //response.write("<img src='/show' />");
-        //response.write("<lable>test</lable>")
         response.end();
     });
 }
@@ -128,7 +123,6 @@ function show(response) {
                 if (this.isLeaf) acc.push(x);
                 return acc;
             }, []);
-//console.dir(leaves);
             response.write(json);
             response.end();
         }
@@ -607,6 +601,10 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, matchMark, option
 
     //isolate the attribute, make them as a node
     //OPTION 1
+    if(options==undefined){
+        //console.log("empty options");
+        options='0';
+    }
     if(options.indexOf("1")>=0){
         if(ele["Attribute"].length>0){
 
@@ -673,7 +671,12 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, matchMark, option
                     for(var j = 0; j < childrenA.length ; j ++){
                         //console.log(childrenA[j]);
                         //OPTION 3
-                        if(options == "3" || options =="13" || options =="35" || options =="135"){
+                        if(options==undefined){
+                            //console.log("empty options");
+                            options='0';
+                        }
+                        //if(options == "3" || options =="13" || options =="35" || options =="135"){
+                        if(options.indexOf("3")>=0){
                             parent.push(childrenA[j]);
                         }
 
@@ -961,6 +964,10 @@ function combineBranch(treeStructure, options,rgEx, log){
 
 
         //OPTION 5
+        if(options==undefined){
+            //console.log("empty options");
+            options='0';
+        }
         if(options.indexOf("5")>=0){
             var tempData = aData.slice(0,aData.length-1);
             //console.log("in OPTION 5");
@@ -2100,7 +2107,13 @@ function treeToCSV(inputCSV, title, options){
     for(var i = 1 ; i < inputCSV.length ; i++){
 
         //OPTION 7
-        if(options == "7" || options =="17" || options =="37" || options =="57" || options =="137" || options =="157" || options =="357" || options =="1357") {
+        if(options==undefined){
+            //console.log("empty options");
+            options='0';
+        }
+        //if(options == "7" || options =="17" || options =="37" || options =="57" || options =="137" || options =="157" || options =="357" || options =="1357") {
+        if(options.indexOf("7")>=0){
+
             if (inputCSV[i].output == true) {
 
                 res += inputCSV[i].Text;
@@ -2131,6 +2144,10 @@ function treeToHTML(inputCSV, title, options){
         //for(idx in title){
         for(var i = 1 ; i < inputCSV.length ; i++){
             //if(options == "7" || options =="17" || options =="37" || options =="57" || options =="137" || options =="157" || options =="357" || options =="1357") {
+            if(options==undefined){
+                //console.log("empty options");
+                options='0';
+            }
             if(options.indexOf("7")>=0){
                 if (title[i].output == true) {
                     res += "<td nowrap>";
@@ -2153,6 +2170,10 @@ function treeToHTML(inputCSV, title, options){
     //for(idx in inputCSV){
     for(var i = 1 ; i < inputCSV.length ; i++){
         //OPTION 7
+        if(options==undefined){
+            //console.log("empty options");
+            options='0';
+        }
         //if(options == "7" || options =="17" || options =="37" || options =="57" || options =="137" || options =="157" || options =="357" || options =="1357") {
         if(options.indexOf("7")>=0){
             if(inputCSV[i].output==true){
@@ -3073,36 +3094,7 @@ function realfunction(response,request,postData) {
 }
 
 function logTime(FirstTime1, LastTime2){
-    /*
-    var regExMin = ":[0-9]*\.";
 
-    var hour1 =  FirstTime1.toString().substring(FirstTime1.toString().match(regExMin).index-2,FirstTime1.toString().match(regExMin).index);
-    var minute1 = FirstTime1.toString().substring(FirstTime1.toString().match(regExMin).index+1,FirstTime1.toString().match(regExMin).index+3);
-    var second1 =  FirstTime1.toString().substring(FirstTime1.toString().match(regExMin).index+4,FirstTime1.toString().match(regExMin).index+6);
-    //console.log(hour1+":"+minute1+":"+second1);
-
-
-
-    //console.log(LastTime2.getTime());
-
-    var hour2 =  LastTime2.toString().substring(LastTime2.toString().match(regExMin).index-2,LastTime2.toString().match(regExMin).index);
-    var minute2 = LastTime2.toString().substring(LastTime2.toString().match(regExMin).index+1,LastTime2.toString().match(regExMin).index+3);
-    var second2 =  LastTime2.toString().substring(LastTime2.toString().match(regExMin).index+4,LastTime2.toString().match(regExMin).index+6);
-
-    //console.log(hour2+":"+minute2+":"+second2);
-
-    //console.log(second1.length);
-    if(second1.length==2){
-
-        second1=second1+"0";
-        console.log(second1);
-    }
-
-    */
-    //console.log((hour2-hour1)+":"+(minute2-minute1)+":")
-    //console.log(LastTime2.getTime()-FirstTime1.getTime());
-    //console.log("\n");
-    //console.log("\n");
 
 }
 exports.start = start;
