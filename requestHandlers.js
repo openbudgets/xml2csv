@@ -225,18 +225,7 @@ function showtraverse(response) {
         }
     });
 }
-function buildHtmlTable(selector) {
-    var columns = addAllColumnHeaders(myList, selector);
-    for (var i = 0 ; i < myList.length ; i++) {
-        var row$ = $('<tr/>');
-        for (var colIndex = 0 ; colIndex < columns.length ; colIndex++) {
-            var cellValue = myList[i][columns[colIndex]];
-            if (cellValue == null) { cellValue = ""; }
-            row$.append($('<td/>').html(cellValue));
-        }
-        $(selector).append(row$);
-    }
-}
+
 function addAllColumnHeaders(myList, selector){
     var columnSet = [];
     var headerTr$ = $('<tr/>');
@@ -255,22 +244,11 @@ function addAllColumnHeaders(myList, selector){
 
 function checkIsLeaf(aTree){
 
-    //console.log("test tree↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
-    //console.log(typeof(aTree));
-    //console.log(aTree.parent());
-    //console.log(aTree.text());
-    //console.log(aTree.toString());
-    //console.log("test tree↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑");
-
     var isLeaf = false;
 
     if(typeof (aTree)=="string"){
         console.log("input is a string");
     }else{
-
-        //if(aTree.name()=="text"){
-        //    return true;
-        //}
 
         if(aTree.child(0)!=null){
             //console.log("aTree.child(0) is not null");
@@ -316,8 +294,6 @@ function addChild(aTree, res, parent, options, addNode, log){
         console.log("in addChild")
         console.log("    "+"aTree.tostring : " + aTree.toString());
     }
-
-    //console.log("aTree type :"+typeof (aTree))
 
     if(aTree.name()=="text"){
         if(log==true) {
@@ -386,15 +362,6 @@ function addChild(aTree, res, parent, options, addNode, log){
             ele["isLeaf"] = checkIsLeaf(aTree);
             ele["output"] = true;
 
-            /*
-             var children = aTree.childNodes();
-             if(children==undefined || (children == "")){
-             console.log("empty node");
-             }else{
-             console.log("node with length "+ children.length);
-             }
-             */
-
             if(log==true) {
                 console.log("res length is "+res.length);
             }
@@ -440,49 +407,11 @@ function addChild(aTree, res, parent, options, addNode, log){
         ele["isLeaf"] = checkIsLeaf(aTree);
         ele["output"] = true;
 
-
-        //console.log(aTree.name());
-        //console.log(aTree.text());
-
         res.push(ele);
         return res;
 
     }
-    /*
 
-     console.log("checkIsLeaf(aTree)"+checkIsLeaf(aTree));
-
-     //xml
-     if(!checkIsLeaf(aTree)){
-
-     console.log("not a leaf"+aTree.doc());
-     var xml = libxmljs.parseXmlString(aTree,{ noblanks: true });
-     console.log("xml"+xml);
-
-     //root
-     var contactElement = xml.root();
-     //console.log("contactElement"+contactElement);
-     var children = contactElement.childNodes();
-     //console.log("children"+children);
-
-     console.log(children.length)
-     if(!checkIsLeaf(aTree) && children.length==1){
-     addChild(children[0],res);
-     }
-
-     }else{
-     console.log("is  a leaf"+aTree.text());
-     }
-
-
-     //this tree should be stright
-     if(checkIsLeaf(aTree)){
-
-     }
-
-     //this tree should be single
-
-     */
     if(log==true){
         console.log("test res return "+res);
         if(res=="") {
@@ -552,11 +481,8 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, matchMark, option
 
 
     //add this node to parent(include itself)
-
-
     if(rgEx!=""){
-        //var myArr = rgEx.exec(contactElement.name());
-        //console.log(myArr);
+
         var regEx= ""+rgEx+""
         if(regEx.substring(0,1)!="^"){
             regEx="^"+regEx;
@@ -570,27 +496,15 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, matchMark, option
         //test = "<amount catpol=\"5.2.17\" year=\"n\"><figure>p.m.</figure></amount>"
         if(log == true){
             console.log(regEx);
-            //console.log(matchMark + " " +test.match(regEx);
         }
-        //console.log(regEx);
+
         if(test.match(regEx)!=null){
             matchMark = true;
 
-            //console.log(matchMark + " " +test.match(regEx));
         }else {
             //console.log(test);
         }
 
-        /*
-        console.log("-------------------")
-        console.log( " tree "+ele["Tree"]);
-        console.log( " Root "+ele["Root"]);
-        console.log( " RootName "+ele["RootName"]);
-        console.log( " Chilrden "+ele["Chilrden"]);
-        console.log("--------------------------------------")
-        */
-
-        //console.log( matchMark+ " Root "+ele["Root"]);
     }
 
 
@@ -623,8 +537,6 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, matchMark, option
                 attr["Children[0]"] = "";
                 attr["isLeaf"] = "";
                 attr["output"] = true;
-                //console.log(ele["RootName"] + " " + attrList[idx].name());
-                //console.log(attrList[idx].value());
                 parent.push(attr);
             }
         }
@@ -695,9 +607,6 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, matchMark, option
                 childrenNext = children;
                 tempMark = true;
             }
-
-            //console.log("how many children children has :"+ children.length);
-            //console.log("how many children childrenNext has :"+ childrenNext.length);
         }
     }else{
         childrenNext = children;
@@ -712,10 +621,6 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, matchMark, option
     if(isLeaf==false){
 
         for(var i = childrenNext.length-1 ; i>-1 ; i--){
-            //console.log("childrenNext.length is " + childrenNext.length)
-            //console.log("checkedMark is " +checkedMark)
-            //console.log("childrenNext[i] text is "+childrenNext[i]);
-            //console.log("childrenNext[i].length-2,childrenNext[i]-1"+childrenNext[i].toString().substring(childrenNext[i].toString().length-2,childrenNext[i].toString().length));
 
             if(childrenNext[i].toString().substring(childrenNext[i].toString().length-2,childrenNext[i].toString().length)=="/>"){
                 var ele = {}
@@ -746,9 +651,9 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, matchMark, option
                 if(log ==true) {
                     console.log("path 2 " + matchMark);
                 }
-                //console.log("tempMark is " +tempMark)
+
                 recFunc(childrenNext[i],parent,res,child, tempMark, matchMark, options,rgEx, log);
-                //console.log("return from path 2")
+
             }else {
                 //this should be the most common choice
                 if(log ==true) {
@@ -764,8 +669,6 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, matchMark, option
 
             }
         }
-
-        //parent.unshift("isNode");
 
         //this tempNode , tell the row is a node
         //node row should be in the final result
@@ -840,13 +743,13 @@ function recFunc(aTree, parentArr, result, child ,checkedMark, matchMark, option
         child.length = 0;
     }
 
-    //console.log(isLeaf);
+
     //if find an leaf , return this root- node -leaf back
     if(isLeaf==true || endRowMark == true){
         return res;
     }
 }
-//                  tempData   res
+
 function checkExist(inputLeaf, outputStack){
 
     //this part will get out every piece of outputStack
@@ -857,33 +760,25 @@ function checkExist(inputLeaf, outputStack){
     var res = -1;
     for(var i = 0; i < outputStack.length; i ++){
 
-        //console.log("------------------");
-        //var table = outputStack[i];
-        //var title = outputStack[i].title;
         var table = outputStack[i].title;
-        //console.log("table is "+table)
+
         var title = [];
 
         for(idx in table){
             title.push(table[idx].RootName);
-            //console.log(table[idx].RootName)
+
         }
 
-        //console.log("title is ");
-        //console.log(title);
-        //console.log(title.length+" : "+inputLeaf.length)
         if(title.length != inputLeaf.length){
             continue;
         }
 
         var sameMark = false;
         for(var j = 0; j < title.length; j ++){
-            //console.log("title[j]"+title[j]);
-            //console.log("inputLeaf[j].RootName"+inputLeaf[j].RootName);
 
             if(title.indexOf(inputLeaf[j].RootName)<0){
                 break;
-                //console.log("leaf index is " + title.indexOf(inputLeaf[j].RootName));
+
             }
 
             if(title[j]!=inputLeaf[j].RootName){
@@ -908,12 +803,11 @@ function checkExist(inputLeaf, outputStack){
         //they have every element indexed in the compare object( the piece of outputStack)
         if(sameMark==true){
 
-            //console.log("index "+i);
             return i;
         }
 
     }
-    //console.log("index "+-1);
+
     return -1;
 }
 
@@ -928,7 +822,6 @@ function sequenceAdjust(candidate, target){
 
     for(idx in candidate){
         title.push(candidate[idx].RootName);
-        //console.log(table[idx].RootName)
     }
 
     for(var i = 0; i < length ; i ++) {
@@ -955,7 +848,6 @@ function combineBranch(treeStructure, options,rgEx, log){
     //loop every row,combine same ones
     for(var i = 0; i < treeStructure.length; i++){
 
-        //console.log("treeStructure[i][0].RootName = "+treeStructure[i][0].RootName);
         var aData = treeStructure[i];
 
         for (idx in treeStructure[i]){
@@ -965,18 +857,15 @@ function combineBranch(treeStructure, options,rgEx, log){
 
         //OPTION 5
         if(options==undefined){
-            //console.log("empty options");
             options='0';
         }
+
         if(options.indexOf("5")>=0){
             var tempData = aData.slice(0,aData.length-1);
-            //console.log("in OPTION 5");
             var firstEle;
-
 
             if(i==treeStructure.length-1){
                 //last element
-                //console.log(rgEx!="");
                 if(rgEx!=""){
                     if(treeStructure[i-1][0].RootName=="isMatch" && treeStructure[i][0].RootName=="isMatch"){
                         sameMark = false;
@@ -1007,22 +896,15 @@ function combineBranch(treeStructure, options,rgEx, log){
                     if(treeStructure[i][0].RootName=="isNode" && treeStructure[i+1][0].RootName=="isLeaf"){
                         sameMark = true;
                         firstEle = treeStructure[i][aData.length-1];
-                        //console.log("without re,set true")
-                        //console.log("firstEle.Text "+firstEle.Text);
-                        //console.log("treeStructure[i][aData.length-2].Text "+treeStructure[i][aData.length-2].Text);
                     }
                     if(treeStructure[i][0].RootName=="isLeaf" && treeStructure[i+1][0].RootName=="isNode"){
                         sameMark = false;
-                        //console.log("without re,set false")
                     }
-
                 }
-
             }
 
             var differentMark = false;
 
-            //console.log("sameMark"+sameMark)
             if( sameMark == true){
                 var pathLength = treeStructure[i-1].length;
 
@@ -1032,8 +914,6 @@ function combineBranch(treeStructure, options,rgEx, log){
                     differentMark=true;
                 }
                 temp.push(treeStructure[i][aData.length-1]);
-                //console.log("treeStructure[i][aData.length-1] "+ treeStructure[i][aData.length-1].Text);
-                //console.log(temp.length);
                 continue;
             }
 
@@ -1062,11 +942,6 @@ function combineBranch(treeStructure, options,rgEx, log){
             var tempData = aData.slice(0,aData.length);
         }
 
-        /*
-
-
-         */
-
         var extractMark=""
 
         if(rgEx!=""){
@@ -1075,17 +950,9 @@ function combineBranch(treeStructure, options,rgEx, log){
             extractMark = "isLeaf";
         }
 
-        //console.log("extractMark"+ extractMark)
-        //console.log(treeStructure[i][treeStructure[i].length-1].RootName +" : "+ treeStructure[i][treeStructure[i].length-1].Text);
-        //console.log("treeStructure[i].isLeaf==true? " + treeStructure[i][0]);
         if(treeStructure[i][0].RootName==extractMark){
 
-            //console.log(treeStructure[i]);
-            //console.log(res);
-            //console.log(checkExist(treeStructure[i],res));
-            //console.log(checkExist(tempData,res));
             var index = checkExist(tempData,res);
-            //console.log("index is "+index);
 
             //index == -1 means it is a brand new title type
             if(index==-1){
@@ -1103,13 +970,9 @@ function combineBranch(treeStructure, options,rgEx, log){
                 //var seqData = sequenceAdjust(tempData,res[index].title);
 
                 res[index].values.push(tempData);
-                //res[index].values.push(seqData);
+
                 res[index].count+=1;
-                //console.log("test");
-                //console.log(res[index].values);
             }
-            //res.push(treeStructure[i]);
-            //console.log(treeStructure[i]);
         }
     }
 
@@ -1217,12 +1080,10 @@ function treatXMLFile(xmlInput,options,rgEx,log){
 
 
 function treatJson( json ){
-    //console.log("transform from JOSN to HTML:start");
-    //var temp = json.indexOf("{");
 
     var patten = "$t";
     var str = json.replace("$t","description")
-    //var str = json;
+
     var indices = [];
     for(var i=0; i<str.length;i++) {
         if (str[i] === "{") indices.push([i,"{"]);
@@ -1302,39 +1163,28 @@ function treatJson( json ){
             //temp13[i]=buildIndentation(indentation)+indentation+temp11[i]+"<br/>";
         }
     }
-//console.log("transform log");
-//console.log(temp13);
-//console.log("transform log");
+
     var datas = [];
     var dataflag = false;
     for(var i=0; i<temp13.length;i++) {
         if(temp13[i].line.indexOf("[")>-1){
             if(dataflag == false){
                 data.push(temp13[i]);
-//console.log("################################a new block#################################################################");
-//console.log("first line#########"+ temp13[i].line + " at line " + i);
             } else{
-//console.log("################################delete a block#################################################################");
-//console.log("because of" + temp13[i].line + " at line " + i);
                 for (var idx in data){
                     prefix.push(data[idx]);
-                    //console.log("data to prefix#########");
+
                 }
                 data.length = 0;
                 data.push(temp13[i]);
-//console.log("first line after delete#########"+ temp13[i].line + " at line " + i);
+
             }
             dataflag = true;
         } else if ((temp13[i].line.indexOf("]")>-1) && (dataflag == true)){
             data.push(temp13[i]);
             dataflag = false;
-//console.log("################################end of a block#################################################################");
-//console.log("because of" + temp13[i].line + " at line " + i);
             //remove duplicate
             var cleanedPrefix = cleanPrefix(prefix);
-//console.log("-------------cleanedPrefix start-----------");
-//console.log(cleanedPrefix);
-//console.log("-------------cleanedPrefix end-------------");
             //if this prefix is already exist ,return index
             //var index = checkPrefix(datas, cleanedPrefix);
 
@@ -1342,12 +1192,9 @@ function treatJson( json ){
             var simpledataFlag = false;
             if(checkSimpleData(data)){
                 simpledataFlag=true;
-//console.log("this is a simple data");
+
             }
             index = findSameTitle(datas, cleanedPrefix, data, simpledataFlag);
-            //console.log("datas "+datas.length);
-            //console.log("same title at "+index);
-//console.log("-------------index is "+index+"-------------");
             //prefix is same ,
             if(index>=0){
                 //check data title , return data title length
@@ -1361,28 +1208,8 @@ function treatJson( json ){
                 if(simpledataFlag==true){
                     ele["simple"]=true;
                 }
-//console.log("update data " + index);
+
                 datas[index] = ele;
-                /*
-                 //data title is same
-                 if (dataLength>0) {
-                 //prefix exist, and data title is same , add to exist
-                 var dataBlock = addDataToExist(cleanedPrefix, datas[index], data);
-                 var ele = {};
-                 ele["prefix"] =dataBlock[0];
-                 ele["datablock"]=dataBlock;
-                 console.log("update data " + index);
-                 datas[index] = ele;
-                 }else{
-                 //prefix exist, but data title is different, make new block
-                 var dataBlock = treatData(cleanedPrefix, data);
-                 var ele = {};
-                 ele["prefix"] =dataBlock[0];
-                 ele["datablock"]=dataBlock;
-                 console.log("add a new data to datas with number"+ datas.length);
-                 datas.push(ele);
-                 }
-                 */
             }
             //prefix is different
             else {
@@ -1397,19 +1224,14 @@ function treatJson( json ){
                     ele["simple"]=false;
                 }
 
-//console.log("-------------dataBlock start-----------");
-//console.log(dataBlock);
-//console.log("-------------dataBlock end-------------");
-
-//console.log("add a new data to datas with number"+ datas.length);
                 datas.push(ele);
             }
             data.length = 0;
         } else if ( dataflag == true ){
-//console.log("line " + i +"add to data");
+
             data.push(temp13[i]);
         } else if (dataflag == false){
-//console.log("line " + i +"add to prefix");
+
             prefix.push(temp13[i]);
         }
     }
@@ -1455,7 +1277,6 @@ function checkTitle(title1, title2){
 }
 
 function mergeFinal(tables){
-    //console.log("mergeFinal start");
 
     if(tables.length == 1){
         return tables;
@@ -1539,20 +1360,11 @@ function mergeFinal(tables){
                     res[i]=tempRow;
                 }
 
-                //console.log("merge them");
             }else{
                 continue;
             }
         }
-        //var title = treatJS[i][0]
-
-        //console.log(title);
-
-
     }
-
-//    console.log("mergedTable"+mergedTable);
-//    console.log("mergeToTable"+mergeToTable);
 
     //get out non-empty tables
     var result=[];
@@ -1563,7 +1375,6 @@ function mergeFinal(tables){
         }
     }
 
-//    console.log("mergeFinal end");
     return result;
 }
 
@@ -1601,9 +1412,6 @@ function cleanResult(res){
             }
         }
 
-        //console.log("data[0].length" + data[0].length);
-        //console.log("data.length" + data.length);
-
         for(var i = 0; i < data.length ; i++){
             //console.log("data["+i+"].length" + data[i].length);
         }
@@ -1613,10 +1421,6 @@ function cleanResult(res){
             //j is row
             for(var j = 1; j < data.length ; j++){
 
-                //console.log("data["+j+"]["+i+"]="+data[j][i]);
-                //console.log("data["+j+"]["+i+"].att="+data[j][i].att);
-                //console.log("data["+j+"]["+i+"].val="+data[j][i].val);
-                //console.log("uselessArray.indexOf(data["+j+"]["+i+"].val)="+uselessArray.indexOf(data[j][i].val));
                 if((uselessArray.indexOf(data[j][i]))!=undefined){
                     if(uselessArray.indexOf(data[j][i].val)!=undefined){
                         if(uselessArray.indexOf(data[j][i].val)==-1){
@@ -1630,7 +1434,7 @@ function cleanResult(res){
 
 
             }
-//console.log("log is"+titleLine[i]["output"]);
+
         }
         resCopy[idx][0]=titleLine;
     }
@@ -1645,14 +1449,11 @@ function buildIndentation(index){
         res+=strindent;
         temp--;
     }
-    //console.log("transform from JOSN to HTML:end");
+
     return res;
 }
 
 function addNewPage(response,request, postdata){
-//console.log("postData is " +postdata);
-//console.log(typeof(postdata));
-//console.log("addNewPage");
     response.write(postdata);
     response.end;
 }
@@ -1663,13 +1464,6 @@ function addNewPage(response,request, postdata){
 //if the data is single (without a brother leaf)
 //if the data is irregular(different from each other)
 function treatData(prefix,data ,simpledataFlag){
-//console.log("build datablock:start");
-//console.log("entered prefix");
-//console.log(prefix);
-//console.log("entered prefix");
-//console.log("entered data");
-//console.log(data);
-//console.log("entered data");
     var title = []
     var rows = [];
     var rowPrefix = prefix.slice(0);
@@ -1704,7 +1498,7 @@ function treatData(prefix,data ,simpledataFlag){
             //detect a start
             if (data[i].line.indexOf("{") > -1) {
                 if (pieceOfDataFlag == 0) {
-//console.log("start of a piece of data");
+
                     dataStack.length = 0;
                     count++;
                 }
@@ -1727,7 +1521,7 @@ function treatData(prefix,data ,simpledataFlag){
                     ele["indentation"] = "";
                     ele["att"] = cleanValue(att);
                     ele["val"] = cleanValue(att);
-//console.log("add an element to title: "+ att);
+
                     title.push(ele);
                     tempTitle.push(ele);
                 }
@@ -1748,7 +1542,7 @@ function treatData(prefix,data ,simpledataFlag){
             //detect a start
             if(data[i].line.indexOf("{")>-1){
                 if(pieceOfDataFlag==0){
-//console.log("start of a piece of data");
+
                     dataStack.length = 0;
                     count++;
                 }
@@ -1778,31 +1572,6 @@ function treatData(prefix,data ,simpledataFlag){
 
                 //not first row
                 if(rows.length >1){
-                    /*
-                     //normal branch,
-                     if(tempTitle.length>rowItemCount){
-                     if(tempTitle[rowItemCount].att==att){
-                     //usual case, all same
-                     //add an element
-                     ele={};
-                     ele["indentation"] = data[i].indentation;
-                     ele["att"]=cleanValue(att);
-                     ele["val"]=cleanValue(temp);
-                     dataStack.push(ele);
-                     }else{
-                     //unusual case, row item is different from title at[rowItemCount]
-                     //temproary :omit this item, keep title
-                     ele={};
-                     ele["indentation"] = tempTitle[rowItemCount].indentation;
-                     ele["att"]=tempTitle[rowItemCount].att;
-                     ele["val"]="-";
-
-                     rowItemCount--;
-                     }
-                     }else{
-                     //this branch means, rows has more column than title
-                     }
-                     */
 
                     ele={};
                     ele["indentation"] = data[i].indentation;
@@ -1826,13 +1595,13 @@ function treatData(prefix,data ,simpledataFlag){
                 if(rows.length>1 && rowItemCount<=(rows[rows.length-1].length-prefix.length)){
                     //the last row in [rows],the element of index of [new build last] not equal to new build row's last
                     if(rows[rows.length-1][prefix.length+rowItemCount-1].att!=att){
-//console.log("not same");
-//console.log(rows[rows.length-1][prefix.length+rowItemCount-1]);
-//console.log(att);
+                        //console.log("not same");
+                        //console.log(rows[rows.length-1][prefix.length+rowItemCount-1]);
+                        //console.log(att);
                     }else{
-//console.log("same");
-//console.log(rows[rows.length-1][prefix.length+rowItemCount-1]);
-//console.log(att);
+                        //console.log("same");
+                        //console.log(rows[rows.length-1][prefix.length+rowItemCount-1]);
+                        //console.log(att);
                     }
                 }else{
                     //rowItemCount--;
@@ -1842,8 +1611,6 @@ function treatData(prefix,data ,simpledataFlag){
             //piece of data finish, attach to rows
             //console.log("pieceOfDataFlag = "+pieceOfDataFlag);
             if(data[i].line.indexOf("}")>-1 && (pieceOfDataFlag==0)){
-//console.log("end of a piece of data")
-                //var temp = prefix.slice(0);
 
                 var temp = [];
                 //copy prefix
@@ -1855,26 +1622,19 @@ function treatData(prefix,data ,simpledataFlag){
                     ele["val"]= cleanValue(prefix[idx].val);
                     temp.push(ele);
                 }
-//console.log("sepecial treat");
-//console.log(prefix);
-//console.log("sepecial treat");
-                //console.log(tempTitle);
-                //console.log(dataStack);
                 var tempData = adaptDataToTitle(tempTitle,dataStack);
-                //console.log(tempData);
 
                 for (idx in tempData){
                     temp.push(tempData[idx]);
                 }
                 var row = temp;
                 rowItemCount=0;
-                //console.log("row-----"+row.length);
+
                 rows.push(row);
             }
         }
 
         //attach title to the first row
-        //console.log("title-----"+title.length);
 
         rows.unshift(title);
     }
@@ -1899,7 +1659,6 @@ function treatData(prefix,data ,simpledataFlag){
         }
         rows.push(title);
     }
-//console.log("build datablock:end");
     return rows;
 }
 
@@ -1933,8 +1692,7 @@ function adaptDataToTitle(title, data){
         var tempTitle = title.slice(0);
 
         for(var i = 0; i <tempTitle.length; i++){
-            //console.log("i= "+i);
-            //console.log("title "+title[i]);
+
             var temp = tempTitle.slice(i,i+1);
             //var ele = temp[0];
 
@@ -1946,14 +1704,7 @@ function adaptDataToTitle(title, data){
             //search att in data, replace val in ele
             for (var j = 0; j < data.length ; j ++){
                 //grab same attribute , this attribute must not used before.
-                /*
-                 console.log("data[j].att "+data[j].att);
-                 console.log("ele.att "+ele.att);
-                 console.log("ele.val before "+ ele.val);
-                 console.log("data[j].att == ele.att "+(data[j].att == ele.att));
-                 console.log("index.indexOf(j)"+index.indexOf(j))
-                 */
-                if(data[j].att == att && index.indexOf(j)==-1){
+                 if(data[j].att == att && index.indexOf(j)==-1){
 
                     var ele = {};
                     ele["att"] = att;
@@ -2033,9 +1784,6 @@ function cleanValue(aValue){
         res = tail;
     }
 
-    //console.log("in  "+ aValue);
-    //console.log("out "+ res);
-
     return res;
 }
 function JSONtoConsoleCSV(inputCSV, title){
@@ -2055,7 +1803,7 @@ function JSONtoConsoleCSV(inputCSV, title){
         }
     }
     res = res.substring(0,res.length-1);
-    //res+="\n";
+
     return res;
 }
 
@@ -2076,7 +1824,7 @@ function JSONtoConsoleCSVALL(inputCSV, title){
         }
     }
     res = res.substring(0,res.length-1);
-    //res+="\n";
+
     return res;
 }
 
@@ -2108,7 +1856,6 @@ function treeToCSV(inputCSV, title, options){
 
         //OPTION 7
         if(options==undefined){
-            //console.log("empty options");
             options='0';
         }
         //if(options == "7" || options =="17" || options =="37" || options =="57" || options =="137" || options =="157" || options =="357" || options =="1357") {
@@ -2133,19 +1880,15 @@ function treeToCSV(inputCSV, title, options){
 }
 
 function treeToHTML(inputCSV, title, options){
-    //console.log("-----------------");
-    //console.log(inputCSV);
-    //console.log(inputCSV);
-    //console.log(title);
-    //console.log(options);
+
     if(title!=undefined&&title!=[]&&title!=""){
         var res = "";
         res+="<tr>";
         //for(idx in title){
         for(var i = 1 ; i < inputCSV.length ; i++){
-            //if(options == "7" || options =="17" || options =="37" || options =="57" || options =="137" || options =="157" || options =="357" || options =="1357") {
+
             if(options==undefined){
-                //console.log("empty options");
+
                 options='0';
             }
             if(options.indexOf("7")>=0){
@@ -2171,10 +1914,10 @@ function treeToHTML(inputCSV, title, options){
     for(var i = 1 ; i < inputCSV.length ; i++){
         //OPTION 7
         if(options==undefined){
-            //console.log("empty options");
+
             options='0';
         }
-        //if(options == "7" || options =="17" || options =="37" || options =="57" || options =="137" || options =="157" || options =="357" || options =="1357") {
+
         if(options.indexOf("7")>=0){
             if(inputCSV[i].output==true){
                 res+="<td nowrap>";
@@ -2187,19 +1930,6 @@ function treeToHTML(inputCSV, title, options){
             res+="</td>";
         }
 
-        /*
-         if(title[idx].output==true){
-         res+="<td nowrap>";
-         if(inputCSV[idx]==undefined){
-         res+="wrong here";
-         }else{
-         res+=inputCSV[idx].val;
-         }
-
-         res+="</td>";
-         }
-
-         */
     }
     res+="</tr>";
     return res;
@@ -2208,13 +1938,13 @@ function treeToHTML(inputCSV, title, options){
 function JSONtoHTML(inputCSV, title){
 
     if(inputCSV.length!=title.length){
-//console.log("lets see input one is wrong :"+inputCSV.length);
-//console.log("lets see title one is wrong:"+title.length);
+        //console.log("lets see input one is wrong :"+inputCSV.length);
+        //console.log("lets see title one is wrong:"+title.length);
         for(indexA in inputCSV){
-//console.log("inputCSV is "+inputCSV[indexA].att);
+            //console.log("inputCSV is "+inputCSV[indexA].att);
         }
         for(indexB in title){
-//console.log("title is "+title[indexB].att);
+            //console.log("title is "+title[indexB].att);
         }
     }
     var res = "";
@@ -2236,9 +1966,7 @@ function JSONtoHTML(inputCSV, title){
     return res;
 }
 function cleanPrefix(prefix){
-//console.log("################################prefix to be clean#################################################################");
-//console.log(prefix);
-//console.log("################################prefix to be clean#################################################################");
+
     for(indexA in prefix){
         //console.log("before clean"+prefix[indexA].indentation+prefix[indexA].line);
     }
@@ -2254,12 +1982,12 @@ function cleanPrefix(prefix){
     var res = [];
     //check from backward
     for(var i = prefix.length-1; i >3; i--){
-//console.log("prefix["+i+"] is "+prefix[i].indentation+prefix[i].line);
+        //console.log("prefix["+i+"] is "+prefix[i].indentation+prefix[i].line);
         if((prefix[i].indentation-prefix[i-1].indentation)<=-1
             && (prefix[i-1].indentation-prefix[i-2].indentation)<=-1){
             endLine = i;
             startMark = prefix[i].indentation;
-//console.log("here is a start mark with indentation =" + startMark);
+            //console.log("here is a start mark with indentation =" + startMark);
             break;
         }
     }
@@ -2268,7 +1996,6 @@ function cleanPrefix(prefix){
         if(prefix[i].indentation==startMark){
             endMark++;
             if(endMark==2){
-//console.log("here is an end mark with " + startMark);
                 startLine=i;
                 break;
             }
@@ -2277,17 +2004,16 @@ function cleanPrefix(prefix){
     if(prefix.indexOf(prefix[startLine])>0){
         //startLine=prefix.indexOf(prefix[startLine]);
     }
-//console.log("startLine = "+startLine +"; endLine = "+ endLine);
+
     if(startLine<endLine) {
         part1 = prefix.slice(0, startLine);
         part2 = prefix.slice(endLine);
         for (idx in part2){
             part1.push(part2[idx]);
         }
-//console.log("start another loop with length = " + part1.length);
+
         res = cleanPrefix(part1);
     }else {
-//console.log("final loop with length = " + prefix.length);
 
         var ele={};
         for(var i = 0 ; i < prefix.length; i++){
@@ -2321,20 +2047,20 @@ function cleanPrefix(prefix){
 }
 
 function checkPrefix(datas, prefix){
-//console.log("checkPrefix start");
+    //console.log("checkPrefix start");
     for(idx in datas){
 
-//console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
-//console.log("prefix is " + prefix.length);
+        //console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+        //console.log("prefix is " + prefix.length);
         for(indexA in prefix){
             //console.log(prefix[indexA].indentation+prefix[indexA].line);
         }
-//console.log("datas[idx].prefi is " + datas[idx].prefix.length);
-//console.log("----------------------------------------------------------------------------------------------------");
+        //console.log("datas[idx].prefi is " + datas[idx].prefix.length);
+        //console.log("----------------------------------------------------------------------------------------------------");
         for(indexB in datas[idx].prefix){
             //console.log(datas[idx].prefix[indexB].indentation+datas[idx].prefix[indexB].line);
         }
-//console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+        //console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
         if(datas[idx].prefix.length != prefix.length){
             //console.log("checkPrefix end: index is -1");
             return -1;
@@ -2345,19 +2071,19 @@ function checkPrefix(datas, prefix){
                 return -1;
             }
         }
-//console.log("checkPrefix end: index is "+ idx);
+        //console.log("checkPrefix end: index is "+ idx);
         return idx;
     }
 
     return -1;
 }
 function findSameTitle(datas, prefix, comparedData, simpledataFlag){
-//console.log("findSameTitle start");
+    //console.log("findSameTitle start");
     var title = prefix;
 
-//console.log("title log start");
-//console.log(title);
-//console.log("title log end");
+    //console.log("title log start");
+    //console.log(title);
+    //console.log("title log end");
 
     var res;
     //console.log("datas length " +datas.length);
@@ -2428,9 +2154,6 @@ function addDataToExist(prefix, originalData, additionalData, simpledataFlag){
     var rowPrefix = prefix.slice(0);
     var dataStack = [];
 
-//console.log("rowPrefix log start");
-//console.log(rowPrefix);
-//console.log("rowPrefix log end");
     var rows = originalData.datablock.slice(0);
 
     if(simpledataFlag == false){
@@ -2494,7 +2217,7 @@ function addDataToExist(prefix, originalData, additionalData, simpledataFlag){
         }
         rows.push(rowPrefix);
     }
-//console.log("add additional data end");
+
     return rows;
 }
 function checkSimpleData(comparedData){
@@ -2552,22 +2275,18 @@ function checkSimpleData(comparedData){
     return false;
 }
 function checkData(originalData, prefixLength, comparedData, simpledataFlag){
-//console.log("checkData start");
-//console.log("comparedData log");
-//console.log(comparedData);
-//console.log("comparedData log");
-//console.log("originalData.simple="+originalData.simple);
+
     var dataStack = [];
     var dataTitle = [];
     var count = 0;
     var originalTitle = originalData.datablock[0]
     if((originalData.simple!=true) && (simpledataFlag==true)){
-//console.log("simple data can not be the same with array datas");
+    //console.log("simple data can not be the same with array datas");
         return -1;
     }else if((originalData.simple==true) && (simpledataFlag==true)){
         for(var i = 0 ; i < comparedData.length; i++) {
             if (comparedData[i].line.indexOf("[") > -1) {
-//console.log("this data is a single data, has no title");
+                //console.log("this data is a single data, has no title");
                 count++;
                 dataStack.length = 0;
             }
@@ -2629,7 +2348,7 @@ function checkData(originalData, prefixLength, comparedData, simpledataFlag){
     if(count == 0){
         for(var i = 0 ; i < comparedData.length; i++) {
             if (comparedData[i].line.indexOf("[") > -1) {
-//console.log("this data is a single data, has no title");
+                //console.log("this data is a single data, has no title");
                 count++;
                 dataStack.length = 0;
             }
@@ -2656,7 +2375,7 @@ function checkData(originalData, prefixLength, comparedData, simpledataFlag){
             }
         }
         if (count == 1) {
-//console.log("checkData end: find same title with data legth = " + dataTitle.length);
+            //console.log("checkData end: find same title with data legth = " + dataTitle.length);
             return -99;
         }
     }
@@ -2670,11 +2389,11 @@ function checkData(originalData, prefixLength, comparedData, simpledataFlag){
     //console.log("original title is "+originalTitle);
     for (var i = 0; i < dataTitle.length ; i++){
         if(dataTitle[dataTitle.length-i-1].att!=originalTitle[originalTitle.length-i-1].att){
-//console.log("checkData end: title context different, return -1");
+            //console.log("checkData end: title context different, return -1");
             return -1;
         }
     }
-//console.log("checkData end: find same title with data legth = " + dataTitle.length);
+    //console.log("checkData end: find same title with data legth = " + dataTitle.length);
     return dataTitle.length;
 }
 function writeLog(msg){
@@ -2793,18 +2512,12 @@ function outputXML(treatXML,postData, options, log){
             var csvLine = treeToCSV(treatXML[i]["values"][j],"",options);
             console.log(csvLine);
             result+=(htmlLine);
-            //console.log("treatJS["+i+"]["+j+"] length is //column count"+treatJS[i][j].length);
-            //var consoleLine = JSONtoConsoleCSV(treatJS[i][j],title);
-            //console.log(consoleLine);
-            //aCSV+=consoleLine;
+
             aCSV+=csvLine;
             aCSV+='\n';
-            //var consoleLineall = JSONtoConsoleCSVALL(treatJS[i][j],title);
-            //console.log(consoleLineall);
         }
         resultArray.push(aCSV);
         resultArrayToSingleCSV +=aCSV;
-        //console.log("");
         console.log('\n');
         result+=("</table>");
         result+=("</div>");
@@ -2828,63 +2541,19 @@ function outputXML(treatXML,postData, options, log){
         // path exists unless there was an error
 
     });
-
-    //console.log("directory "+directory);
-    //console.log("resultArray "+resultArray.length);
-    //output separated csv
     for (var i = 0; i < resultArray.length; i ++){
-        //console.log("temp "+ resultArray.length)
-        //var fs = require('fs');
-        //console.log("at out put ");
-        //console.log(resultArray[i]);
 
         fs.writeFileSync(directory+"/"+i+".csv", resultArray[i]);
-        /*
-        fs.writeFile(directory+"/"+i+".csv", resultArray[i], function(err) {
-            //console.log("in sync");
-            if(err) {
-                return console.log(err);
-            }
-            var date = new Date();
-            //console.log(date.toISOString()+": The file "+i+" was saved!");
-        });
-        */
     }
 
     //output unified csv
-    //var fs = require('fs');
-    //writeFile(directory+"/result"+".csv", resultArrayToSingleCSV);
-    //console.log("--------result--------");
-    //console.log(resultArrayToSingleCSV);
     fs.writeFileSync(directory+"/result"+".csv", resultArrayToSingleCSV);
-    /*
-    fs.writeFile(directory+"/result"+".csv", resultArrayToSingleCSV, function(err) {
-        if(err) {
-            return console.log(err);
-        }
-        var date = new Date();
-        //console.log("date "+ date);
-    });
-    */
 
 
     //output html
-    //var fs = require('fs');
     fs.writeFileSync(directory+"/result"+".html", result);
-    /*
-    fs.writeFile("/tmp/result.html", result, function(err) {
-        if(err) {
-            return console.log(err);
-        }
-        var date = new Date();
-        //console.log(date.toISOString()+": The file was saved!");
-    });
-    */
-
-
 
     var date = new Date();
-    //console.log(date.toISOString()+": the end");
 
     return resultArray;
 }
@@ -2934,41 +2603,6 @@ function realfunction(response,request,postData) {
 
             outputXML(treatXML,postData);
 
-            /*
-             result+=func;
-             for (var i = 0 ; i<treatJS.length; i ++){
-             result+=("<input type = 'button' onclick='showButton(\"toc"+i+"\")' value = data"+i+">");
-             result+=("<div id=\"toc"+i+"\" hidden>");
-             result+=("<table style=\"width:100%\" border=1>");
-
-             var title = treatJS[i][0];
-             //console.log("^^^^^^^^final log^^^^^^^^");
-             //console.log(title);
-             //console.log("^^^^^^^^final log end^^^^");
-
-             //console.log("treatJS["+i+"] length is // row count"+treatJS[i].length);
-             var aCSV = "";
-             for (var j = 0; j < treatJS[i].length; j++){
-             //var htmlLine = JSONtoCSV(treatJS[i][j],title);
-             //var htmlLine = JSONtoConsoleCSV(treatJS[i][j],title);
-             var htmlLine = JSONtoHTML(treatJS[i][j],title);
-             result+=(htmlLine);
-             //console.log("treatJS["+i+"]["+j+"] length is //column count"+treatJS[i][j].length);
-             var consoleLine = JSONtoConsoleCSV(treatJS[i][j],title);
-             //console.log(consoleLine);
-             aCSV+=consoleLine;
-             aCSV+='\n';
-             var consoleLineall = JSONtoConsoleCSVALL(treatJS[i][j],title);
-             //console.log(consoleLineall);
-             }
-             resultArray.push(aCSV);
-             //console.log("");
-             result+=("</table>");
-             result+=("</div>");
-             result+=("<br/>");
-             }
-             */
-
             result+=func;
             for (var i = 0 ; i<treatXML.length; i ++){
                 result+=("<input type = 'button' onclick='showButton(\"toc"+i+"\")' value = data"+i+">");
@@ -2981,40 +2615,23 @@ function realfunction(response,request,postData) {
                     title.push(treatXML[i]["title"][idx].RootName);
                 }
 
-
-                //console.log("^^^^^^^^final log^^^^^^^^");
-                //console.log(title);
-                //console.log("^^^^^^^^final log end^^^^");
-
-                //console.log("treatJS["+i+"] length is // row count"+treatJS[i].length);
                 var aCSV = "";
                 for (var j = 0; j < treatXML[i]["values"].length; j++){
-                    //var htmlLine = JSONtoCSV(treatJS[i][j],title);
-                    //var htmlLine = JSONtoConsoleCSV(treatJS[i][j],title);
-                    //var htmlLine = JSONtoHTML(treatJS[i][j],title);
                     if(j == 0){
                         var htmlLine = treeToHTML(treatXML[i]["values"][j],treatXML[i]["title"]);
                         result+=(htmlLine);
                         aCSV+=treeToCSV(treatXML[i]["values"][j],treatXML[i]["title"]);;
                         aCSV+='\n';
-                        //console.log(result);
                     }
                     var htmlLine = treeToHTML(treatXML[i]["values"][j]);
                     var csvLine = treeToCSV(treatXML[i]["values"][j]);
                     console.log(csvLine);
                     result+=(htmlLine);
-                    //console.log("treatJS["+i+"]["+j+"] length is //column count"+treatJS[i][j].length);
-                    //var consoleLine = JSONtoConsoleCSV(treatJS[i][j],title);
-                    //console.log(consoleLine);
-                    //aCSV+=consoleLine;
                     aCSV+=csvLine;
                     aCSV+='\n';
-                    //var consoleLineall = JSONtoConsoleCSVALL(treatJS[i][j],title);
-                    //console.log(consoleLineall);
                 }
                 resultArray.push(aCSV);
                 resultArrayToSingleCSV +=aCSV;
-                //console.log("");
                 result+=("</table>");
                 result+=("</div>");
                 result+=("<br/>");
@@ -3046,28 +2663,25 @@ function realfunction(response,request,postData) {
                 //console.log("temp "+ resultArray.length)
                 var fs = require('fs');
                 fs.writeFile(directory+"/"+i+".csv", resultArray[i], function(err) {
-                    ///console.log("in sync");
+
                     if(err) {
                         return console.log(err);
                     }
                     var date = new Date();
-                    //console.log(date.toISOString()+": The file "+i+" was saved!");
+
                 });
             }
 
             var fs = require('fs');
             fs.writeFile(directory+"/result"+".csv", resultArrayToSingleCSV, function(err) {
-                ///console.log("in sync");
+
                 if(err) {
                     return console.log(err);
                 }
                 var date = new Date();
-                //console.log(date.toISOString()+": The file "+i+" was saved!");
+
             });
 
-            //console.log("result log");
-            //console.log(result);
-            //console.log("result log");
             var fs = require('fs');
             fs.writeFile("/tmp/result.html", result, function(err) {
                 if(err) {
